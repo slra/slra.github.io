@@ -1,0 +1,4 @@
+- *Decreasing complexity of SDP relaxations for polynomial optimization by forcing low-rank constraints*
+~~~
+The size of SDP relaxations corresponding to polynomial optimization problems increase combinatorially with the degree of the relaxation. Forcing low rank constraints on the moment matrices involved in the LMI constraints opens the possibility to reduce the size of the involved SDP. This may lead to better computational performance for other relaxations.
+~~~

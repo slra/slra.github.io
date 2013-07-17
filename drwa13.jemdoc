@@ -1,0 +1,38 @@
+# jemdoc: menu{MENU}{drwa13.html}
+= Program for the working group on low-rank approximation
+within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--13, 2013.
+
+- Monday 
+  -- 11:00-12:00: [http://www.ece.neu.edu/ece/index.php/component/content/123?task=view Mario Sznaier]
+  -- 12:00-12:30: [http://www.montefiore.ulg.ac.be/~mishra/ Bamdev Mishra]\n 
+     		  [http://www.manopt.org/ Manopt: A Matlab toolbox for optimization on manifolds]
+  -- 17:00-17:45: [http://homepages.vub.ac.be/~kusevich/ Konstantin Usevich]\n 
+     		  [drwa13/kostia.html Adjusted least squares estimator for algebraic hypersurface fitting]
+  -- 17:45-18:30: [http://homepages.vub.ac.be/~imarkovs/homepage.html Ivan Markovsky]\n 
+     		  [drwa13/ivan.html Low-rank approximation problems in system identification]
+- Tuesday
+  -- 11:00-12:00: [http://homes.esat.kuleuven.be/~delathau/ Lieven De Lathauwer],\n 
+                  [drwa13/lieven.html Numerical approximation of higher-order tensors: An introduction]
+  -- 12:00-12:30: [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva]\n 
+     		  [drwa13/maria.html Low multilinear rank approximation of tensors by structured matrix low-rank approximation]
+  -- 17:00-17:45: [https://sites.google.com/site/nicolasgillis/ Nicolas Gillis]\n 
+     		  [drwa13/nicolas.html Recent advances in nonnegative matrix factorization]
+  -- 17:45-18:30: [http://www.di.ens.fr/~lefevrea/ Augustin Lefèvre]
+- Thursday
+  -- 16:30-17:10: [http://users.ba.cnr.it/iac/irmanm21/ Nicola Mastronardi]
+  -- 17:20-18:00: [http://homes.esat.kuleuven.be/~smc/person.php?persid=299 Marco Signoretto]\n 
+                  [drwa13/marco.html Tensor estimation in reproducing kernel Hilbert spaces with applications]
+  -- 18:00-18:30: [http://www.montefiore.ulg.ac.be/~mishra/ Bamdev Mishra]\n 
+     		  [drwa13/bamdev.html Fixed-rank optimization on Riemannian quotient manifolds]
+- Friday
+  -- 11:00-11:30: [https://www.aut.bme.hu/Staff/kolixx Kolumbán Sándor]\n
+     		  [drwa13/kol.html Decreasing complexity of SDP relaxations for polynomial optimization by forcing low-rank constraints]
+  -- 11:30-12:15: [http://people.tuebingen.mpg.de/fdinuzzo/ Francesco Dinuzzo]\n
+     		  [drwa13/francesco.html Decreasing complexity of SDP relaxations for polynomial optimization by forcing low-rank constraints]
+
+
+
+
+
+
+

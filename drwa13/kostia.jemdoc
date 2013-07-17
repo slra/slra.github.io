@@ -1,0 +1,4 @@
+- *Adjusted least squares estimator for algebraic hypersurface fitting*
+~~~
+The problem of algebraic hypersurface fitting is considered in an estimation framework: given a set of noisy data points, estimate the coefficients of a corresponding implicit multivariate polynomial equation. The adjusted least squares estimator proposed accounts for the bias present in the ordinary least squares estimator. An algorithm for computing the correction for an arbitrary support of the polynomial equation is presented and applied to the related problem of subspace clustering.
+~~~

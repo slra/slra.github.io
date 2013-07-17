@@ -1,0 +1,43 @@
+# jemdoc: menu{MENU}{software.html}
+# jemdoc: eqsize{200}
+= SLRA: Software for structured low-rank approximation
+[http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky] ([imarkovs@vub.ac.be]) 
+and 
+[http://homepages.vub.ac.be/~kusevich/ Konstantin Usevich] ([kusevich@vub.ac.be]) 
+
+The package computes locally optimal solutions to low-rank approximation problems 
+\(
+minimize \quad over \ \widehat p \quad ||p - \widehat p||_w \quad subject \ to \quad rank({\cal S}(\widehat p)) \leq r 
+\)
+with the following features:
+- mosaic Hankel structured approximating matrix ${\cal S}(\widehat p)$,
+- weighted 2-norm approximation criterion $||\cdot||_w$,
+- fixed elements in the approximating matrix,
+- missing elements in the data matrix, and
+- linear constraints on an approximating matrix's left kernel basis.
+
+For an $m\times n$ data matrix, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$.
+
+== [slra.pdf Documentation]
+
+== [slra.tgz Download] 
+- [https://github.com/slra/slra source code]
+
+== Citing
+
+~~~
+{}{}
+@TechReport{slra-software,
+  author = 	 {I. Markovsky and K. Usevich},
+  title = 	 {Software for weighted structured low-rank approximation},
+  institution =  {Univ. of Southampton},
+  year = 	 {2012},
+  number = 	 {339974},
+  address =      {\url{http://eprints.soton.ac.uk/339974}},
+}
+~~~
+
+# == License
+# == Feedback
+# == Version history
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>SLRA: Software for structured low-rank approximation</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">SLRA</div>
+<div class="menu-item"><a href="index.html">index</a></div>
+<div class="menu-item"><a href="software.html" class="current">software</a></div>
+<div class="menu-item"><a href="drwa13.html">DRWA&rsquo;13</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>SLRA: Software for structured low-rank approximation</h1>
+<div id="subtitle"><a href="http://homepages.vub.ac.be/~imarkovs/">Ivan Markovsky</a> (<a href="mailto:imarkovs@vub.ac.be">imarkovs@vub.ac.be</a>) 
+and 
+<a href="http://homepages.vub.ac.be/~kusevich/">Konstantin Usevich</a> (<a href="mailto:kusevich@vub.ac.be">kusevich@vub.ac.be</a>) </div>
+</div>
+<p>The package computes locally optimal solutions to low-rank approximation problems </p>
+
+<div class="eqwl"><img class="eqwl" src="eqs/629179561238737992-200.png" alt=" minimize quad over  widehat p quad ||p - widehat p||_w quad subject  to quad rank({cal S}(widehat p)) leq r  " />
+<br /></div><p>with the following features:</p>
+<ul>
+<li><p>mosaic Hankel structured approximating matrix <img class="eq" src="eqs/9133601666111744340-200.png" alt="{cal S}(widehat p)" style="vertical-align: -7px" />,</p>
+</li>
+<li><p>weighted 2-norm approximation criterion <img class="eq" src="eqs/8146405997343856945-200.png" alt="||cdot||_w" style="vertical-align: -7px" />,</p>
+</li>
+<li><p>fixed elements in the approximating matrix,</p>
+</li>
+<li><p>missing elements in the data matrix, and</p>
+</li>
+<li><p>linear constraints on an approximating matrix's left kernel basis.</p>
+</li>
+</ul>
+<p>For an <img class="eq" src="eqs/3187889088634215596-200.png" alt="mtimes n" style="vertical-align: -1px" /> data matrix, with <img class="eq" src="eqs/310184670480442714-200.png" alt="m &lt; n" style="vertical-align: -2px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/5400137134684481330-200.png" alt="O(m^2n)" style="vertical-align: -7px" />, so that the package is suitable for applications with <img class="eq" src="eqs/3312475274443383293-200.png" alt="ngg m" style="vertical-align: -2px" />.</p>
+<h2><a href="slra.pdf">Documentation</a></h2>
+<h2><a href="slra.tgz">Download</a> </h2>
+<ul>
+<li><p><a href="https://github.com/slra/slra">source code</a></p>
+</li>
+</ul>
+<h2>Citing</h2>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+@TechReport{slra-software,
+  author = 	 {I. Markovsky and K. Usevich},
+  title = 	 {Software for weighted structured low-rank approximation},
+  institution =  {Univ. of Southampton},
+  year = 	 {2012},
+  number = 	 {339974},
+  address =      {\url{http://eprints.soton.ac.uk/339974}},
+}
+</pre></div></div>
+<div id="footer">
+<div id="footer-text">
+Page generated 2013-07-17 18:50:55 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,1 +1,6 @@
-slra
+_site
+_import
+.DS_Store
+Gemfile.lock
+*~
+

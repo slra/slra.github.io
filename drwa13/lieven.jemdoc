@@ -1,0 +1,4 @@
+- *Numerical approximation of higher-order tensors: An introduction*
+~~~
+We give an overview of basic tensor decompositions and explain their general use. We pay special attention to the use of tensor decompositions for approximation purposes. We discuss numerical strategies for tensor approximation. Important progress has recently been made. It has been recognized that tensor product structure allows a very efficient storage and handling of the Jacobian and (approximate) Hessian of the cost function. On the other hand, multilinearity allows global optimization in (scaled) line and plane search. Although there are many possibilities for decomposition symmetry and factor structure, these may be conveniently handled. We demonstrate the algorithms using Tensorlab, our recently published MATLAB toolbox for tensors and tensor computations. (Joint work with Laurent Sorber and Marc Van Barel) 
+~~~

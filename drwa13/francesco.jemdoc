@@ -1,0 +1,4 @@
+- *Low Rank Output Kernels for Multi-Task Learning Problems*
+~~~
+Low Rank Output Kernel Learning (LROKL) is a kernel-based nonlinear generalization of Reduced Rank Regression that allows to simultaneously solve multiple estimation tasks and reveal a shared low-dimensional subspace capturing inter-task relationships. This talk will discuss several alternative formulations of LROKL, numerical strategies to train the associated model, and applications to a variety of multi-task learning problems.
+~~~
