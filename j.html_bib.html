@@ -1,0 +1,555 @@
+<h1>mypapers.bib</h1><a name="LHM99"></a><pre>
+@article{<a href="j.html.html#LHM99">LHM99</a>,
+  author = {M. Lemmon and K. He and I. Markovsky},
+  title = {Supervisory Hybrid Systems},
+  journal = {IEEE Control Systems Magazine},
+  month = {August},
+  volume = {19},
+  number = {4},
+  pages = {42--55},
+  year = {1999}
+}
+</pre>
+
+<a name="KMV01b"></a><pre>
+@article{<a href="j.html.html#KMV01b">KMV01b</a>,
+  author = {A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {Consistent fundamental matrix estimation in a quadratic measurement error model arising in motion analysis},
+  journal = {Comput. Statist. Data Anal.},
+  year = {2002},
+  volume = {41},
+  number = {1},
+  pages = {3--18},
+  texfile = {ma.tex},
+  pdf = {axb_published.pdf},
+  abstract = {A bilinear multivariate errors-in-variables model is considered. It corresponds to an overdetermined set of linear equations $AXB=C$, where $A$ is $m\times n$, $B$ is $p\times q$, and $A$, $B$, $C$ are perturbed by errors. The total least squares estimator is inconsistent in this case. An adjusted least squares estimator is constructed, which converges to the true value of $X$, as $m$ and $q$ go to infinity. A small sample modification of the estimator is presented, which is more stable for small $m$ and $q$ and is asymptotically equivalent to the adjusted least squares estimator. The theoretical results are confirmed by a simulation study.},
+  keywords = {bilinear multivariate measurement error models, errors-in-variables models, adjusted least squares, consistency, asymptotic normality, small sample modification},
+  software = {<a href="axb.tgz">axb.tgz</a>}
+}
+</pre>
+
+<a name="KMV01c"></a><pre>
+@article{<a href="j.html.html#KMV01c">KMV01c</a>,
+  author = {A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {Consistent estimation in the bilinear multivariate errors-in-variables model},
+  journal = {Metrika},
+  year = {2003},
+  volume = {57},
+  number = {3},
+  pages = {253--285},
+  texfile = {metrika_rev2.tex},
+  pdf = {metrica.pdf},
+  abstract = {A multivariate measurement error model $AX = B $ is considered. The errors in $[A \ B]$ are rowwise independent, but within each row the errors may be correlated. Some of the columns are observed without errors, and in addition the error covariance matrices may differ from row to row. The total covariance structure of the errors is supposed to be known up to a scalar factor. The fully weighted total least squares estimator of $X$ is studied, which in the case of normal errors coincides with the maximum likelihood estimator. We give mild conditions for weak and strong consistency of the estimator, when the number of rows in $A$ increases. The results generalize the conditions of Gallo given for a univariate homoscedastic model (where $B$ is a vector), and extend the conditions of Gleser given for the multivariate homoscedastic model. We derive the objective function for the estimator and propose an iteratively reweighted numerical procedure.},
+  keywords = {linear errors-in-variables model, elementwise-weighted total least squares, consistency, iteratively reweighted procedure}
+}
+</pre>
+
+<a name="MRPKV02"></a><pre>
+@article{<a href="j.html.html#MRPKV02">MRPKV02</a>,
+  author = {I. Markovsky and M.-L. Rastello and A. Premoli and A. Kukush and S. {Van Huffel}},
+  title = {The element-wise weighted total least squares problem},
+  journal = {Comput. Statist. Data Anal.},
+  pages = {181--209},
+  volume = {50},
+  number = {1},
+  year = {2005},
+  texfile = {ewtls_els.tex},
+  software = {<a href="wtls?">wtls?</a>},
+  abstract = {We consider a new technique for parameter estimation in a linear measurement error model $AX = B$, $A = A_0 + E_A$, $B = B_0 + E_B$, $A_0X_0=B_0$ with row-wise independent and non-identically distributed measurement errors $E_A$, $E_B$. Here $A_0$ and~$B_0$ are the true values of the measurements $A$ and~$B$, and~$X_0$ is the true value of the parameter~$X$. The total least squares method yields an inconsistent estimate of the parameter in this case. We formulate a modified total least squares problem, called element-wise weighted total least squares, that provides a consistent estimator, i.e., the estimate~$\hat X$ converges to the true value~$X_0$ as the number of measurements increases. The new estimator is a solution of an optimization problem with the parameter estimate~$\hat X$ and the correction $\Delta D = [\Delta A \ \Delta B]$, applied to the measured data~$D=[A \ B]$, as decision variables. We derive an equivalent unconstrained problem by minimizing analytically over the correction~$\Delta D$ and propose an iterative algorithm for its solution, based on the first order optimality condition. The algorithm is locally convergent with linear convergence rate. For large sample size the convergence rate tends to quadratic.},
+  keywords = {Total least squares; Multivariate errors-in-variables model; Unequally sized errors; Non-convex optimization; Re-weighted least squares},
+  answerfile = {ewtls_answer.tex}
+}
+</pre>
+
+<a name="KMV02c"></a><pre>
+@article{<a href="j.html.html#KMV02c">KMV02c</a>,
+  author = {A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {Consistent estimation in an implicit quadratic measurement error model},
+  journal = {Comput. Statist. Data Anal.},
+  year = {2004},
+  volume = {47},
+  number = {1},
+  pages = {123--147},
+  texfile = {ellest_stat.tex},
+  software = {<a href="ellest.tgz">ellest.tgz</a>},
+  abstract = {An adjusted least squares estimator is derived that yields a consistent estimate of the parameters of an implicit quadratic measurement error model. In addition, a consistent estimator for the measurement error noise variance is proposed. Important assumptions are: (1) all errors are uncorrelated identically distributed and (2) the error distribution is normal.  The estimators for the quadratic measurement error model are used to estimate consistently conic sections and ellipsoids. Simulation examples, comparing the adjusted least squares estimator with the ordinary least squares method and the orthogonal regression method, are shown for the ellipsoid fitting problem.},
+  keywords = {Adjusted least squares; Conic fitting; Consistent estimator; Ellipsoid fitting; Quadratic measurement error model}
+}
+</pre>
+
+<a name="MKV02d"></a><pre>
+@article{<a href="j.html.html#MKV02d">MKV02d</a>,
+  author = {I. Markovsky and A. Kukush and S. {Van Huffel}},
+  title = {Consistent least squares fitting of ellipsoids},
+  journal = {Numerische Mathematik},
+  year = {2004},
+  volume = {98},
+  number = {1},
+  pages = {177--194},
+  abstract = {A parameter estimation problem for ellipsoid fitting in the presence of measurement errors is considered. The ordinary least squares estimator is inconsistent, and due to the nonlinearity of the model, the orthogonal regression estimator is inconsistent as well, i.e., these estimators do not converge to the true value of the parameters, as the sample size tends to infinity. A consistent estimator is proposed, based on a proper correction of the ordinary least squares estimator. The correction is explicitly given in terms of the true value of the noise variance.},
+  keywords = {adjusted least squares -- consistent estimator -- ellipsoid fitting -- orthogonal regression -- quadratic measurement error model -- total least squares},
+  software = {<a href="ellest?">ellest?</a>},
+  texfile = {ellest_comp_rev.tex},
+  answerfile = {ellest_comp_letter3.tex}
+}
+</pre>
+
+<a name="KMV02e"></a><pre>
+@article{<a href="j.html.html#KMV02e">KMV02e</a>,
+  author = {A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {Consistency of the structured total least squares estimator in a multivariate errors-in-variables model},
+  journal = {J. Statist. Plann. Inference},
+  pages = {315--358},
+  volume = {133},
+  number = {2},
+  year = {2005},
+  texfile = {stls.tex},
+  abstract = {The structured total least squares estimator, defined via a constrained optimization problem, is a generalization of the total least squares estimator when the data matrix and the applied correction satisfy given structural constraints. In the paper, an affine structure with additional assumptions is considered. In particular, Toeplitz and Hankel structured, noise free and unstructured blocks are allowed simultaneously in the augmented data matrix. An equivalent optimization problem is derived that has as decision variables only the estimated parameters. The cost function of the equivalent problem is used to prove consistency of the structured total least squares estimator. The results for the general affine structured multivariate model are illustrated by examples of special models. Modification of the results for block-Hankel/Toeplitz structures is also given. As a by-product of the analysis of the cost function, an iterative algorithm for the computation of the structured total least squares estimator is proposed.},
+  keywords = {Block-Hankel/Toeplitz structure; Consistency; Dynamic errors-in-variables model; Iterative algorithm; Structured total least squares; Total least squares.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="MVK02"></a><pre>
+@article{<a href="j.html.html#MVK02">MVK02</a>,
+  author = {I. Markovsky and S. {Van Huffel} and A. Kukush},
+  title = {On the computation of the structured total least squares estimator},
+  journal = {Numer. Linear. Algebra Appl.},
+  year = {2004},
+  volume = {11},
+  pages = {591--608},
+  texfile = {stls_comp_rev.tex},
+  abstract = {A multivariate structured total least squares problem is considered, in which the extended data matrix is partitioned into blocks and each of the blocks is Toeplitz/Hankel structured, unstructured, or noise free. Two types of numerical solution methods for this problem are proposed: i) standard local optimization methods in combination with efficient evaluation of the cost function and its first derivative, and ii) an iterative procedure proposed originally for the element-wise weighted total least squares problem. The computational efficiency of the proposed methods is compared with this of alternative methods. },
+  keywords = {parameter estimation; total least squares; structured total least squares; system identification.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="MV03a"></a><pre>
+@article{<a href="j.html.html#MV03a">MV03a</a>,
+  author = {I. Markovsky and S. {Van Huffel} and R. Pintelon},
+  title = {Block-{T}oeplitz/{H}ankel structured total least squares},
+  journal = {SIAM J. Matrix Anal. Appl.},
+  pages = {1083--1099},
+  volume = {26},
+  number = {4},
+  year = {2005},
+  texfile = {stls_block_rev.tex},
+  answerfile = {stls_block_answer.tex, stls_block_answer2.tex},
+  abstract = {A structured total least squares problem is considered, in which the extended data matrix is partitioned into blocks and each of the blocks is block-Toeplitz/Hankel structured, unstructured, or exact. An equivalent optimization problem is derived and its properties are established. The special structure of the equivalent problem enables to improve the computational efficiency of the numerical solution methods. By exploiting the structure, the computational complexity of the algorithms (local optimization methods) per iteration is linear in the sample size. Application of the method for system identification and for model reduction is illustrated by simulation examples. },
+  keywords = {Parameter estimation, Total least squares, Structured total least squares, System identification, Model reduction.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="MDM03"></a><pre>
+@article{<a href="j.html.html#MDM03">MDM03</a>,
+  author = {I. Markovsky and B. {De Moor}},
+  title = {Linear dynamic filtering with noisy input and output},
+  journal = {Automatica},
+  volume = {41},
+  number = {1},
+  pages = {167--171},
+  year = {2005},
+  texfile = {eivkf_rev.tex},
+  answerfile = {eivkf_answer.tex},
+  abstract = {State estimation problems for linear time-invariant systems with noisy inputs and outputs are considered. An efficient recursive algorithm for the smoothing problem is presented. The equivalence between the optimal filter and an appropriately modified Kalman filter is established. The optimal estimate of the input signal is derived from the optimal state estimate. The result shows that the noisy input/output filtering problem is not fundamentally different from the classical Kalman filtering problem.},
+  keywords = {errors-in-variables, Kalman filtering, optimal smoothing, misfit, latency.},
+  software = {<a href="eivkf?">eivkf?</a>}
+}
+</pre>
+
+<a name="MWRDM04"></a><pre>
+@article{<a href="j.html.html#MWRDM04">MWRDM04</a>,
+  author = {I. Markovsky and J. C. Willems and P. Rapisarda and B. De Moor},
+  title = {Algorithms for deterministic balanced subspace identification},
+  journal = {Automatica},
+  pages = {755--766},
+  volume = {41},
+  number = {5},
+  year = {2005},
+  texfile = {subspace_rev2.tex},
+  answerfile = {subspace_answer.tex, subspace_answer2.tex},
+  abstract = {New algorithms for identification of a balanced state space representation are proposed. They are based on a procedure for estimation of the impulse response and sequential zero input responses directly from data. The proposed algorithms are more efficient than the existing alternatives that compute the whole Hankel matrix of Markov parameters. It is shown that the computations can be performed on Hankel matrices of the input-output data of various dimensions. By choosing wider matrices, we need persistency of excitation of smaller order. Moreover, this leads to computational savings and improved statistical accuracy when the data is noisy. Using a finite amount of input-output data, the existing algorithms compute finite time balanced representation and the identified models have a lower bound on the distance to an exact balanced representation. The proposed algorithm can approximate arbitrarily closely an exact balanced representation. Moreover, the finite time balancing parameter can be selected automatically by monitoring the decay of the impulse response. We show what is the optimal in terms of minimal identifiability condition partition of the data into ``past'' and ``future''.},
+  keywords = {Exact deterministic subspace identification; Balanced model reduction; Approximate system identification; MPUM.},
+  software = {<a href="detss?">detss?</a>}
+}
+</pre>
+
+<a name="MPV04a"></a><pre>
+@article{<a href="j.html.html#MPV04a">MPV04a</a>,
+  author = {I. Markovsky and J. C. Willems and S. {Van Huffel} and B. De Moor and R. Pintelon},
+  title = {Application of structured total least squares for system identification and model reduction},
+  volume = {50},
+  number = {10},
+  pages = {1490--1500},
+  journal = {IEEE Trans. Automat. Control},
+  year = {2005},
+  texfile = {stls_appl_rev2.tex},
+  answerfile = {stls_appl_answer.tex, stls_appl_answer2.tex},
+  abstract = {The following identification problem is considered: minimize the $l_2$ norm of the difference between a given time series and an approximating one under the constraint that the approximating time series is a trajectory of a linear time invariant system of a fixed complexity. The complexity is measured by the input dimension and the maximum lag. The question leads to a problem that is known as the global total least squares problem and alternatively can be viewed as maximum likelihood identification in the errors-in-variables setup. Multiple time series and latent variables can be considered in the same setting. Special cases of the problem are autonomous system identification, approximate realization, and finite time optimal $l_2$ model reduction. 
+
+The identification problem is related to the structured total least squares problem. The paper presents an efficient software package that implements the theory. The proposed method and software are tested on data sets from the database for the identification of systems DAISY.},
+  keywords = {Errors-in-variables, system identification, model reduction, structured total least squares, numerical software, DAISY, MPUM.},
+  software = {<a href="ident">ident</a>}
+}
+</pre>
+
+<a name="WRMDM04"></a><pre>
+@article{<a href="j.html.html#WRMDM04">WRMDM04</a>,
+  author = {J. C. Willems and P. Rapisarda and I. Markovsky and B. De Moor},
+  title = {A note on persistency of excitation},
+  journal = {Control Lett.},
+  volume = {54},
+  number = {4},
+  pages = {325--329},
+  year = {2005},
+  texfile = {scl.tex},
+  abstract = {We prove that if a component of the response signal of a controllable linear time-invariant system is persistently exciting of sufficiently high order, then the windows of the signal span the full system behavior. This is then applied to obtain conditions under which the state trajectory of a state representation spans the whole state space. The related question of when the matrix formed formed from a state sequence has linearly independent rows from the matrix formed from an input sequence and a finite number of its shifts is of central importance in subspace system identification. },
+  keywords = {Behavioral systems, persistency of excitation, lags, annihilators, system identification.},
+  software = {<a href="detss">detss</a>}
+}
+</pre>
+
+<a name="MV04"></a><pre>
+@article{<a href="j.html.html#MV04">MV04</a>,
+  author = {I. Markovsky and S. {Van Huffel}},
+  title = {High-performance numerical algorithms and software for structured total least squares},
+  journal = {J. Comput. Appl. Math.},
+  pages = {311--331},
+  volume = {180},
+  number = {2},
+  year = {2005},
+  texfile = {stls_pack.tex},
+  abstract = {We present a software package for structured total least squares approximation problems. The allowed structures in the data matrix are block-Toeplitz, block-Hankel, unstructured, and exact. Combination of blocks with these structures can be specified. The computational complexity of the algorithms is~$O(m)$, where~$m$ is the sample size. We show simulation examples with different approximation problems. Application of the method for multivariable system identification is illustrated on examples from the database for identification of systems DAISY.
+},
+  keywords = {Parameter estimation; Structured total least squares; Deconvolution; System identification; Numerical linear algebra.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="SMWV04"></a><pre>
+@article{<a href="j.html.html#SMWV04">SMWV04</a>,
+  author = {M. Schuermans and I. Markovsky and P. Wentzell and S. {Van Huffel}},
+  title = {On the equivalence between total least squares and maximum likelihood {PCA}},
+  journal = {Analytica Chimica Acta},
+  pages = {254--267},
+  issue = {1--2},
+  volume = {544},
+  year = {2005},
+  pdf = {mieke.pdf},
+  abstract = {The maximum likelihood PCA (MLPCA) method has been devised in chemometrics as a generalization of the well-known PCA method in order to derive consistent estimators in the presence of errors with known error distribution. For similar reasons, the total least squares (TLS) method has been generalized in the field of computational mathematics and engineering to maintain consistency of the parameter estimates in linear models with measurement errors of known distribution. The basic motivation for TLS is the following. Let a set of multidimensional data points (vectors) be given. How can one obtain a linear model that explains these data? The idea is to modify all data points in such a way that some norm of the modification is minimized subject to the constraint that the modified vectors satisfy a linear relation. Although the name “total least squares” appeared in the literature only 25 years ago, this method of fitting is certainly not new and has a long history in the statistical literature, where the method is known as “orthogonal regression”, “errors-in-variables regression” or “measurement error modeling”. The purpose of this paper is to explore the tight equivalences between MLPCA and element-wise weighted TLS (EW-TLS). Despite their seemingly different problem formulation, it is shown that both methods can be reduced to the same mathematical kernel problem, i.e. finding the closest (in a certain sense) weighted low rank matrix approximation where the weight is derived from the distribution of the errors in the data. Different solution approaches, as used in MLPCA and EW-TLS, are discussed. In particular, we will discuss the weighted low rank approximation (WLRA), the MLPCA, the EW-TLS and the generalized TLS (GTLS) problems. These four approaches tackle an equivalent weighted low rank approximation problem, but different algorithms are used to come up with the best approximation matrix. We will compare their computation times on chemical data and discuss their convergence behavior.},
+  keywords = {TLS; MLPCA; Rank reduction; Measurement errors}
+}
+</pre>
+
+<a name="MV05"></a><pre>
+@article{<a href="j.html.html#MV05">MV05</a>,
+  author = {I. Markovsky and S. {Van Huffel}},
+  title = {Overview of total least squares methods},
+  journal = {Signal Processing},
+  year = {2007},
+  volume = {87},
+  pages = {2283--2302},
+  texfile = {tls_overview.tex},
+  answerfile = {tls_overview_answer.tex},
+  abstract = {We review the development and extensions of the classical total least squares method and describe algorithms for its generalization to weighted and structured approximation problems. In the generic case, the classical total least squares problem has a unique solution, which is given in analytic form in terms of the singular value decomposition of the data matrix. The weighted and structured total least squares problems have no such analytic solution and are currently solved numerically by local optimization methods. We explain how special structure of the weight matrix and the data matrix can be exploited for efficient cost function and first derivative computation. This allows to obtain computationally efficient solution methods. The total least squares family of methods has a wide range of applications in system theory, signal processing, and computer algebra. We describe the applications for deconvolution, linear prediction, and errors-in-variables system identification.},
+  keywords = {Total least squares; Orthogonal regression; Errors-in-variables model; Deconvolution; Linear prediction; System identification.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="SKMV05"></a><pre>
+@article{<a href="j.html.html#SKMV05">SKMV05</a>,
+  author = {S. Shklyar and A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {On the conic section fitting problem},
+  journal = {Journal of Multivariate Analysis},
+  year = {2007},
+  volume = {98},
+  pages = {588--624},
+  texfile = {shklyar/Shklyar.tex},
+  answerfile = {RESPONSE-TO-REVIEWS.doc},
+  abstract = {For the conic section problem adjusted least squares estimators (ALS) are considered.  Consistency of the translation invariant version of ALS estimator is proved. The similarity invariance of the ALS2 estimator is shown. The conditions for consistency of the ALS2 estimator are relaxed compared with the paper Kukush et al. (2004), Comput. Statist. Data Anal., Vol. 47, No. 1, 123--147.},
+  software = {<a href="ellest">ellest</a>}
+}
+</pre>
+
+<a name="MV05c"></a><pre>
+@article{<a href="j.html.html#MV05c">MV05c</a>,
+  author = {I. Markovsky and S. {Van Huffel}},
+  title = {Left vs right representations for solving weighted low rank approximation problems},
+  journal = {Linear Algebra Appl.},
+  volume = {422},
+  pages = {540--552},
+  year = {2007},
+  texfile = {wtls_note_rev.tex},
+  answerfile = {wtls_note_answer.tex},
+  abstract = {The weighted low-rank approximation problem in general has no analytical solution in terms of the singular value decomposition and is solved numerically using optimization methods. Four representations of the rank constraint that turn the abstract problem formulation into parameter optimization problems are presented. The parameter optimization problem is partially solved analytically, which results in an equivalent quadratically constrained problem. A commonly used re-parameterization avoids the quadratic constraint and makes the equivalent problem a nonlinear least squares problem, however, it might be necessary to change this re-parameterization during the iteration process. It is shown how the cost function can be computed efficiently in two special cases: row-wise and column-wise weighting.},
+  keywords = {Weighted low-rank approximation, total least squares, parameter optimization.},
+  software = {<a href="wtls">wtls</a>}
+}
+</pre>
+
+<a name="SMV06"></a><pre>
+@article{<a href="j.html.html#SMV06">SMV06</a>,
+  author = {M. Schuermans and I. Markovsky and S. {Van Huffel}},
+  title = {An adapted version of the element-wise weighted TLS method for applications in chemometrics},
+  journal = {Chemometrics and Intelligent Laboratory Systems},
+  year = {2007},
+  volume = {85},
+  number = {1},
+  pages = {40--46},
+  pdf = {mieke2.pdf},
+  abstract = {The Maximum Likelihood PCA (MLPCA) method has been devised in chemometrics as a generalization of the well-known PCA method in order to derive consistent estimators in the presence of errors with known error distribution. For similar reasons, the Total Least Squares (TLS) method has been generalized in the field of computational mathematics and engineering to maintain consistency of the parameter estimates in linear models with measurement errors of known distribution. In a previous paper [M. Schuermans, I. Markovsky, P.D. Wentzell, S. Van Huffel, On the equivalance between total least squares and maximum likelihood PCA, Anal. Chim. Acta, 544 (2005), 254–267], the tight equivalences between MLPCA and Element-wise Weighted TLS (EW-TLS) have been explored. The purpose of this paper is to adapt the EW-TLS method in order to make it useful for problems in chemometrics. We will present a computationally efficient algorithm and compare this algorithm with the standard EW-TLS algorithm and the MLPCA algorithm in computation time and convergence behaviour on chemical data.},
+  keywords = {EW-TLS; MLPCA; Rank reduction; Measurement errors}
+}
+</pre>
+
+<a name="MR07"></a><pre>
+@article{<a href="j.html.html#MR07">MR07</a>,
+  author = {I. Markovsky and P. Rapisarda},
+  title = {Data-driven simulation and control},
+  journal = {Int. J. Control},
+  volume = {81},
+  number = {12},
+  pages = {1946--1959},
+  year = {2008},
+  texfile = {ddctr.tex},
+  answerfile = {ddctr_answer.tex, ddctr_answer_editor.txt, ddctr_answer_ijc.tex},
+  abstract = {Classical linear time-invariant system simulation methods are based on a transfer function, impulse response, or input/state/output representation. We present a method for computing the response of a system to a given input and initial conditions directly from a trajectory of the system, without explicitly identifying the system from the data. Similarly to the classical approach for simulation, the classical approach for control is model-based: first a model representation is derived from given data of the plant and then a control law is synthesised using the model and the control specifications. We present an approach for computing a linear quadratic tracking control signal that circumvents the identification step. The results are derived assuming exact data and the simulated response or control input is constructed off-line.},
+  keywords = {simulation, data-driven control, output matching, linear quadratic tracking, system identification.},
+  software = {<a href="ddctr?">ddctr?</a>}
+}
+</pre>
+
+<a name="M07"></a><pre>
+@article{<a href="j.html.html#M07">M07</a>,
+  author = {I. Markovsky},
+  title = {Structured low-rank approximation and its applications},
+  journal = {Automatica},
+  year = {2008},
+  volume = {44},
+  number = {4},
+  pages = {891--909},
+  annote = {Survey paper on structured low-rank approximation with an emphasis on applications in system identification and signal processing.},
+  texfile = {slra_rev.tex},
+  answerfile = {slra_answer.tex, slra_answer2.tex},
+  review = {slra_report1.pdf, slra_report2.pdf, slra_report3.txt, slra_report_ae.txt},
+  abstract = {Fitting data by a bounded complexity linear model is equivalent to low-rank approximation of a matrix constructed from the data. The data matrix being Hankel structured is equivalent to the existence of a linear time-invariant system that fits the data and the rank constraint is related to a bound on the model complexity. In the special case of fitting by a static model, the data matrix and its low-rank approximation are unstructured.
+
+We outline applications in system theory (approximate realization, model reduction, output error and errors-in-variables identification), signal processing (harmonic retrieval, sum-of-damped exponentials and finite impulse response modeling), and computer algebra (approximate common divisor). Algorithms based on heuristics and local optimization methods are presented. Generalizations of the low-rank approximation problem result from different approximation criteria (e.g., weighted norm) and constraints on the data matrix (e.g., nonnegativity). Related problems are rank minimization and structured pseudospectra.},
+  keywords = {Low-rank approximation, total least squares, system identification, errors-in-variables modeling, behaviors.},
+  software = {<a href="slra">slra</a>}
+}
+</pre>
+
+<a name="KMV07"></a><pre>
+@article{<a href="j.html.html#KMV07">KMV07</a>,
+  author = {A. Kukush and I. Markovsky and S. {Van Huffel}},
+  title = {Estimation in a linear multivariate measurement error model with a change point in the data},
+  journal = {Comput. Statist. Data Anal.},
+  year = {2007},
+  volume = {52},
+  number = {2},
+  pages = {1167--1182},
+  texfile = {noisevar_stat_new_final.tex},
+  answerfile = {noisevar_answer.doc},
+  abstract = {A linear multivariate measurement error model $AX=B$ is considered. The errors in $[ A \ B ]$ are row-wise finite dependent, and within each row, the errors may be correlated. Some of the columns may be observed without errors, and in addition the error covariance matrix may differ from row to row. The columns of the error matrix are united into two uncorrelated blocks, and in each block, the total covariance structure is supposed to be known up to a corresponding scalar factor. Moreover the row data are clustered into two groups, according to the behavior of the rows of true $A$ matrix. The change point is unknown and estimated in the paper. After that, based on the method of corrected objective function, strongly consistent estimators of the scalar factors and~$X$ are constructed, as the numbers of rows in the clusters tend to infinity. Since Toeplitz/Hankel structure is allowed, the results are applicable to system identification, with a change point in the input data.},
+  keywords = {Linear errors-in-variables model;
+Corrected objective function; Clustering; Dynamic
+errors-in-variables model; Consistent estimator.}
+}
+</pre>
+
+<a name="MN08"></a><pre>
+@article{<a href="j.html.html#MN08">MN08</a>,
+  author = {I. Markovsky and M. Niranjan},
+  title = {Approximate low-rank factorization with structured factors},
+  journal = {Comput. Statist. Data Anal.},
+  volume = {54},
+  pages = {3411--3420},
+  year = {2008},
+  address = {\url{http://eprints.ecs.soton.ac.uk/17440/}},
+  texfile = {factorize_rev.tex},
+  answerfile = {factorize_answer.tex},
+  abstract = {An approximate rank revealing factorization problem with structure constraints on the normalized factors is considered. Examples of structure, motivated by an application in microarray data analysis, are sparsity, nonnegativity, periodicity, and smoothness. In general, the approximate rank revealing factorization problem is nonconvex. An alternating projections algorithm is developed, which is globally convergent to a locally optimal solution. Although the algorithm is developed for a specific application in microarray data analysis, the approach is applicable to other types of structure.},
+  keywords = {rank revealing factorization; numerical rank; low-rank approximation; maximum likelihood PCA; total least squares; errors-in-variables; microarray data.},
+  software = {<a href="factorize.tgz">factorize.tgz</a>}
+}
+</pre>
+
+<a name="MM08"></a><pre>
+@article{<a href="j.html.html#MM08">MM08</a>,
+  author = {I. Markovsky and S. Mahmoodi},
+  title = {Least squares contour alignment},
+  journal = {IEEE Signal Proc. Lettersk},
+  volume = {16},
+  number = {1},
+  pages = {41--44},
+  year = {2009},
+  address = {\url{http://eprints.ecs.soton.ac.uk/16829/}},
+  texfile = {dist.tex},
+  answerfile = {dist_answer.tex},
+  abstract = {The contour alignment problem, considered in this paper, is to compute the minimal distance in a least squares sense, between two explicitly represented contours, specified by corresponding points, after arbitrary rotation, scaling, and translation of one of the contours. This is a constrained nonlinear optimization problem with respect to the translation, rotation and scaling parameters, however, it is transformed into an equivalent linear least squares problem by a nonlinear change of variables. Therefore, a global solution of the contour alignment problem can be computed efficiently. It is shown that a normalized minimum value of the cost function is invariant to ordering and affine transformation of the contours and can be used as a measure for the distance between the contours. A solution is proposed to the problem of finding a point correspondence between the contours.},
+  keywords = {Contour alignment, image registration, translation, rotation, scaling, affine invariance, least squares.},
+  software = {<a href="dist.tgz">dist.tgz</a>}
+}
+</pre>
+
+<a name="M08b"></a><pre>
+@article{<a href="j.html.html#M08b">M08b</a>,
+  author = {I. Markovsky},
+  title = {Closed-loop data-driven simulation},
+  journal = {Int. J. Contr.},
+  year = {2010},
+  volume = {83},
+  optnumber = {10},
+  pages = {2134--2139},
+  texfile = {unfalsified_control_rev3.tex},
+  answerfile = {unfalsified_control_answer.tex, unfalsified_control_answer2.tex, unfalsified_control_answer3.tex},
+  review = {unfalsified_control_decision1.txt},
+  abstract = {Closed-loop data-driven simulation refers to the problem of finding the set of all responses of a closed-loop system to a given reference signal directly from an input/output trajectory of the plant and a representation of the controller. Conditions under which the problem has a solution are given and an algorithm for computing the solution is presented. The problem formulation and its solution are in the spirit of the deterministic subspace identification algorithms, i.e., in the theoretical analysis of the method, the data is assumed exact (noise free). The results have applications in data-driven control, e.g., testing controller's performance directly from closed-loop data of the plant in feedback with possibly different controller.},
+  keywords = {System identification; Subspace methods; Persistency of excitation; Data-driven simulation and control.},
+  software = {<a href="??">??</a>}
+}
+</pre>
+
+<a name="MSV09"></a><pre>
+@article{<a href="j.html.html#MSV09">MSV09</a>,
+  author = {I. Markovsky and D. Sima and S. {Van Huffel}},
+  title = {Total least squares methods},
+  journal = {Wiley Interdisciplinary Reviews: Comput. Stat.},
+  year = {2010},
+  volume = {2},
+  number = {2},
+  pages = {212--217},
+  optaddress = {\url{http://eprints.ecs.soton.ac.uk/17223/}},
+  optannote = {},
+  texfile = {tls-review.tex},
+  abstract = {Recent advances in total least squares approaches for solving various errors-in-variables modeling problems are reviewed, with emphasis on the following generalizations: 1) the use of weighted norms as a measure of the data perturbation size, capturing prior knowledge about uncertainty in the data; 2) the addition of constraints on the perturbation to preserve the structure of the data matrix, motivated by structured data matrices occurring in signal and image processing, systems and control, and computer algebra; 3) the use of regularization in the problem formulation, aiming at stabilizing the solution by decreasing the effect due to intrinsic ill-conditioning of certain problems.}
+}
+</pre>
+
+<a name="LMFR08"></a><pre>
+@article{<a href="j.html.html#LMFR08">LMFR08</a>,
+  author = {F. Le and I. Markovsky and C. Freeman and E. Rogers},
+  title = {Identification of electrically stimulated muscle models of stroke patients},
+  journal = {Control Engineering Practice},
+  volume = {18},
+  number = {4},
+  pages = {396--407},
+  year = {2010},
+  texfile = {zoe1.tex},
+  abstract = {Despite significant recent interest in the identification of electrically stimulated muscle models, current methods are based on underlying models and identification techniques that make them unsuitable for use with subjects with incomplete paralysis. One consequence of this is that very few model-based controllers have been used in clinical trials. Motivated by one case where a model-based controller has been applied to the upper limb of stroke patients, and the modeling limitations that were encountered, this paper first undertakes a review of existing modeling techniques with particular emphasis on their limitations. A Hammerstein structure, already known in this area, is then selected, and a suitable identification procedure and set of excitation inputs are developed to address these short-comings. The technique that is proposed to obtain the model parameters from measured data is a combination of two iterative schemes: the first of these has rapid convergence and is based on alternating least squares, and the second is a more complex method to further improve accuracy. Finally, experimental results are used to assess the efficacy of the overall approach.},
+  keywords = {System identification; Hammerstein system; Muscle models; Alternating least squares; Functional electrical}
+}
+</pre>
+
+<a name="M10"></a><pre>
+@article{<a href="j.html.html#M10">M10</a>,
+  author = {I. Markovsky},
+  title = {Bibliography on total least squares and related methods},
+  journal = {Statistics and Its Interface},
+  year = {2010},
+  volume = {3},
+  optnumber = {},
+  pages = {329--334},
+  optannote = {},
+  texfile = {tls-bib.tex},
+  answerfile = {tls-bib-answer.tex},
+  abstract = {The class of total least squares methods has been growing since the basic total least squares method was proposed by Golub and Van Loan in the 70's. Efficient and robust computational algorithms were developed and properties of the resulting estimators were established in the errors-in-variables setting. At the same time the developed methods were applied in diverse areas, leading to broad literature on the subject. This paper collects the main references and guides the reader in finding details about the total least squares methods and their applications. In addition, the paper comments on similarities and differences between the total least squares and the singular spectrum analysis methods.},
+  keywords = {total least squares, errors-in-variables, singular spectrum analysis}
+}
+</pre>
+
+<a name="complex-ls"></a><pre>
+@article{<a href="j.html.html#complex-ls">complex-ls</a>,
+  author = {I. Markovsky},
+  title = {On the complex least squares problem with constrained phase},
+  journal = {SIAM J. Matrix Anal. Appl.},
+  year = {2011},
+  volume = {32},
+  optnumber = {3},
+  pages = {987--992},
+  optmonth = {},
+  optnote = {},
+  optannote = {},
+  texfile = {complex-ls.nw},
+  abstract = {The problem of solving approximately in the least squares sense an overdetermined linear system of equations with complex valued coefficients is considered, where the elements of the solution vector are constrained to have the same phase. A direct solution to this problem is given in [Linear Algebra and Its Applications, Vol.\ 433, pp.~1719--1721]. An alternative direct solution that reduces the problem to a generalized eigenvalue problem is derived in this paper. The new solution is related to generalized low-rank matrix approximation and makes possible one to use existing robust and efficient algorithms.},
+  keywords = {Linear system of equations, Phase constraint, Low-rank approximation, Total least squares.},
+  software = {<a href="complex-ls.tgz">complex-ls.tgz</a>}
+}
+</pre>
+
+<a name="LMFR12"></a><pre>
+@article{<a href="j.html.html#LMFR12">LMFR12</a>,
+  author = {F. Le and I. Markovsky and C. Freeman and E. Rogers},
+  title = {Recursive identification of Hammerstein systems with application to electrically stimulated muscle},
+  journal = {Control Engineering Practice},
+  volume = {20},
+  optnumber = {4},
+  pages = {386--396},
+  year = {2012},
+  texfile = {zoe2},
+  abstract = {Two methods for recursive identification of Hammerstein systems are presented. In the first method, recursive least squares algorithm is applied to an overparameterized representation of the Hammerstein model and a rank-1 approximation is used to recover the linear and nonlinear parameters from the estimated overparameterized representation. In the second method, the linear and nonlinear parameters are recursively estimated in an alternate manner. Numerical example with simulated data and experimental data from human muscles show the superiority of second method.},
+  keywords = {recursive identification; Hammerstein system; muscle model; functional electrical stimulation.}
+}
+</pre>
+
+<a name="slra-ext"></a><pre>
+@article{<a href="j.html.html#slra-ext">slra-ext</a>,
+  author = {I. Markovsky and K. Usevich},
+  title = {Structured low-rank approximation with missing data},
+  year = {2013},
+  journal = {SIAM J. Matrix Anal. Appl.},
+  abstract = {We consider low-rank approximation of affinely structured matrices with missing elements. The method proposed is based on reformulation of the problem as inner and outer optimization. The inner minimization is a singular linear least-norm problem and admits an analytic solution. The outer problem is a nonlinear least squares problem and is solved by local optimization methods: minimization subject to quadratic equality constraints and unconstrained minimization with regularized cost function. The method is generalized to weighted low-rank approximation with missing values and is illustrated on approximate low-rank matrix completion, system identification, and data-driven simulation problems. An extended version of the paper is a literate program, implementing the method and reproducing the presented results.},
+  texfile = {\url{~/slra/doc/sslra-ext.nw}}
+}
+</pre>
+
+<a name="ident"></a><pre>
+@article{<a href="j.html.html#ident">ident</a>,
+  author = {I. Markovsky},
+  title = {System identification in the behavioral setting},
+  year = {2013},
+  journal = {Control Engineering Practice},
+  texfile = {~/slra/ident/ident.nw}
+}
+</pre>
+
+<a name="slra-efficient"></a><pre>
+@article{<a href="j.html.html#slra-efficient">slra-efficient</a>,
+  author = {K. Usevich and I. Markovsky},
+  title = {Variable projection for affinely structured low-rank approximation in weighted 2-norm},
+  journal = {J. Comput. Appl. Math.},
+  year = {2013},
+  doi = {10.1016/j.cam.2013.04.034}
+}
+</pre>
+
+<a name="slra-software"></a><pre>
+@article{<a href="j.html.html#slra-software">slra-software</a>,
+  author = {I. Markovsky and K. Usevich},
+  title = {Software for weighted structured low-rank approximation},
+  year = {2012},
+  journal = {J. Comput. Appl. Math. (under review)},
+  texfile = {~/slra/doc/slra.nw}
+}
+</pre>
+
+<a name="VMVS07"></a><pre>
+@article{<a href="j.html.html#VMVS07">VMVS07</a>,
+  author = {S. {Van Huffel} and I. Markovsky and R. J. Vaccaro and T. {S\"oderstr\"om}},
+  title = {Guest editorial: {T}otal least squares and errors-in-variables modeling},
+  journal = {Signal Proc.},
+  year = {2007},
+  volume = {87},
+  optnumber = {10},
+  pages = {2281--2282},
+  month = {October},
+  annote = {Proceedings from the 4th workshop on total least squares and errors-in-variables modeling, Leuven, 2007.}
+}
+</pre>
+
+<hr><p><em>This file was generated by
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.97.</em></p>

@@ -1,0 +1,19 @@
+# jemdoc: menu{MENU}{publications.html}
+
+== Books
+
+#includeraw{b.html}
+
+== Journal papers
+
+#includeraw{j.html}
+
+== Conference papers 
+
+#includeraw{c.html}
+
+== Technical reports
+
+#includeraw{t.html}
+
+

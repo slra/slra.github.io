@@ -1,8 +1,9 @@
 # makefile: SLRA makefile
 all: 
 	./jemdoc.py index.jemdoc
+	./jemdoc.py publications.jemdoc
 	./jemdoc.py software.jemdoc
-	./jemdoc.py drwa13.jemdoc
+	./jemdoc.py news.jemdoc
 pull:
 	git pull origin master	
 push:

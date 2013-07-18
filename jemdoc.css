@@ -336,7 +336,7 @@ img.eqwl {
 }
 
 table {
-    border: 2px solid black;
+    border: none; /* 2px solid black; bibtex2html */
     border-collapse: collapse;
 }
 
@@ -366,3 +366,18 @@ table.imgtable, table.imgtable td {
     text-align: left;
 }
 
+/* Styles for bibtex2html */
+
+td.bibtexitem { 
+  border:none;
+  text-align:left;
+ }
+
+td.bibtexnumber { 
+  border:none;
+  text-align:right;
+ }
+
+p em {
+  display:none; 
+ }
