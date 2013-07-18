@@ -1,0 +1,8 @@
+.noshow { display: none; }
+
+.show {
+	margin-right: 0%;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+//	background: #ffffee;
+}
