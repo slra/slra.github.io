@@ -1,9 +1,68 @@
 # jemdoc: menu{MENU}{software.html}
 # jemdoc: eqsize{200}
-= SLRA: Software for structured low-rank approximation
-[http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky] ([imarkovs@vub.ac.be]) 
-and 
-[http://homepages.vub.ac.be/~kusevich/ Konstantin Usevich] ([kusevich@vub.ac.be]) 
+= SLRA: Software for weighted structured low-rank approximation
+
+This is the MATLAB\/Octave\/R package for structured low-rank approximation problem with the following features:
+- mosaic Hankel structured approximating matrix,
+- weighted 2-norm approximation criterion 
+- fixed elements in the approximating matrix
+- missing elements in the data matrix
+- linear constraints on an approximating matrix's left kernel basis
+
+
+== Download and installation
+
+=== Latest stable version (v0.5)
+- Download [https://github.com/slra/slra/archive/v0.5.zip  ZIP File]
+- Download [https://github.com/slra/slra/archive/v0.5.tar.gz TAR Ball]
+- View on [https://github.com/slra/slra/releases/tag/v0.5 GitHub]
+
+=== Current version (unstable)
+- Download [https://github.com/slra/slra/zipball/master ZIP File]
+- Download [https://github.com/slra/slra/tarball/master TAR Ball]
+- View on [https://github.com/slra/slra GitHub]
+
+=== Documentation
+A up-to-date version of the manual can be found [https://github.com/slra/slra/raw/master/slra.pdf here].
+
+=== Installation
+- For MATLAB\/Octave users:  unpack the archive and use +addpath+ in MATLAB\/Octave
+- For R users (Linux):  unpack the archive and run +make R+ in console
+- For R users (Windows): *TODO!*
+
+
+== First example
+
+~~~
+{Hankel structured low rank approximation problem (small example)}{}
+% Generate data
+np = 50;                            % number of parameters
+p0 = (1:np)'; n = 2                 % true value of the parameter vector
+sigma = 0.1;                        % noise standard deviation
+p  = p0 + sigma * randn(np, 1);          % add disturbance
+c = hankel(p(1:np - n), p(np - n:np));
+a = c(:, 1:n); b = c(:, n + 1);
+
+% Define the structure and solve the problem via SLRA 
+s.m = n+1;
+s.n = np-n;
+s.phi = eye(n+1);
+tic, [p_slra, i_slra] = slra(p, s, n, opt); t_slra = toc
+error_data = norm(p - p0)
+error = norm(p_slra - p0)
+
+% Make the same with a permutation matrix
+I = eye(n + 1); perm = randperm(n + 1); 
+s.phi = I(perm, :);
+tic, [p_slra2, i_slra] = slra(p, s, n, opt); t_slra = toc
+error_data = norm(p - p0)
+error = norm(p_slra2 - p0)
+~~~
+
+More examples can be found in *TODO!*
+
+
+== Mathematics
 
 The package computes locally optimal solutions to low-rank approximation problems 
 \(
@@ -18,12 +77,12 @@ with the following features:
 
 For an $m\times n$ data matrix, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$.
 
-== [slra.pdf Documentation]
+More details can be found in the up-to-date version of the  [https://github.com/slra/slra/raw/master/slra.pdf manual].
 
-== [slra.tgz Download] 
-- [https://github.com/slra/slra source code]
 
 == Citing
+
+Please use the following citation to
 
 ~~~
 {}{}

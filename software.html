@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>SLRA: Software for structured low-rank approximation</title>
+<title>SLRA: Software for weighted structured low-rank approximation</title>
 </head>
 <body>
 <table summary="Table for page layout." id="tlayout">
@@ -19,11 +19,80 @@
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>SLRA: Software for structured low-rank approximation</h1>
-<div id="subtitle"><a href="http://homepages.vub.ac.be/~imarkovs/">Ivan Markovsky</a> (<a href="mailto:imarkovs@vub.ac.be">imarkovs@vub.ac.be</a>) 
-and 
-<a href="http://homepages.vub.ac.be/~kusevich/">Konstantin Usevich</a> (<a href="mailto:kusevich@vub.ac.be">kusevich@vub.ac.be</a>) </div>
+<h1>SLRA: Software for weighted structured low-rank approximation</h1>
 </div>
+<p>This is the MATLAB/Octave/R package for structured low-rank approximation problem with the following features:</p>
+<ul>
+<li><p>mosaic Hankel structured approximating matrix,</p>
+</li>
+<li><p>weighted 2-norm approximation criterion </p>
+</li>
+<li><p>fixed elements in the approximating matrix</p>
+</li>
+<li><p>missing elements in the data matrix</p>
+</li>
+<li><p>linear constraints on an approximating matrix's left kernel basis</p>
+</li>
+</ul>
+<h2>Download and installation</h2>
+<h3>Latest stable version (v0.5)</h3>
+<ul>
+<li><p>Download <a href="https://github.com/slra/slra/archive/v0.5.zip">ZIP File</a></p>
+</li>
+<li><p>Download <a href="https://github.com/slra/slra/archive/v0.5.tar.gz">TAR Ball</a></p>
+</li>
+<li><p>View on <a href="https://github.com/slra/slra/releases/tag/v0.5">GitHub</a></p>
+</li>
+</ul>
+<h3>Current version (unstable)</h3>
+<ul>
+<li><p>Download <a href="https://github.com/slra/slra/zipball/master">ZIP File</a></p>
+</li>
+<li><p>Download <a href="https://github.com/slra/slra/tarball/master">TAR Ball</a></p>
+</li>
+<li><p>View on <a href="https://github.com/slra/slra">GitHub</a></p>
+</li>
+</ul>
+<h3>Documentation</h3>
+<p>A up-to-date version of the manual can be found <a href="https://github.com/slra/slra/raw/master/slra.pdf">here</a>.</p>
+<h3>Installation</h3>
+<ul>
+<li><p>For MATLAB/Octave users:  unpack the archive and use <tt>addpath</tt> in MATLAB/Octave</p>
+</li>
+<li><p>For R users (Linux):  unpack the archive and run <tt>make R</tt> in console</p>
+</li>
+<li><p>For R users (Windows): <b>TODO!</b></p>
+</li>
+</ul>
+<h2>First example</h2>
+<div class="codeblock">
+<div class="blocktitle">Hankel structured low rank approximation problem (small example)</div>
+<div class="blockcontent"><pre>
+% Generate data
+np = 50;                            % number of parameters
+p0 = (1:np)'; n = 2                 % true value of the parameter vector
+sigma = 0.1;                        % noise standard deviation
+p  = p0 + sigma * randn(np, 1);          % add disturbance
+c = hankel(p(1:np - n), p(np - n:np));
+a = c(:, 1:n); b = c(:, n + 1);
+
+% Define the structure and solve the problem via SLRA
+s.m = n+1;
+s.n = np-n;
+s.phi = eye(n+1);
+tic, [p_slra, i_slra] = slra(p, s, n, opt); t_slra = toc
+error_data = norm(p - p0)
+error = norm(p_slra - p0)
+
+% Make the same with a permutation matrix
+I = eye(n + 1); perm = randperm(n + 1);
+s.phi = I(perm, :);
+tic, [p_slra2, i_slra] = slra(p, s, n, opt); t_slra = toc
+error_data = norm(p - p0)
+error = norm(p_slra2 - p0)
+</pre></div></div>
+<p>More examples can be found in <b>TODO!</b></p>
+<h2>Mathematics</h2>
 <p>The package computes locally optimal solutions to low-rank approximation problems </p>
 
 <div class="eqwl"><img class="eqwl" src="eqs/629179561238737992-200.png" alt=" minimize quad over  widehat p quad ||p - widehat p||_w quad subject  to quad rank({cal S}(widehat p)) leq r  " />
@@ -41,13 +110,9 @@ and
 </li>
 </ul>
 <p>For an <img class="eq" src="eqs/3187889088634215596-200.png" alt="mtimes n" style="vertical-align: -1px" /> data matrix, with <img class="eq" src="eqs/310184670480442714-200.png" alt="m &lt; n" style="vertical-align: -2px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/5400137134684481330-200.png" alt="O(m^2n)" style="vertical-align: -7px" />, so that the package is suitable for applications with <img class="eq" src="eqs/3312475274443383293-200.png" alt="ngg m" style="vertical-align: -2px" />.</p>
-<h2><a href="slra.pdf">Documentation</a></h2>
-<h2><a href="slra.tgz">Download</a> </h2>
-<ul>
-<li><p><a href="https://github.com/slra/slra">source code</a></p>
-</li>
-</ul>
+<p>More details can be found in the up-to-date version of the  <a href="https://github.com/slra/slra/raw/master/slra.pdf">manual</a>.</p>
 <h2>Citing</h2>
+<p>Please use the following citation to</p>
 <div class="codeblock">
 <div class="blockcontent"><pre>
 @TechReport{slra-software,
@@ -61,7 +126,7 @@ and
 </pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2013-07-18 12:27:06 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2013-07-18 13:01:17 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </td>
