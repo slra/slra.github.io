@@ -1,4 +1,0 @@
-- *Tensor estimation in reproducing kernel Hilbert spaces with applications*
-~~~
-  Recently there has been an increasing interest in the cross-fertilization of ideas coming from (convex) optimization, kernel methods and tensor-based techniques. In this talk we discuss the estimation of tensors from data in the unifying framework of reproducing kernel Hilbert spaces (RKHSs). The methodology is based on a multilinear generalization of spectral penalties and relies on a novel representer theorem. When the RKHS is defined on the Cartesian product of finite sets, our problem formulation specializes into existing matrix and tensor completion problems. Additionally, the approach leads to the extension of kernel-based frameworks based on operator estimation. This includes multi-task learning, collaborative filtering and regularization networks. We illustrate applications and highlight the advantages with respect to the existing learning techniques.
-~~~

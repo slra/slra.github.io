@@ -1,4 +1,0 @@
-- *Low multilinear rank approximation of tensors by structured matrix low-rank approximation*
-~~~
-We first consider symmetric higher-order tensors and discuss a novel way to perform symmetric low multilinear rank approximation. Instead of representing the approximation as a product of factors with reduced dimensions, we make use of the fact that a matrix is rank deficient if it has nonzero null space (nonzero kernel). We show how to reformulate the tensor approximation problem as structured matrix low-rank approximation. In addition, by imposing a constraint on the kernel matrix of the approximation, our approach is applicable to general (non-symmetric) tensors. Finally, we deal with affinely structured tensors and obtain (locally) best low multilinear approximation with the same structure. 
-~~~

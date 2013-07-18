@@ -1,4 +1,0 @@
-- *Low-rank approximation problems in system identification*
-~~~
-The notion of linear time-invariant model complexity is quantified and related to the rank of a mosaic Hankel matrix constructed from a set of trajectories of the system. This fact makes mosaic Hankel structured low-rank approximation (SLRA) a powerful tool for linear time-invariant system identification. It was shown in the past that errors-in-variables and output error identification problem with known noise covariance structure can be solved by generic SLRA methods. The SLRA approach has attractive numerical properties and can deal with exact and missing data values. Finally, we present work in progress on solving auto-regressive moving-average exogenous identification problems by SLRA.
-~~~
