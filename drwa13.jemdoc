@@ -1,7 +1,6 @@
-# jemdoc: menu{MENU}{drwa13.html}, addjs{toggle}, addcss{toggle}
+# jemdoc: addjs{toggle}, addcss{toggle}
 = Program for the working group on low-rank approximation
 within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--13, 2013.
-
 
 == Monday 
 - 11:00-12:00: [http://www.ece.neu.edu/ece/index.php/component/content/123?task=view Mario Sznaier]
