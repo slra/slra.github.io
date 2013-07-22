@@ -26,7 +26,8 @@
 \end{itemize}
 It implements a variable projection type algorithm and allows the user to choose standard local optimization methods for the solution of the parameter optimization problem. For an $m\times n$ data matrix, with $n>m$, the computational complexity of the cost function and derivative evaluation is~$O(m^2n)$. The package is suitable for applications with $n\gg m$. In statistical estimation and data modeling---the main application areas of the package---$n\gg m$ corresponds to modeling of large amount of data by a low-complexity model. Performance results on benchmark system identification problems from the database DAISY and approximate common divisor problems are presented.},
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf</a>}
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf</a>},
+  note = {Submitted on 06/2012 to the Journal }
 }
 </pre>
 
@@ -36,6 +37,7 @@ It implements a variable projection type algorithm and allows the user to choose
   title = {Recent progress on structured low-rank approximation},
   institution = {Vrije Univ. Brussel},
   year = {2013},
+  note = {Submitted on 16/05/2013 to {\em Signal Processing}},
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf">http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf</a>}
 }
@@ -46,6 +48,7 @@ It implements a variable projection type algorithm and allows the user to choose
   author = {I. Markovsky and J. Goos and K. Usevich and R. Pintelon},
   title = {Subspace identification of autonomous linear periodically time-varying systems},
   institution = {Vrije Univ. Brussel},
+  note = {Submitted on 03/2013 to {\em Automatica}.},
   year = {2013}
 }
 </pre>
@@ -64,6 +67,7 @@ It implements a variable projection type algorithm and allows the user to choose
   author = {K. Usevich and I. Markovsky},
   title = {Variable projection methods for approximate (greatest) common divisor computations},
   year = {2013},
+  note = {Submitted on 25/04/2013 to {\em Journal of Symbolic Computation}.},
   institution = {Vrije Univ. Brussel},
   url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
   pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>}
@@ -73,9 +77,11 @@ It implements a variable projection type algorithm and allows the user to choose
 <a name="UM12autart"></a><pre>
 @techreport{<a href="t.html#UM12autart">UM12autart</a>,
   author = {K. Usevich and I. Markovsky},
-  title = {Optimization on a Grassmann manifold with application to system identification},
+  title = {Optimization on a {G}rassmann manifold with application to system identification},
   institution = {Vrije Univ. Brussel},
+  note = {Submitted on 03/2013 to {\em Automatica}.},
   year = {2012},
+  pdf = {<a href="http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf">http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf</a>},
   url = {<a href="http://homepages.vub.ac.be/~kusevich/preprints.html">http://homepages.vub.ac.be/~kusevich/preprints.html</a>},
   abstract = {In this paper, we consider the problem of optimization of a cost function on a Grassmann manifold. This problem appears in system identification in the behavioral setting, which is a structured low-rank approximation problem. We develop a new method for local optimization on the Grassmann manifold with switching coordinate charts. This method reduces the optimization problem on the manifold to an optimization problem in a bounded domain of an Euclidean space. Our experiments show that this method is competitive with state- of-the-art retraction-based methods. Compared to retraction-based methods, the proposed method allows to incorporate easily an arbitrary optimization method for solving the optimization subproblem in the Euclidean space.},
   keywords = {system identification, over-parameterized models, Grassmann manifold, coordinate charts, structured low-rank approximation, optimization}
@@ -88,7 +94,7 @@ It implements a variable projection type algorithm and allows the user to choose
   title = {Regularized structured low-rank approximation},
   number = {},
   year = {2013},
-  note = {submitted},
+  note = {Submitted 25/07/2013 to {\em SIAM J. Matrix Anal. Appl.}},
   keywords = {low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor},
   abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed algorithms is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We also show how it compares to existing approaches on some numerical examples.}
 }
@@ -100,7 +106,7 @@ It implements a variable projection type algorithm and allows the user to choose
   title = {Bounded Matrix Factorization for Recommender System},
   number = {},
   year = {2013},
-  note = {submitted},
+  optnote = {submitted},
   keywords = {low rank approximation, recommender systems, bound constraints, matrix factorization, block coordinate descent method, scalable algorithm},
   abstract = {Matrix factorization has been widely utilized as a latent-factor model for solving the recommender system problem using collaborative filtering. For a recommender system, all the ratings in the rating matrix are bounded within $[r_{min},r_{max}]$. In this paper, we propose a new improved matrix factorization approach for such a rating matrix, called  Bounded Matrix Factorization (BMF) which imposes a lower and an upper bound on every estimated missing element of the rating matrix. We present an efficient algorithm to solve BMF based on the block coordinate descent method. We show that our algorithm is scalable for large matrices with missing elements on multi core systems with low memory. We present substantial experimental results illustrating that the proposed method  outperforms the state of the art algorithms for recommender system such as Stochastic Gradient Descent, Alternating Least Squares with regularization, SVD++ and Bias-SVD on real world data sets such as Jester, Movielens, Book crossing, Online dating and Netflix.}
 }
