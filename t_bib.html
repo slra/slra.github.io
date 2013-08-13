@@ -9,28 +9,6 @@
 }
 </pre>
 
-<a name="slra-software"></a><pre>
-@techreport{<a href="t.html#slra-software">slra-software</a>,
-  author = {I. Markovsky and K. Usevich},
-  title = {Software for weighted structured low-rank approximation},
-  year = {2012},
-  institution = {Vrije Univ. Brussel},
-  journal = {J. Comput. Appl. Math. (under review)},
-  abstract = {A software package is presented that computes locally optimal solutions to low-rank approximation problems with the following features:
-\begin{itemize}
-\item {\em mosaic Hankel structure\/} constraint on the approximating matrix,
-\item {\em weighted 2-norm\/} approximation criterion,
-\item {\em fixed elements\/} in the approximating matrix,
-\item {\em missing elements\/} in the data matrix, and
-\item {\em linear constraints\/} on an approximating matrix's left kernel basis.
-\end{itemize}
-It implements a variable projection type algorithm and allows the user to choose standard local optimization methods for the solution of the parameter optimization problem. For an $m\times n$ data matrix, with $n>m$, the computational complexity of the cost function and derivative evaluation is~$O(m^2n)$. The package is suitable for applications with $n\gg m$. In statistical estimation and data modeling---the main application areas of the package---$n\gg m$ corresponds to modeling of large amount of data by a low-complexity model. Performance results on benchmark system identification problems from the database DAISY and approximate common divisor problems are presented.},
-  url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf</a>},
-  note = {Submitted on 06/2012 to the {\em Journal of Computational and Applied Mathematics}}
-}
-</pre>
-
 <a name="overview"></a><pre>
 @techreport{<a href="t.html#overview">overview</a>,
   author = {I. Markovsky},
@@ -50,7 +28,9 @@ It implements a variable projection type algorithm and allows the user to choose
   title = {Subspace identification of autonomous linear periodically time-varying systems},
   institution = {Vrije Univ. Brussel},
   note = {Submitted on 03/2013 to {\em Automatica}.},
-  year = {2013}
+  year = {2013},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev.pdf">http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev.pdf</a>},
+  abstract = {Subsampling of a linear periodically time-varying system results in a collection of linear time-invariant systems with common poles. This key fact, known as ``lifting'', is used in a two step realization method. The first step is the realization of the time-invariant dynamics (the lifted system). Computationally, this step is a rank-revealing factorization of a block-Hankel matrix. The second step derives a state space representation of the periodic time-varying system. It is shown that no extra computations are required in the second step. The computational complexity of the overall method is therefore equal to the complexity for the realization of the lifted system. A modification of the realization method is proposed, which makes the complexity independent of the parameter variation period. Replacing the rank-revealing factorization in the realization algorithm by structured low-rank approximation yields a maximum likelihood identification method. Existing methods for structured low-rank approximation are used to identify efficiently linear periodically time-varying system.}
 }
 </pre>
 
@@ -71,7 +51,8 @@ It implements a variable projection type algorithm and allows the user to choose
   note = {Submitted on 25/04/2013 to {\em Journal of Symbolic Computation}.},
   institution = {Vrije Univ. Brussel},
   url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
-  pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>}
+  pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>},
+  abstract = {We consider the problem of finding for a given $N$-tuple of polynomials the closest $N$-tuple that has a common divisor of degree at least $d$. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either $d$ is small or $d$ is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.}
 }
 </pre>
 
@@ -89,15 +70,15 @@ It implements a variable projection type algorithm and allows the user to choose
 }
 </pre>
 
-<a name="IshUseMar13"></a><pre>
-@techreport{<a href="t.html#IshUseMar13">IshUseMar13</a>,
+<a name="rslra"></a><pre>
+@techreport{<a href="t.html#rslra">rslra</a>,
   author = {M. Ishteva and K. Usevich and I. Markovsky},
   title = {Regularized structured low-rank approximation},
-  number = {},
   year = {2013},
-  note = {Submitted on 25/07/2013 to {\em SIAM J. Matrix Anal. Appl.}},
+  institution = {Vrije Univ. Brussel},
+  note = {Submitted on 02/08/2013 to {\em SIAM J. Matrix Anal. Appl.}},
   keywords = {low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor},
-  abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed algorithms is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We also show how it compares to existing approaches on some numerical examples.}
+  abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.}
 }
 </pre>
 
@@ -114,4 +95,4 @@ It implements a variable projection type algorithm and allows the user to choose
 </pre>
 
 <hr><p><em>This file was generated by
-<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.97.</em></p>
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.96.</em></p>

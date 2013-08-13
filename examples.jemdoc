@@ -1,0 +1,83 @@
+# jemdoc: menu{MENU}{software.html}, showsource
+# jemdoc: eqs, eqsize{150} 
+# jemdoc: addpackage{amsmath}
+# jemdoc: addpackage{mathdots}
+# jemdoc: addpackage{amsfonts}
+# jemdoc: addpackage{times}
+# jemdoc: addpackage{mathptmx}
+# jemdoc: analytics{ANALYTICS KEY}
+= Examples
+
+== Hankel matrix
+\(
+{\cal H}_{m,n}(p) :=
+\left[\begin{array}{ccccc} 
+p_1 & p_2 & p_3 & \cdots &  p_n \\
+p_2 & p_3 &    \iddots          & & p_{n+1} \\
+p_3 &  \iddots            &       &              &  \vdots\\
+\vdots              &               &      &        &  \\
+p_m & p_{m+1}             &  \cdots                  &  & p_{m+n-1}
+\end{array}\right]  \in \mathbb{R}^{m\times n}
+\)
+is specified in MATLAB/Octave by a structure variable with fields +m+ (number of rows) and, optionally, +n+ (number of columns):
+~~~
+{}{}
+s.m = m; s.n = n;
+~~~
+If +s.n+ is missing, the number of columns is determined from the length $n_p$ of $p$ as $n = n_p - m  + 1$.
+
+== Mosaic Hankel matrix
+
+A mosaic Hankel matrix
+\(
+{\cal H}_{\mathbf{m},\mathbf{n}} := 
+\left[\begin{array}{ccc}
+{\cal H}_{m_1,n_1}(p^{(11)})     & \cdots & {\cal H}_{m_1,n_N}(p^{(1N)}) \\ 
+\vdots                    &        & \vdots \\ 
+{\cal H}_{m_q,n_1}(p^{(q1)})     & \cdots & {\cal H}_{m_q,n_N}(p^{(qN)}) 
+\end{array}\right] 
+\)
+is specified by the vectors 
+\(
+\mathbf{m} = \begin{bmatrix} m_1& \cdots & m_q \end{bmatrix}, \qquad
+\mathbf{n} = \begin{bmatrix} n_1& \cdots& n_N \end{bmatrix}.
+\)
+For example, with $q = N = 2$,
+~~~
+{}{}
+s.m = [m1; m2]; s.n = [n1; n2];
+~~~
+
+== Unstructured matrix
+
+An $m\times n$ unstructured matrix is a special case of a mosaic Hankel matrix and is specified by
+~~~
+{}{}
+s.m = ones(m, 1); s.n = ones(n, 1); 
+~~~
+
+== Weight vector
+
+The vector $w$ of weights is considered part of the structure and is specified by a filed +w+ of +s+:
+~~~
+{}{}
+s.w = w;
+~~~
+
+== Exact elements
+
+Exact elements of $p$, i.e., constraints $\widehat p_i = p_i$, are specifies by infinite weights:
+~~~
+{}{}
+s.w(I_exact) = inf;
+~~~
+where +I_exct+ are the indeces of the exact elements of $p$.
+
+== Missing elements
+
+Missing elements of $p$ are specified by setting them to +NaN+:
+~~~
+{}{}
+p(I_missing) = NaN;
+~~~
+where +I_imssing+ are the indeces of the missing elements of $p$.

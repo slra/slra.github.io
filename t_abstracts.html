@@ -31,8 +31,12 @@ I.&nbsp;Markovsky, J.&nbsp;Goos, K.&nbsp;Usevich, and R.&nbsp;Pintelon.
   time-varying systems.
  Technical report, Vrije Univ. Brussel, 2013.
  Submitted on 03/2013 to <em>Automatica</em>.
-[&nbsp;<a href="t_bib.html#pltv">bib</a>&nbsp;]
-
+[&nbsp;<a href="t_bib.html#pltv">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev.pdf">pdf</a>&nbsp;]
+<blockquote>
+Subsampling of a linear periodically time-varying system results in a collection of linear time-invariant systems with common poles. This key fact, known as &ldquo;lifting&rdquo;, is used in a two step realization method. The first step is the realization of the time-invariant dynamics (the lifted system). Computationally, this step is a rank-revealing factorization of a block-Hankel matrix. The second step derives a state space representation of the periodic time-varying system. It is shown that no extra computations are required in the second step. The computational complexity of the overall method is therefore equal to the complexity for the realization of the lifted system. A modification of the realization method is proposed, which makes the complexity independent of the parameter variation period. Replacing the rank-revealing factorization in the realization algorithm by structured low-rank approximation yields a maximum likelihood identification method. Existing methods for structured low-rank approximation are used to identify efficiently linear periodically time-varying system.
+</blockquote>
+<p>
 </td>
 </tr>
 
@@ -50,23 +54,26 @@ K.&nbsp;Usevich and I.&nbsp;Markovsky.
 [&nbsp;<a href="t_bib.html#slra-agcd">bib</a>&nbsp;| 
 <a href="http://arxiv.org/pdf/1304.6962v1">pdf</a>&nbsp;| 
 <a href="http://arxiv.org/abs/1304.6962">http</a>&nbsp;]
-
+<blockquote>
+We consider the problem of finding for a given <em>N</em>-tuple of polynomials the closest <em>N</em>-tuple that has a common divisor of degree at least <em>d</em>. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either <em>d</em> is small or <em>d</em> is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.
+</blockquote>
+<p>
 </td>
 </tr>
 
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="IshUseMar13">4</a>]
+[<a name="rslra">4</a>]
 </td>
 <td class="bibtexitem">
 M.&nbsp;Ishteva, K.&nbsp;Usevich, and I.&nbsp;Markovsky.
  Regularized structured low-rank approximation.
- Technical report, 2013.
- Submitted on 25/07/2013 to <em>SIAM J. Matrix Anal. Appl.</em>
-[&nbsp;<a href="t_bib.html#IshUseMar13">bib</a>&nbsp;]
+ Technical report, Vrije Univ. Brussel, 2013.
+ Submitted on 02/08/2013 to <em>SIAM J. Matrix Anal. Appl.</em>
+[&nbsp;<a href="t_bib.html#rslra">bib</a>&nbsp;]
 <blockquote>
-We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed algorithms is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We also show how it compares to existing approaches on some numerical examples.
+We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.
 </blockquote>
 <p><blockquote>
 Keywords: low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor
@@ -98,36 +105,7 @@ Keywords: low rank approximation, recommender systems, bound constraints, matrix
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="slra-software">6</a>]
-</td>
-<td class="bibtexitem">
-I.&nbsp;Markovsky and K.&nbsp;Usevich.
- Software for weighted structured low-rank approximation.
- Technical report, Vrije Univ. Brussel, 2012.
- Submitted on 06/2012 to the <em>Journal of Computational and Applied
-  Mathematics</em>.
-[&nbsp;<a href="t_bib.html#slra-software">bib</a>&nbsp;| 
-<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">pdf</a>&nbsp;| 
-<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">.html</a>&nbsp;]
-<blockquote>
-A software package is presented that computes locally optimal solutions to low-rank approximation problems with the following features:
-<p><ul>
-<em>mosaic Hankel structure</em> constraint on the approximating matrix,
-<em>weighted 2-norm</em> approximation criterion,
-<em>fixed elements</em> in the approximating matrix,
-<em>missing elements</em> in the data matrix, and
-<em>linear constraints</em> on an approximating matrix's left kernel basis.
-</ul>
-It implements a variable projection type algorithm and allows the user to choose standard local optimization methods for the solution of the parameter optimization problem. For an <em>m</em>&#215;<em>n</em> data matrix, with <em>n</em>&gt;<em>m</em>, the computational complexity of the cost function and derivative evaluation is&nbsp;<em>O</em>(<em>m</em><sup>2</sup><em>n</em>). The package is suitable for applications with <em>n</em><em>m</em>. In statistical estimation and data modeling-the main application areas of the package-<em>n</em><em>m</em> corresponds to modeling of large amount of data by a low-complexity model. Performance results on benchmark system identification problems from the database DAISY and approximate common divisor problems are presented.
-</blockquote>
-<p>
-</td>
-</tr>
-
-
-<tr valign="top">
-<td align="right" class="bibtexnumber">
-[<a name="UM12autart">7</a>]
+[<a name="UM12autart">6</a>]
 </td>
 <td class="bibtexitem">
 K.&nbsp;Usevich and I.&nbsp;Markovsky.
@@ -148,4 +126,4 @@ Keywords: system identification, over-parameterized models, Grassmann manifold, 
 </td>
 </tr>
 </table><hr><p><em>This file was generated by
-<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.97.</em></p>
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.96.</em></p>

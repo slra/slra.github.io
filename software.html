@@ -12,26 +12,48 @@
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-item"><a href="index.html">Overview</a></div>
+<div class="menu-item"><a href="software.html" class="current">Software</a></div>
 <div class="menu-item"><a href="publications.html">Publications</a></div>
 <div class="menu-item"><a href="presentations.html">Presentations</a></div>
-<div class="menu-item"><a href="software.html" class="current">Software</a></div>
+<div class="menu-item"><a href="http://homepages.vub.ac.be/~imarkovs/doctoral-school.html">Lectures</a></div>
 <div class="menu-item"><a href="drwa13.html">DRWA&nbsp;2013</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
 <h1>SLRA: Software for weighted structured low-rank approximation</h1>
 </div>
-<p>This is the MATLAB/Octave/R package for structured low-rank approximation problem with the following features:</p>
+<h2>Overview</h2>
+<p>SLRA is a C<tt></tt> software with interface to MATLAB, Octave, and R for solving low-rank approximation problems</p>
+
+<div class="eqwl"><img class="eqwl" src="eqs/1629822693081112490-150.png" alt=" text{minimize} quad text{over}  widehat p quad |p - widehat p|_w quad text{subject to} quad text{rank}({cal S}(widehat p)) leq r, " />
+<br /></div><p>with the following features:</p>
 <ul>
-<li><p>mosaic Hankel structured approximating matrix,</p>
+<li><p><a href="examples">mosaic Hankel structured</a> approximating matrix <img class="eq" src="eqs/9133601666111744340-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />,</p>
 </li>
 <li><p>weighted 2-norm approximation criterion </p>
 </li>
-<li><p>fixed elements in the approximating matrix</p>
+</ul>
+
+<div class="eqwl"><img class="eqwl" src="eqs/1062761975630790230-150.png" alt=" |p|_w = textstylesqrt{sum_{i=1}^{n_p} w_i p_i^2}, " />
+<br /></div><ul>
+<li><p>fixed elements in the approximating matrix,</p>
 </li>
-<li><p>missing elements in the data matrix</p>
+<li><p>missing elements in the data matrix,</p>
 </li>
-<li><p>linear constraints on an approximating matrix's left kernel basis</p>
+<li><p>linear constraints on an approximating matrix's left kernel basis.</p>
+</li>
+</ul>
+<p>For an <img class="eq" src="eqs/3187889088634215596-150.png" alt="mtimes n" style="vertical-align: -1px" /> matrix <img class="eq" src="eqs/9133601666111744340-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />, with <img class="eq" src="eqs/310184670480442714-150.png" alt="m &lt; n" style="vertical-align: -1px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/5400137134684481330-150.png" alt="O(m^2n)" style="vertical-align: -6px" />, so that the package is suitable for applications with <img class="eq" src="eqs/3312475274443383293-150.png" alt="ngg m" style="vertical-align: -2px" />. Problems with <img class="eq" src="eqs/4307665416819844441-150.png" alt="n_p leq n(m - r)" style="vertical-align: -7px" /> can not be solved by the method, used in the software.</p>
+<h2>Usage</h2>
+<p>In MATLAB/Octave, once the structure and approximation criterion are specified in a variable <tt>s</tt> (see <a href="examples.html">examples</a> and the <a href="https://github.com/slra/slra/raw/master/slra.pdf">manual</a>), the problem is solved by a call of the <tt>slra</tt> function: </p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+[ph, info] = slra(p, s, r, opt);
+</pre></div></div>
+<ul>
+<li><p>The optional parameter <tt>opt</tt> is used to specify an initial approximation and options for the optimization method. </p>
+</li>
+<li><p>The output parameter <tt>info</tt> contains information about the convergence of the optimization method.</p>
 </li>
 </ul>
 <h2>Download and installation</h2>
@@ -53,80 +75,28 @@
 <li><p>View on <a href="https://github.com/slra/slra">GitHub</a></p>
 </li>
 </ul>
-<h3>Documentation</h3>
-<p>A up-to-date version of the manual can be found <a href="https://github.com/slra/slra/raw/master/slra.pdf">here</a>.</p>
 <h3>Installation</h3>
 <ul>
 <li><p>For MATLAB/Octave users:  unpack the archive and use <tt>addpath</tt> in MATLAB/Octave</p>
 </li>
-<li><p>For R users (Linux):  unpack the archive and run <tt>make R</tt> in console</p>
-</li>
-<li><p>For R users (Windows): <b>TODO!</b></p>
-</li>
-</ul>
-<h2>First example</h2>
-<div class="codeblock">
-<div class="blocktitle">Hankel structured low rank approximation problem (small example)</div>
-<div class="blockcontent"><pre>
-% Generate data
-np = 50;                            % number of parameters
-p0 = (1:np)'; n = 2                 % true value of the parameter vector
-sigma = 0.1;                        % noise standard deviation
-p  = p0 + sigma * randn(np, 1);          % add disturbance
-c = hankel(p(1:np - n), p(np - n:np));
-a = c(:, 1:n); b = c(:, n + 1);
-
-% Define the structure and solve the problem via SLRA
-s.m = n+1;
-s.n = np-n;
-s.phi = eye(n+1);
-tic, [p_slra, i_slra] = slra(p, s, n, opt); t_slra = toc
-error_data = norm(p - p0)
-error = norm(p_slra - p0)
-
-% Make the same with a permutation matrix
-I = eye(n + 1); perm = randperm(n + 1);
-s.phi = I(perm, :);
-tic, [p_slra2, i_slra] = slra(p, s, n, opt); t_slra = toc
-error_data = norm(p - p0)
-error = norm(p_slra2 - p0)
-</pre></div></div>
-<p>More examples can be found in <b>TODO!</b></p>
-<h2>Mathematics</h2>
-<p>The package computes locally optimal solutions to low-rank approximation problems </p>
-
-<div class="eqwl"><img class="eqwl" src="eqs/629179561238737992-200.png" alt=" minimize quad over  widehat p quad ||p - widehat p||_w quad subject  to quad rank({cal S}(widehat p)) leq r  " />
-<br /></div><p>with the following features:</p>
-<ul>
-<li><p>mosaic Hankel structured approximating matrix <img class="eq" src="eqs/9133601666111744340-200.png" alt="{cal S}(widehat p)" style="vertical-align: -7px" />,</p>
-</li>
-<li><p>weighted 2-norm approximation criterion <img class="eq" src="eqs/8146405997343856945-200.png" alt="||cdot||_w" style="vertical-align: -7px" />,</p>
-</li>
-<li><p>fixed elements in the approximating matrix,</p>
-</li>
-<li><p>missing elements in the data matrix, and</p>
-</li>
-<li><p>linear constraints on an approximating matrix's left kernel basis.</p>
+<li><p>For R users (Linux):  unpack the archive and run <tt>make R</tt> in console
+</p>
 </li>
 </ul>
-<p>For an <img class="eq" src="eqs/3187889088634215596-200.png" alt="mtimes n" style="vertical-align: -1px" /> data matrix, with <img class="eq" src="eqs/310184670480442714-200.png" alt="m &lt; n" style="vertical-align: -2px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/5400137134684481330-200.png" alt="O(m^2n)" style="vertical-align: -7px" />, so that the package is suitable for applications with <img class="eq" src="eqs/3312475274443383293-200.png" alt="ngg m" style="vertical-align: -2px" />.</p>
-<p>More details can be found in the up-to-date version of the  <a href="https://github.com/slra/slra/raw/master/slra.pdf">manual</a>.</p>
 <h2>Citing</h2>
-<p>Please use the following citation to</p>
 <div class="codeblock">
 <div class="blockcontent"><pre>
-@TechReport{slra-software,
+@Article{slra-software,
   author = 	 {I. Markovsky and K. Usevich},
   title = 	 {Software for weighted structured low-rank approximation},
-  institution =  {Univ. of Southampton},
-  year = 	 {2012},
-  number = 	 {339974},
-  address =      {\url{http://eprints.soton.ac.uk/339974}},
+  year = 	 {2013},
+  journal =      {J. Comput. Appl. Math.},
 }
 </pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2013-07-25 12:22:53 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2013-08-13 10:28:41 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+(<a href="software.jemdoc">source</a>)
 </div>
 </div>
 </td>

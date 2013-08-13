@@ -1,26 +1,32 @@
 # jemdoc: menu{MENU}{presentations.html}
 = Presentations
 
+== 2014
+
+- [http://sites.uclouvain.be/socn/Courses/Courses2013-4 SOCN lectures], to be given on 4, 7, 11, 14, 18, and 21 March, at K.U.Leuven.
+
 == 2013
 
+- Low rank approximations and its applications in system identification and signal processing\n
+Plenary lecture at the [ http://sites.uclouvain.be/dysco/ Study day of the IAP network on Dynamical Systems, Control and Optimization], November 22.
 - [drwa13.html Workshop on low-rank approximation]\n
 Takes place within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--11.
-- Regularized structured low-rank approximation\n 
+- [http://homepages.vub.ac.be/~mishteva/selected_presentations/regularized_slra_poster.pdf Regularized structured low-rank approximation]\n 
 Poster presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Jul. 8–10, Leuven, Belgium.
 - [http://homepages.vub.ac.be/~kusevich/slides/UsevichMarkovskyROKS201322.pdf Structured low-rank approximation as optimization on a Grassmann manifold]\n
 Talk presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Jul. 8–10, Leuven, Belgium.
 - [http://homepages.vub.ac.be/~imarkovs/doctoral-school.html ELEC/VUB Doctoral school lectures], May 28--19, Brussels, Belgium.
-- Tensors and graphical models\n
+- [http://homepages.vub.ac.be/~mishteva/selected_presentations/tensor_graphicalmodels_slides.pdf Tensors and graphical models]\n
 Talk given at the [http://www.uclouvain.be/11245.html Seminars in systems and control], May 7, Louvain-La-Neuve, Belgium.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_DYSCO2013.pdf Variable projection methods for approximate (greatest) common divisor computations]\n
 Poster presented at the [http://sites.uclouvain.be/dysco/StudyDays/2013-may IAP DYSCO Study day], May 24, Mons, Belguim.
-- Regularized structured low-rank approximation\n 
+- [http://homepages.vub.ac.be/~mishteva/selected_presentations/regularized_slra_poster.pdf Regularized structured low-rank approximation]\n 
 Poster presented at the [http://sites.uclouvain.be/dysco/StudyDays/2013-may IAP DYSCO Study day], May 24, Mons, Belguim.
 - [http://homepages.vub.ac.be/~imarkovs/talks/liege.pdf Data-driven modeling: A low-rank approximation problem]\n
 Presented at the [http://www.montefiore.ulg.ac.be/services/stochastic/new/cmsimple/index.php?Events Systems and Modeling group seminar], Liege, March 29.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_BMSC_2013.pdf Optimization on the Grassmann manifold: a case study]\n
 Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
-- Regularized structured low-rank approximation\n 
+- [http://homepages.vub.ac.be/~mishteva/selected_presentations/regularized_slra_slides.pdf Regularized structured low-rank approximation]\n 
 Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
 - [http://homepages.vub.ac.be/~imarkovs/talks/benelux13.pdf System identification in the behavioral setting]\n
 Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
@@ -32,9 +38,9 @@ Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and C
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Cardiff12_slides.pdf Structured low-rank approximation and variable projection]\n
 [http://cardiff.ac.uk/maths/newsandevents/events/seminars/statistics/ Statistics and Operations Research seminar], School of Mathematics, 2 October, Cardiff University, UK.
 - System identification with missing data\n
-Poster presented at the [http://www.ernsi2012.tue.nl/ 2012 Workshop of the European Research Network on System Identification], Maastricht, The Netherlands, 25 September.
+Poster presented at the [http://www.ernsi2012.tue.nl/ Workshop of the European Research Network on System Identification], Maastricht, The Netherlands, 25 September.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_ERNSI2012.pdf Fast algorithms and software for weighted mosaic Hankel low-rank approximation]\n
-Poster at the [http://www.ernsi2012.tue.nl/ 2012 Workshop of the European Research Network on System Identification], Maastricht, The Netherlands, 24 September.
+Poster at the [http://www.ernsi2012.tue.nl/ Workshop of the European Research Network on System Identification], Maastricht, The Netherlands, 24 September.
 - [http://homepages.vub.ac.be/~imarkovs/talks/cambridge11.pdf Hankel structured low-rank matrix completion]\n
 Presented at the
 [http://www.esat.kuleuven.be/scd/event.php?view=1&id=1674 SISTA Seminar], K.U.Leuven, 19 September.
@@ -47,10 +53,9 @@ Poster presented at the
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_SYSID_2012.pdf Structured low-rank approximation as a rational function minimization]\n
 Presented at the [http://www.sysid2012.org/ 16th IFAC Symposium on System Identification], Brussels, Belgium, 11--13 July.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_MED2012.pdf Improved initial approximation for errors-in-variables system identification]\n
-Presented at the [http://med12.esaii.upc.edu/ 20th Mediterranean Conference on Control and Automation], Barcelona, Spain, 3--6 July 2012.
+Presented at the [http://med12.esaii.upc.edu/ 20th Mediterranean Conference on Control and Automation], Barcelona, Spain, 3--6 July.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_CSPC_2012.pdf Structured low-rank approximation as a rational function minimization]\n
 Presented at the Control seminar, CSPC group, University of Southampton, 19 January.
-
 
 == 2011
 

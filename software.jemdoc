@@ -1,14 +1,45 @@
-# jemdoc: menu{MENU}{software.html}
-# jemdoc: eqsize{200}
+# jemdoc: menu{MENU}{software.html}, showsource
+# jemdoc: eqs, eqsize{150}, 
+# jemdoc: addpackage{amsmath}
+# jemdoc: addpackage{mathdots}
+# jemdoc: addpackage{amsfonts}
+# jemdoc: addpackage{times}
+# jemdoc: addpackage{mathptmx}
 = SLRA: Software for weighted structured low-rank approximation
 
-This is the MATLAB\/Octave\/R package for structured low-rank approximation problem with the following features:
-- mosaic Hankel structured approximating matrix,
-- weighted 2-norm approximation criterion 
-- fixed elements in the approximating matrix
-- missing elements in the data matrix
-- linear constraints on an approximating matrix's left kernel basis
+#~~~
+#{}{raw}
+#<script type="text/javascript"
+#   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+#~~~
 
+== Overview
+
+SLRA is a C++ software with interface to MATLAB, Octave, and R for solving low-rank approximation problems
+\(
+\text{minimize} \quad \text{over} \ \widehat p \quad \|p - \widehat p\|_w \quad \text{subject to} \quad \text{rank}({\cal S}(\widehat p)) \leq r,
+\)
+with the following features:
+- [examples mosaic Hankel structured] approximating matrix ${\cal S}(\widehat p)$,
+- weighted 2-norm approximation criterion 
+\(
+\|p\|_w = \textstyle\sqrt{\sum_{i=1}^{n_p} w_i p_i^2},
+\)
+- fixed elements in the approximating matrix,
+- missing elements in the data matrix,
+- linear constraints on an approximating matrix's left kernel basis.
+
+For an $m\times n$ matrix ${\cal S}(\widehat p)$, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$. Problems with $n_p \leq n(m - r)$ can not be solved by the method, used in the software.
+
+== Usage
+
+In MATLAB/Octave, once the structure and approximation criterion are specified in a variable +s+ (see [examples.html examples] and the [https://github.com/slra/slra/raw/master/slra.pdf manual]), the problem is solved by a call of the +slra+ function: 
+~~~
+{}{}
+[ph, info] = slra(p, s, r, opt);
+~~~
+- The optional parameter +opt+ is used to specify an initial approximation and options for the optimization method. 
+- The output parameter +info+ contains information about the convergence of the optimization method. # In particular, +info.Rh+ is a low-rank certificate: $\widehat R {\cal S}(\widehat p) = 0$.
 
 == Download and installation
 
@@ -22,81 +53,24 @@ This is the MATLAB\/Octave\/R package for structured low-rank approximation prob
 - Download [https://github.com/slra/slra/tarball/master TAR Ball]
 - View on [https://github.com/slra/slra GitHub]
 
-=== Documentation
-A up-to-date version of the manual can be found [https://github.com/slra/slra/raw/master/slra.pdf here].
-
 === Installation
 - For MATLAB\/Octave users:  unpack the archive and use +addpath+ in MATLAB\/Octave
 - For R users (Linux):  unpack the archive and run +make R+ in console
-- For R users (Windows): *TODO!*
-
-
-== First example
-
-~~~
-{Hankel structured low rank approximation problem (small example)}{}
-% Generate data
-np = 50;                            % number of parameters
-p0 = (1:np)'; n = 2                 % true value of the parameter vector
-sigma = 0.1;                        % noise standard deviation
-p  = p0 + sigma * randn(np, 1);          % add disturbance
-c = hankel(p(1:np - n), p(np - n:np));
-a = c(:, 1:n); b = c(:, n + 1);
-
-% Define the structure and solve the problem via SLRA 
-s.m = n+1;
-s.n = np-n;
-s.phi = eye(n+1);
-tic, [p_slra, i_slra] = slra(p, s, n, opt); t_slra = toc
-error_data = norm(p - p0)
-error = norm(p_slra - p0)
-
-% Make the same with a permutation matrix
-I = eye(n + 1); perm = randperm(n + 1); 
-s.phi = I(perm, :);
-tic, [p_slra2, i_slra] = slra(p, s, n, opt); t_slra = toc
-error_data = norm(p - p0)
-error = norm(p_slra2 - p0)
-~~~
-
-More examples can be found in *TODO!*
-
-
-== Mathematics
-
-The package computes locally optimal solutions to low-rank approximation problems 
-\(
-minimize \quad over \ \widehat p \quad ||p - \widehat p||_w \quad subject \ to \quad rank({\cal S}(\widehat p)) \leq r 
-\)
-with the following features:
-- mosaic Hankel structured approximating matrix ${\cal S}(\widehat p)$,
-- weighted 2-norm approximation criterion $||\cdot||_w$,
-- fixed elements in the approximating matrix,
-- missing elements in the data matrix, and
-- linear constraints on an approximating matrix's left kernel basis.
-
-For an $m\times n$ data matrix, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$.
-
-More details can be found in the up-to-date version of the  [https://github.com/slra/slra/raw/master/slra.pdf manual].
-
+# - For R users (Windows): *TODO!*
 
 == Citing
 
-Please use the following citation to
-
 ~~~
 {}{}
-@TechReport{slra-software,
+@Article{slra-software,
   author = 	 {I. Markovsky and K. Usevich},
   title = 	 {Software for weighted structured low-rank approximation},
-  institution =  {Univ. of Southampton},
-  year = 	 {2012},
-  number = 	 {339974},
-  address =      {\url{http://eprints.soton.ac.uk/339974}},
+  year = 	 {2013},
+  journal =      {J. Comput. Appl. Math.},
 }
 ~~~
 
 # == License
 # == Feedback
-# == Version history
+
 
