@@ -5,13 +5,17 @@
 # jemdoc: addpackage{amsfonts}
 # jemdoc: addpackage{times}
 # jemdoc: addpackage{mathptmx}
-= SLRA: Software for weighted structured low-rank approximation
 
 #~~~
 #{}{raw}
 #<script type="text/javascript"
 #   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 #~~~
+
+~~~
+{}{img_left}{software-logo.png}{}{120px}{}{}
+= SLRA: Software for weighted structured low-rank approximation
+~~~
 
 == Overview
 
