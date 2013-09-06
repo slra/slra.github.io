@@ -6,6 +6,13 @@
 # jemdoc: addpackage{times}
 # jemdoc: addpackage{mathptmx}
 # jemdoc: analytics{ANALYTICS KEY}
+
+#~~~
+#{}{raw}
+#<script type="text/javascript"
+#   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+#~~~
+
 = Examples
 
 == Hankel matrix
