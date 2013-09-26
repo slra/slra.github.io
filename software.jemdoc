@@ -45,6 +45,10 @@ In MATLAB/Octave, once the structure and approximation criterion are specified i
 - The optional parameter +opt+ is used to specify an initial approximation and options for the optimization method. 
 - The output parameter +info+ contains information about the convergence of the optimization method. # In particular, +info.Rh+ is a low-rank certificate: $\widehat R {\cal S}(\widehat p) = 0$.
 
+=== System identification 
+
+A major application area of mosaic Hankel structured low-rank approximation methods is system identification. The +slra+ package includes a wrapper function +ident+ for identification of linear time-invariant systems. For details see the [http://homepages.vub.ac.be/~imarkovs/ident-demo.html demo]. 
+
 == Download and installation
 
 === Latest stable version (v0.5)
@@ -69,8 +73,10 @@ In MATLAB/Octave, once the structure and approximation criterion are specified i
 @Article{slra-software,
   author = 	 {I. Markovsky and K. Usevich},
   title = 	 {Software for weighted structured low-rank approximation},
-  year = 	 {2013},
   journal =      {J. Comput. Appl. Math.},
+  volume =       {256},
+  pages =        {278--292},
+  year = 	 {2013},
 }
 ~~~
 
