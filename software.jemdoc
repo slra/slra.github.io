@@ -24,7 +24,7 @@ SLRA is a C++ software with interface to MATLAB, Octave, and R for solving low-r
 \text{minimize} \quad \text{over} \ \widehat p \quad \|p - \widehat p\|_w \quad \text{subject to} \quad \text{rank}({\cal S}(\widehat p)) \leq r,
 \)
 with the following features:
-- [examples mosaic Hankel structured] approximating matrix ${\cal S}(\widehat p)$,
+- [examples.html mosaic Hankel structured] approximating matrix ${\cal S}(\widehat p)$,
 - weighted 2-norm approximation criterion 
 \(
 \|p\|_w = \textstyle\sqrt{\sum_{i=1}^{n_p} w_i p_i^2},

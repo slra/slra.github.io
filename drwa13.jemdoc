@@ -1,3 +1,4 @@
+# jemdoc: menu{MENU}{drwa13.html}
 # jemdoc: addjs{toggle}, addcss{toggle}
 = Program for the working group on low-rank approximation
 within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--13, 2013.
