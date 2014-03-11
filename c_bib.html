@@ -69,8 +69,8 @@
   title = {Exact identification with missing data},
   booktitle = {Proc. of the 52nd IEEE Conference on Decision and Control},
   year = {2013},
-  address = {Firenze, Italy},
-  optpages = {},
+  address = {Florence, Italy},
+  pages = {151--155},
   optdoi = {},
   abstract = {The paper presents initial results on a subspace method for exact identification of a linear time-invariant system from data with missing values. The identification problem with missing data is equivalent to a Hankel structured low-rank matrix completion problem. The novel idea is to search systematically and use effectively completely specified submatrices of the incomplete Hankel matrix constructed from the given data. Nontrivial kernels of the rank-deficient completely specified submatrices carry information about the to-be-identified system. Combining this information into a full model of the identified system is a greatest common divisor computation problem. The developed subspace method has linear computational complexity in the number of data points and is therefore an attractive alternative to more expensive methods based on the nuclear norm heuristic.},
   keywords = {subspace system identification, missing data, low-rank matrix completion, nuclear norm, realization.},
@@ -86,54 +86,13 @@
   booktitle = {Proc. of the 52nd IEEE Conference on Decision and Control},
   year = {2013},
   month = {December},
-  address = {Firenze, Italy},
-  optpages = {},
+  address = {Florence, Italy},
+  pages = {156--161},
   optdoi = {},
   abstract = {Linear time-invariant system identification is considered in the behavioral setting. Nonstandard features of the problem are specification of missing and exact variables and identification from multiple time series with different length. The problem is equivalent to mosaic Hankel structured low-rank approximation with element-wise weighted cost function. Zero/infinite weights are assigned to the missing/exact data points. The problem is in general nonconvex. A solution method based on local optimization is outlined and compared with alternative methods on simulation examples. In a stochastic setting, the problem corresponds to errors-in-variables identification. A modification of the generic problem considered is presented that is a deterministic equivalent to the classical ARMAX identification. The modification is also a mosaic Hankel structured low-rank approximation problem.},
   keywords = {system identification; behavioral approach; missing data; mosaic Hankel matrix; low-rank approximation},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/papers/cdc13b.pdf">http://homepages.vub.ac.be/~imarkovs/papers/cdc13b.pdf</a>},
   software = {<a href="http://homepages.vub.ac.be/~imarkovs/software/cdc13b.tar">http://homepages.vub.ac.be/~imarkovs/software/cdc13b.tar</a>}
-}
-</pre>
-
-<a name="Usevich12conf-Improved"></a><pre>
-@inproceedings{<a href="c.html#Usevich12conf-Improved">Usevich12conf-Improved</a>,
-  author = {K. Usevich},
-  title = {Improved initial approximation for errors-in-variables system identification},
-  booktitle = {Proceedings of 20th Mediterranean Conference on Control and Automation},
-  year = {2012},
-  pages = {198--203},
-  address = {Barcelona, Spain, 2012},
-  month = {July},
-  abstract = {Errors-in-variables system identification can be posed and solved as a Hankel structured low-rank approximation problem. In this paper different estimates based on suboptimal low-rank approximations are considered. The estimates are shown to have almost the same efficiency and lead to the same minimum when supplied as an initial approximation to local optimization solver of the structured low-rank approximation problem. In this paper it is shown that increasing Hankel matrix window length improves suboptimal estimates for autonomous systems and does not improve them for systems with inputs.},
-  url = {<a href="http://eprints.soton.ac.uk/334428/">http://eprints.soton.ac.uk/334428/</a>},
-  doi = {10.1109/MED.2012.6265638}
-}
-</pre>
-
-<a name="IshSonPar13"></a><pre>
-@inproceedings{<a href="c.html#IshSonPar13">IshSonPar13</a>,
-  title = {Unfolding latent tree structures using $4$th order tensors},
-  author = {M. Ishteva and L. Song and H. Park},
-  booktitle = {International Conference on Machine Learning (ICML)},
-  year = {2013},
-  url = {<a href="http://jmlr.org/proceedings/papers/v28/ishteva13.html">http://jmlr.org/proceedings/papers/v28/ishteva13.html</a>},
-  pdf = {<a href="http://jmlr.org/proceedings/papers/v28/ishteva13.pdf">http://jmlr.org/proceedings/papers/v28/ishteva13.pdf</a>},
-  keywords = {latent tree graphical model, structure learning, quartet test, tensor, low rank, nuclear norm},
-  abstract = {Discovering the structures of latent variable models whose conditional independence structures are trees is an important yet challenging learning task. Existing approaches for this task often require the unknown number of hidden states as an input. In this paper, we propose a quartet based approach which is \emph{agnostic} to this number. The key contribution is a novel rank characterization of the tensor associated with the marginal distribution of a quartet. This characterization allows us to design a \emph{nuclear norm} based test for resolving quartet relations. We then use the quartet test as a subroutine in a divide-and-conquer algorithm for recovering the latent tree structure. We also derive the conditions under which the algorithm is consistent and its error probability decays exponentially with increasing sample size. We demonstrate that the proposed approach compares favorably to alternatives. In a real world stock dataset, it also discovers meaningful groupings of variables, and produces a model that fits the data better.}
-}
-</pre>
-
-<a name="SonIshParEtAl13"></a><pre>
-@inproceedings{<a href="c.html#SonIshParEtAl13">SonIshParEtAl13</a>,
-  title = {Hierarchical tensor decomposition of latent tree graphical models},
-  author = {L. Song and M. Ishteva and A. Parikh and E. Xing and H. Park},
-  booktitle = {International Conference on Machine Learning (ICML)},
-  year = {2013},
-  url = {<a href="http://jmlr.org/proceedings/papers/v28/song13.html">http://jmlr.org/proceedings/papers/v28/song13.html</a>},
-  pdf = {<a href="http://jmlr.org/proceedings/papers/v28/song13.pdf">http://jmlr.org/proceedings/papers/v28/song13.pdf</a>},
-  keywords = {parameter estimation, latent tree graphical model, hierarchical tensor decomposition, low rank},
-  abstract = {We approach the problem of estimating the parameters of a latent tree graphical model from a hierarchical tensor decomposition point of view. In this new view, the marginal probability table of the observed variables is treated as a tensor, and we show that: (i) the latent variables induce low rank structures in various matricizations of the tensor; (ii) this collection of low rank matricizations induces a hierarchical low rank decomposition of the tensor. We further derive an optimization problem for estimating (alternative) parameters of a latent tree graphical model, allowing us to represent the marginal probability table of the observed variables in a compact and robust way. The optimization problem aims to find the best hierarchical low rank approximation of a tensor in Frobenius norm. For correctly specified latent tree graphical models, we show that a global optimum of the optimization problem can be obtained via a recursive decomposition algorithm. This algorithm recovers previous spectral algorithms for hidden Markov models (Hsu et al., 2009; Foster et al., 2012) and latent tree graphical models (Parikh et al., 2011; Song et al., 2011) as special cases, elucidating the global objective these algorithms are optimizing. For misspecified latent tree graphical models, we derive a novel decomposition based on our framework, and provide approximation guarantee and computational complexity analysis. In both synthetic and real world data, this new estimator significantly improves over the state-of-the-art.}
 }
 </pre>
 

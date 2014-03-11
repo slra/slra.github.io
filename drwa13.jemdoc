@@ -1,6 +1,10 @@
 # jemdoc: addjs{toggle}, addcss{toggle}
+
+~~~
+{}{img_left}{drwa13-photo.jpg}{}{250px}{}{}
 = Program for the working group on low-rank approximation
 within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--13, 2013.
+~~~
 
 == Monday 
 - 11:00-12:00: [http://www.ece.neu.edu/ece/index.php/component/content/123?task=view Mario Sznaier], [javascript:toggleAbs('mario') Convex relaxations of  semi-algebraic  rank minimization problems arising in systems identification and machine learning] {{<br/><span id="bib_mario" class="noshow">Abstract: This talks discusses  convex relaxations of semi-algebraic rank minimization  problems arising in three closely related fields:  identification   of switched systems, manifold embedding of dynamic data and semi-supervised learning.  As we will show in the talk, all of these problems are equivalent to minimizing the rank of a matrix that depends polynomially on the data. While in principle this is a hard non-convex problem, the use of moments based ideas allows for reducing it to a structured principal component decomposition: decomposing a matrix as a sum of structured low-rank and sparse components.  In turn, this problem can be very efficiently solved using Augmented Lagrangian methods. In particular, we will discuss the use of Alternating Directions Method of Multipliers (ADMM), which in this case requires performing only a sequence of singular value decomposition and thresholding operations.  Finally, we will cover some recent results on Atomic Norm minimization that provide  a computationally attractive alternative to Interior Point and Augmented Lagrangian methods. In the second portion of the talk we will present a practical application of these results to problems that involve extracting actionable information from very large data streams, including genomic and video data segmentation, contextually abnormal activity detection and tracking in crowded scenarios.</span>}}

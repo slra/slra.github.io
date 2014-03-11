@@ -35,25 +35,10 @@
   author = {K. Usevich and I. Markovsky},
   title = {Variable projection methods for approximate (greatest) common divisor computations},
   year = {2013},
-  note = {Submitted on 25/04/2013 to {\em Journal of Symbolic Computation}.},
   institution = {Vrije Univ. Brussel},
   url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
   pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>},
   abstract = {We consider the problem of finding for a given $N$-tuple of polynomials the closest $N$-tuple that has a common divisor of degree at least $d$. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either $d$ is small or $d$ is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.}
-}
-</pre>
-
-<a name="UM12autart"></a><pre>
-@techreport{<a href="t.html#UM12autart">UM12autart</a>,
-  author = {K. Usevich and I. Markovsky},
-  title = {Optimization on a {G}rassmann manifold with application to system identification},
-  institution = {Vrije Univ. Brussel},
-  note = {Submitted on 03/2013 to {\em Automatica}.},
-  year = {2012},
-  url = {<a href="http://homepages.vub.ac.be/~kusevich/preprints.html">http://homepages.vub.ac.be/~kusevich/preprints.html</a>},
-  pdf = {<a href="http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf">http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf</a>},
-  abstract = {In this paper, we consider the problem of optimization of a cost function on a Grassmann manifold. This problem appears in system identification in the behavioral setting, which is a structured low-rank approximation problem. We develop a new method for local optimization on the Grassmann manifold with switching coordinate charts. This method reduces the optimization problem on the manifold to an optimization problem in a bounded domain of an Euclidean space. Our experiments show that this method is competitive with state- of-the-art retraction-based methods. Compared to retraction-based methods, the proposed method allows to incorporate easily an arbitrary optimization method for solving the optimization subproblem in the Euclidean space.},
-  keywords = {system identification, over-parameterized models, Grassmann manifold, coordinate charts, structured low-rank approximation, optimization}
 }
 </pre>
 
@@ -65,19 +50,8 @@
   institution = {Vrije Univ. Brussel},
   note = {Submitted on 02/08/2013 to {\em SIAM J. Matrix Anal. Appl.}},
   keywords = {low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf</a>},
   abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.}
-}
-</pre>
-
-<a name="KanIshPar13"></a><pre>
-@techreport{<a href="t.html#KanIshPar13">KanIshPar13</a>,
-  author = {R. Kannan and M. Ishteva and H. Park},
-  title = {Bounded Matrix Factorization for Recommender System},
-  number = {},
-  year = {2013},
-  optnote = {submitted},
-  keywords = {low rank approximation, recommender systems, bound constraints, matrix factorization, block coordinate descent method, scalable algorithm},
-  abstract = {Matrix factorization has been widely utilized as a latent-factor model for solving the recommender system problem using collaborative filtering. For a recommender system, all the ratings in the rating matrix are bounded within $[r_{min},r_{max}]$. In this paper, we propose a new improved matrix factorization approach for such a rating matrix, called  Bounded Matrix Factorization (BMF) which imposes a lower and an upper bound on every estimated missing element of the rating matrix. We present an efficient algorithm to solve BMF based on the block coordinate descent method. We show that our algorithm is scalable for large matrices with missing elements on multi core systems with low memory. We present substantial experimental results illustrating that the proposed method  outperforms the state of the art algorithms for recommender system such as Stochastic Gradient Descent, Alternating Least Squares with regularization, SVD++ and Bias-SVD on real world data sets such as Jester, Movielens, Book crossing, Online dating and Netflix.}
 }
 </pre>
 

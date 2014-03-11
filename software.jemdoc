@@ -1,10 +1,11 @@
-# jemdoc: menu{MENU}{software.html}, showsource
+# jemdoc: menu{MENU}{software.html}
 # jemdoc: eqs, eqsize{150}, 
 # jemdoc: addpackage{amsmath}
 # jemdoc: addpackage{mathdots}
 # jemdoc: addpackage{amsfonts}
 # jemdoc: addpackage{times}
 # jemdoc: addpackage{mathptmx}
+# jemdoc: showsource
 
 #~~~
 #{}{raw}
