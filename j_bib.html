@@ -117,8 +117,8 @@ It implements a variable projection type algorithm and allows the user to choose
 }
 </pre>
 
-<a name="UM12autart"></a><pre>
-@article{<a href="j.html#UM12autart">UM12autart</a>,
+<a name="UM12-aut"></a><pre>
+@article{<a href="j.html#UM12-aut">UM12-aut</a>,
   author = {K. Usevich and I. Markovsky},
   title = {Optimization on a {G}rassmann manifold with application to system identification},
   optvolume = {?},
@@ -127,8 +127,25 @@ It implements a variable projection type algorithm and allows the user to choose
   journal = {Automatica},
   url = {<a href="http://homepages.vub.ac.be/~kusevich/preprints.html">http://homepages.vub.ac.be/~kusevich/preprints.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf">http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf</a>},
+  doi = {10.1016/j.automatica.2014.04.010},
   abstract = {In this paper, we consider the problem of optimization of a cost function on a Grassmann manifold. This problem appears in system identification in the behavioral setting, which is a structured low-rank approximation problem. We develop a new method for local optimization on the Grassmann manifold with switching coordinate charts. This method reduces the optimization problem on the manifold to an optimization problem in a bounded domain of an Euclidean space. Our experiments show that this method is competitive with state- of-the-art retraction-based methods. Compared to retraction-based methods, the proposed method allows to incorporate easily an arbitrary optimization method for solving the optimization subproblem in the Euclidean space.},
   keywords = {system identification, over-parameterized models, Grassmann manifold, coordinate charts, structured low-rank approximation, optimization}
+}
+</pre>
+
+<a name="pltv"></a><pre>
+@article{<a href="j.html#pltv">pltv</a>,
+  author = {I. Markovsky and J. Goos and K. Usevich and R. Pintelon},
+  title = {Realization and identification of autonomous linear periodically time-varying systems},
+  optvolume = {?},
+  optpages = {?--?},
+  doi = {10.1016/j.automatica.2014.04.003},
+  year = {2014},
+  journal = {Automatica},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev3.pdf">http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev3.pdf</a>},
+  abstract = {Subsampling of a linear periodically time-varying system results in a collection of linear time-invariant systems with common poles. This key fact, known as ``lifting'', is used in a two step realization method. The first step is the realization of the time-invariant dynamics (the lifted system). Computationally, this step is a rank-revealing factorization of a block-Hankel matrix. The second step derives a state space representation of the periodic time-varying system. It is shown that no extra computations are required in the second step. The computational complexity of the overall method is therefore equal to the complexity for the realization of the lifted system. A modification of the realization method is proposed, which makes the complexity independent of the parameter variation period. Replacing the rank-revealing factorization in the realization algorithm by structured low-rank approximation yields a maximum likelihood identification method. Existing methods for structured low-rank approximation are used to identify efficiently linear periodically time-varying system. These methods can deal with missing data.
+},
+  keywords = {linear periodically time-varying systems, lifting, realization, Kung's algorithm, Hankel low-rank approximation, maximum likelihood estimation.}
 }
 </pre>
 

@@ -13,6 +13,10 @@
 
 #includeraw{c.html}
 
+== Book chapters 
+
+#includeraw{bc.html}
+
 == Technical reports
 
 #includeraw{t.html}
