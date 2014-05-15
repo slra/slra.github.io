@@ -1,9 +1,24 @@
 # jemdoc: menu{MENU}{presentations.html}
-= Presentations
+= Presentations 
 
 == 2014
 
-- [http://sites.uclouvain.be/socn/Courses/Courses2013-4 SOCN lectures], to be given on 4, 7, 11, 14, 18, and 21 March, at K.U.Leuven.
+- Consistent estimation of linear systems from multiple experiments\n
+Poster at the [http://wwwtw.vub.ac.be/elec/ERNSI%202014/ERNSI2014-home.html Workshop of the European Research Network on System Identification], Ostend, Belgium, 21-24 September
+- Multiple experiments in operational modal analysis\n
+Talk at the [http://www.isma-isaac.be/isma_conf/objectives.html Leuven Conference on Noise and Vibration Engineering], Leuven, 15--17 September
+- Adjusted least squares estimator for fitting algebraic hypersurfaces with arbitrary support\n
+Lecture at the [http://noether.math.uoa.gr/conferences/sla2014/?q=content/welcome-sla-2014 Structured Numerical Linear and Multilinear Algebra:  Analysis, Algorithms and Applications], Kalamata, Greece, 8--12 September 
+- Decomposing multivariate polynomials with structured low-rank approximation\n
+Talk at the [https://fwn06.housing.rug.nl/mtns2014/ International Symposium on Mathematical Theory of Networks and Systems], Groningen, The Netherlands, 7--11 July
+- Tensor low multilinear rank approximation by structured matrix low-rank approximation\n
+Talk at the [https://fwn06.housing.rug.nl/mtns2014/ International Symposium on Mathematical Theory of Networks and Systems], Groningen, The Netherlands, 7--11 July
+- Structured low-rank approximation with missing data\n
+Poster at the [http://sites.uclouvain.be/HHXIX/ Householder Symposium], Spa, Belgium, 8--13 June 
+- Low-rank approximation with applications\n
+Lecture at the [http://parallel.bas.bg/Conferences/nmascaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19-22
+- Factorization approach to structured low-rank approximation\n
+Lecture at the [http://parallel.bas.bg/Conferences/nmscaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19-22
 
 == 2013
 
@@ -53,7 +68,7 @@ Lecture presented at
 [https://www.cs.kuleuven.be/conference/sla2012/ "Structured numerical linear and multilinear algebra conference"], K.U. Leuven, 14 September. 
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_ISSAC_2012.pdf Variable projection methods for approximate GCD computations]\n
 Poster presented at the
-[http://issac-conference.org/2012/ 37th International Symposium on Symbolic and Algebraic Computation], 22--25 July, Grenoble, France.
+[http://issac-conference.org/2012/ 37th International Symposium on Symbolic and Algebraic Computation], Grenoble, France, 22--25 July.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_SYSID_2012.pdf Structured low-rank approximation as a rational function minimization]\n
 Presented at the [http://www.sysid2012.org/ 16th IFAC Symposium on System Identification], Brussels, Belgium, 11--13 July.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_MED2012.pdf Improved initial approximation for errors-in-variables system identification]\n
@@ -67,19 +82,15 @@ Presented at the Control seminar, CSPC group, University of Southampton, 19 Janu
 Presented at the Electrical Engineering Department, Cambridge, 18 November.
 - Fast measurements of slow processes\n
 Presented at the Electrical Engineering Department (ELEC), Vrije Universiteit Brussel, 10 November.
-- Bias correction for polynomial low rank approximation\n
+- Bias correction for polynomial low rank approximation\n 
 Poster presented at the [http://www-sop.inria.fr/apics/ERNSI11/index.htm ERNSI workshop], Nice, France, 25--28 September.
 - Low-rank approximation and its applications\n 
-Poster, presented at the
-[http://www.math.unipd.it/~demarchi/drwa11/ Dolomites research week on approximation], Alba di Canazei, Trento, Italy, 5--9, September.
+Poster, presented at the [http://www.math.unipd.it/~demarchi/drwa11/ Dolomites research week on approximation], Alba di Canazei, Trento, Italy, 5--9, September.
 - [http://homepages.vub.ac.be/~imarkovs/talks/curve-fitting.pdf Nonlinearly structured low-rank approximation with application to algebraic curve fitting]\n
-Poster presented at the 
-[https://outreach.scidac.gov/HH11/ Householder symposium], Lake Tahoe, California, USA, 12--17 June.
+Poster presented at the [https://outreach.scidac.gov/HH11/ Householder symposium], Lake Tahoe, California, USA, 12--17 June.
 - Fast measurements of slow processes\n
-Presented at the
-Division of Systems and Control, Department of Information Technology, Uppsala University, March 29.
+Presented at the Division of Systems and Control, Department of Information Technology, Uppsala University, March 29.
 - Low-rank approximation: theory, algorithms, and applications\n
 Presented at the Mathematics Department, Leicester University, 10 March.
 - Low-rank approximation: a tool for data modeling\n
-Presented at the 
-[http://web.mat.bham.ac.uk/loghin/onaseminars.html Optimisation and numerical analysis seminar], School of mathematics, University of Birmingham, 3 February.
+Presented at the [http://web.mat.bham.ac.uk/loghin/onaseminars.html Optimisation and numerical analysis seminar], School of mathematics, University of Birmingham, 3 February.

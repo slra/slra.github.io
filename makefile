@@ -6,6 +6,8 @@ all:
 	./jemdoc.py examples.jemdoc
 	./jemdoc.py presentations.jemdoc
 	./jemdoc.py drwa13.jemdoc
+	./jemdoc.py lectures.jemdoc
+	./jemdoc.py sessions.jemdoc
 pull:
 	git pull origin master	
 push:
