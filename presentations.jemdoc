@@ -18,19 +18,19 @@ Talk at the [https://fwn06.housing.rug.nl/mtns2014/ International Symposium on M
 - Structured low-rank approximation with missing data\n
 Poster at the [http://sites.uclouvain.be/HHXIX/ Householder Symposium], Spa, Belgium, 8--13 June 
 - Structured matrix low-rank approximation and its application for solving tensor problem\n
-Invited lecture at the [http://www.unilim.fr/pages_perso/paola.boito/SMD/structured_matrix_days_2014.html Structured Matrix Days], Université de Limoges, May 26--27
+Invited lecture at the [http://www.unilim.fr/pages_perso/paola.boito/SMD/structured_matrix_days_2014.html Structured Matrix Days], Université de Limoges, France, May 26--27
 - Low-rank approximation with applications\n
 Lecture at the [http://parallel.bas.bg/Conferences/nmascaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19--22
 - Factorization approach to structured low-rank approximation\n
-Lecture at the [http://parallel.bas.bg/Conferences/nmscaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19--22
+Lecture at the [http://parallel.bas.bg/Conferences/nmascaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19--22
 - Structured matrix computations for Waring type decompositions of multivariate polynomials\n
-Talk at [http://pdmi.zapto.org/ Polynomial Computer Algebra 2014], St. Petersburg, Russia, April 14--19
+Talk at [http://pdmi.zapto.org/ Polynomial Computer Algebra 2014], St. Petersburg, Russia, 14--19 April 
 - Adjusted least squares estimator for algebraic hypersurface fitting\n
-Talk at the [http://www.disc.tudelft.nl/news/benelux-meeting-2014.html 33rd Benelux Meeting on Systems and Control], Nijmegen, The Netherlands, March 25--27
+Talk at the [http://www.benelux2014.tue.nl/ 33rd Benelux Meeting on Systems and Control], Heijen, The Netherlands, 25--27 March 
 - Tensors and structured matrices of low rank\n
 Talk at the [http://www.benelux2014.tue.nl/ 33rd Benelux Meeting on Systems and Control], Heijen, The Netherlands, 25--27 March
 - Structured low-rank approximation: a tool for polynomial decompositions and other problems\n
-Talk at the [http://www.gipsa-lab.grenoble-inp.fr/animation/seminaires.php?sem_choix=histo&an=2014&dep=dis Images-Signal seminar], GIPSA lab, Grenoble, France, February 13 
+Talk at the [http://www.gipsa-lab.grenoble-inp.fr/animation/seminaires.php?sem_choix=histo&an=2014&dep=dis Images-Signal seminar], GIPSA lab, Grenoble, France, 13 February 
 
 == 2013
 
@@ -41,6 +41,8 @@ Plenary lecture at the [http://sites.uclouvain.be/dysco/ Study day of the IAP ne
 - [http://homepages.vub.ac.be/~imarkovs/ident-demo.html A software package for system identification in the behavioral setting]\n 
 Software demo presented at the [http://ernsi-2013.cran.univ-lorraine.fr/ Workshop of the ERNSI network], Nancy, 22--25 September.
 - [http://homepages.vub.ac.be/~imarkovs/talks/ernsi13.pdf Subspace identification of autonomous linear periodically time-varying systems]\n 
+Poster presented at the [http://ernsi-2013.cran.univ-lorraine.fr/ Workshop of the ERNSI network], Nancy, 22--25 September.
+- Regularized structured low-rank approximation\n
 Poster presented at the [http://ernsi-2013.cran.univ-lorraine.fr/ Workshop of the ERNSI network], Nancy, 22--25 September.
 - Decomposing multivariate polynomials with structured low-rank approximation\n
 Talk at seminar of the Department ELEC, Vrije Universiteit Brussel, Belgium, September 20 
