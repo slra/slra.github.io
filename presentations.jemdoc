@@ -3,8 +3,10 @@
 
 == 2014
 
+- Tensor low multilinear rank approximation by structured matrix low-rank approximation\n
+Poster at the [http://wwwtw.vub.ac.be/elec/ERNSI%202014/ERNSI2014-home.html Workshop of the European Research Network on System Identification], Ostend, Belgium, 21--24 September
 - Consistent estimation of linear systems from multiple experiments\n
-Poster at the [http://wwwtw.vub.ac.be/elec/ERNSI%202014/ERNSI2014-home.html Workshop of the European Research Network on System Identification], Ostend, Belgium, 21-24 September
+Poster at the [http://wwwtw.vub.ac.be/elec/ERNSI%202014/ERNSI2014-home.html Workshop of the European Research Network on System Identification], Ostend, Belgium, 21--24 September
 - Multiple experiments in operational modal analysis\n
 Talk at the [http://www.isma-isaac.be/isma_conf/objectives.html Leuven Conference on Noise and Vibration Engineering], Leuven, 15--17 September
 - Adjusted least squares estimator for fitting algebraic hypersurfaces with arbitrary support\n
@@ -15,26 +17,40 @@ Talk at the [https://fwn06.housing.rug.nl/mtns2014/ International Symposium on M
 Talk at the [https://fwn06.housing.rug.nl/mtns2014/ International Symposium on Mathematical Theory of Networks and Systems], Groningen, The Netherlands, 7--11 July
 - Structured low-rank approximation with missing data\n
 Poster at the [http://sites.uclouvain.be/HHXIX/ Householder Symposium], Spa, Belgium, 8--13 June 
+- Structured matrix low-rank approximation and its application for solving tensor problem\n
+Invited lecture at the [http://www.unilim.fr/pages_perso/paola.boito/SMD/structured_matrix_days_2014.html Structured Matrix Days], Université de Limoges, May 26--27
 - Low-rank approximation with applications\n
-Lecture at the [http://parallel.bas.bg/Conferences/nmascaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19-22
+Lecture at the [http://parallel.bas.bg/Conferences/nmascaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19--22
 - Factorization approach to structured low-rank approximation\n
-Lecture at the [http://parallel.bas.bg/Conferences/nmscaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19-22
+Lecture at the [http://parallel.bas.bg/Conferences/nmscaa/ International Conference on Numerical Methods for Scientific Computations], Bansko, Bulgaria, May 19--22
+- Structured matrix computations for Waring type decompositions of multivariate polynomials\n
+Talk at [http://pdmi.zapto.org/ Polynomial Computer Algebra 2014], St. Petersburg, Russia, April 14--19
+- Adjusted least squares estimator for algebraic hypersurface fitting\n
+Talk at the [http://www.disc.tudelft.nl/news/benelux-meeting-2014.html 33rd Benelux Meeting on Systems and Control], Nijmegen, The Netherlands, March 25--27
+- Tensors and structured matrices of low rank\n
+Talk at the [http://www.benelux2014.tue.nl/ 33rd Benelux Meeting on Systems and Control], Heijen, The Netherlands, 25--27 March
+- Structured low-rank approximation: a tool for polynomial decompositions and other problems\n
+Talk at the [http://www.gipsa-lab.grenoble-inp.fr/animation/seminaires.php?sem_choix=histo&an=2014&dep=dis Images-Signal seminar], GIPSA lab, Grenoble, France, February 13 
 
 == 2013
 
+- Decomposing multivariate polynomials with structured low-rank approximation\n
+Invited talk at [http://ssa.cf.ac.uk/conf2013/ Optimal Decisions in Statistics and Data Analysis], Cardiff, UK, December 16--18
 - Low rank approximations and its applications in system identification and signal processing\n
 Plenary lecture at the [http://sites.uclouvain.be/dysco/ Study day of the IAP network on Dynamical Systems, Control and Optimization], November 22.
 - [http://homepages.vub.ac.be/~imarkovs/ident-demo.html A software package for system identification in the behavioral setting]\n 
 Software demo presented at the [http://ernsi-2013.cran.univ-lorraine.fr/ Workshop of the ERNSI network], Nancy, 22--25 September.
 - [http://homepages.vub.ac.be/~imarkovs/talks/ernsi13.pdf Subspace identification of autonomous linear periodically time-varying systems]\n 
 Poster presented at the [http://ernsi-2013.cran.univ-lorraine.fr/ Workshop of the ERNSI network], Nancy, 22--25 September.
+- Decomposing multivariate polynomials with structured low-rank approximation\n
+Talk at seminar of the Department ELEC, Vrije Universiteit Brussel, Belgium, September 20 
 - [drwa13.html Workshop on low-rank approximation]\n
 Takes place within the [http://events.math.unipd.it/drwa13/ Dolomites Research Week on Approximation,] Alba di Canazei, Italy, September 8--11.
 - [http://homepages.vub.ac.be/~mishteva/selected_presentations/regularized_slra_poster.pdf Regularized structured low-rank approximation]\n 
-Poster presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Jul. 8–10, Leuven, Belgium.
+Poster presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Leuven, Belgium, July 8-–10.
 - [http://homepages.vub.ac.be/~kusevich/slides/UsevichMarkovskyROKS201322.pdf Structured low-rank approximation as optimization on a Grassmann manifold]\n
-Talk presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Jul. 8–10, Leuven, Belgium.
-- [http://homepages.vub.ac.be/~imarkovs/doctoral-school.html ELEC/VUB Doctoral school lectures], May 28--19, Brussels, Belgium.
+Talk presented at the [http://www.esat.kuleuven.be/sista/ROKS2013/program.php ROKS workshop], Leuven, Belgium, July 8–-10.
+- [http://homepages.vub.ac.be/~imarkovs/doctoral-school.html ELEC/VUB Doctoral school lectures], Brussels, Belgium, May 28--19.
 - [http://homepages.vub.ac.be/~mishteva/selected_presentations/tensor_graphicalmodels_slides.pdf Tensors and graphical models]\n
 Talk given at the [http://www.uclouvain.be/11245.html Seminars in systems and control], May 7, Louvain-La-Neuve, Belgium.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_DYSCO2013.pdf Variable projection methods for approximate (greatest) common divisor computations]\n
@@ -44,11 +60,11 @@ Poster presented at the [http://sites.uclouvain.be/dysco/StudyDays/2013-may IAP 
 - [http://homepages.vub.ac.be/~imarkovs/talks/liege.pdf Data-driven modeling: A low-rank approximation problem]\n
 Presented at the [http://www.montefiore.ulg.ac.be/services/stochastic/new/cmsimple/index.php?Events Systems and Modeling group seminar], Liege, March 29.
 - [http://homepages.vub.ac.be/~kusevich/slides/Usevich_Markovsky_BMSC_2013.pdf Optimization on the Grassmann manifold: a case study]\n
-Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
+Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26--28.
 - [http://homepages.vub.ac.be/~mishteva/selected_presentations/regularized_slra_slides.pdf Regularized structured low-rank approximation]\n 
-Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
+Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26--28.
 - [http://homepages.vub.ac.be/~imarkovs/talks/benelux13.pdf System identification in the behavioral setting]\n
-Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26-28.
+Presented at the [http://saas.ulb.ac.be/bm2013/ Benelux Meeting on Systems and Control], Houffalize, Belgium, March 26--28.
 
 == 2012
 
