@@ -13,75 +13,24 @@
 #   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 #~~~
 
+= Software produced by the SLRA project
+
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
-= SLRA: Software for weighted structured low-rank approximation
+== [software-slra.html SLRA: Software for weighted structured low-rank approximation]
 ~~~
 
-== Overview
-
-SLRA is a C++ software with interface to MATLAB, Octave, and R for solving low-rank approximation problems
-\(
-\text{minimize} \quad \text{over} \ \widehat p \quad \|p - \widehat p\|_w \quad \text{subject to} \quad \text{rank}({\cal S}(\widehat p)) \leq r,
-\)
-with the following features:
-- [examples.html mosaic Hankel structured] approximating matrix ${\cal S}(\widehat p)$,
-- weighted 2-norm approximation criterion 
-\(
-\|p\|_w = \textstyle\sqrt{\sum_{i=1}^{n_p} w_i p_i^2},
-\)
-- fixed elements in the approximating matrix,
-- missing elements in the data matrix,
-- linear constraints on an approximating matrix's left kernel basis.
-
-For an $m\times n$ matrix ${\cal S}(\widehat p)$, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$. Problems with $n_p \leq n(m - r)$ can not be solved by the method, used in the software.
-
-== Usage
-
-In MATLAB/Octave, once the structure and approximation criterion are specified in a variable +s+ (see [examples.html examples] and the [https://github.com/slra/slra/raw/master/slra.pdf manual]), the problem is solved by a call of the +slra+ function: 
 ~~~
-{}{}
-[ph, info] = slra(p, s, r, opt);
-~~~
-- The optional parameter +opt+ is used to specify an initial approximation and options for the optimization method. 
-- The output parameter +info+ contains information about the convergence of the optimization method. # In particular, +info.Rh+ is a low-rank certificate: $\widehat R {\cal S}(\widehat p) = 0$.
-
-=== System identification 
-
-A major application area of mosaic Hankel structured low-rank approximation methods is system identification. The +slra+ package includes a wrapper function +ident+ for identification of linear time-invariant systems. For details see the [http://homepages.vub.ac.be/~imarkovs/ident-demo.html demo]. 
-
-== Download and installation
-
-=== Latest stable version (v0.5)
-- Download [https://github.com/slra/slra/archive/v0.5.zip  ZIP File]
-- Download [https://github.com/slra/slra/archive/v0.5.tar.gz TAR Ball]
-- View on [https://github.com/slra/slra/releases/tag/v0.5 GitHub]
-
-=== Current version (unstable)
-- Download [https://github.com/slra/slra/zipball/master ZIP File]
-- Download [https://github.com/slra/slra/tarball/master TAR Ball]
-- View on [https://github.com/slra/slra GitHub]
-
-=== Installation
-- For MATLAB\/Octave users:  unpack the archive and use +addpath+ in MATLAB\/Octave
-- For R users (Linux):  unpack the archive and run +make R+ in console
-# - For R users (Windows): *TODO!*
-
-== Citing
-
-~~~
-{}{}
-@Article{slra-software,
-  author = 	 {I. Markovsky and K. Usevich},
-  title = 	 {Software for weighted structured low-rank approximation},
-  journal =      {J. Comput. Appl. Math.},
-  volume =       {256},
-  pages =        {278--292},
-  year = 	 {2014},
-}
+{}{img_left}{software-logo.png}{}{120px}{}{}
+== [http://homepages.vub.ac.be/~imarkovs/ident-demo.html IDENT: Identification in behavioural setting]
 ~~~
 
-# == License
-# == Feedback
 
+~~~
+{}{img_left}{software-logo.png}{}{120px}{}{}
+== REGSLRA: Penalized SLRA
+~~~
 
+~~~
+{}{img_left}{software-logo.png}{}{120px}{}{}
+== ALS: Adjusted least squares
