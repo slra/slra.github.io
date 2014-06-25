@@ -1,15 +1,10 @@
 Overview            [index.html]
-
-Software            [software.html]
-  -- --  SLRA package            [software-slra.html]
-  -- --  IDENT package           [http://homepages.vub.ac.be/~imarkovs/ident-demo.html]
-  -- --  Penalized SLRA          [software-regslra.html]
-  -- --  Adjusted least squares  [software-als.html]
-
+Software    	[software.html]
+~~ ~ SLRA package            [software-slra.html]
+~~ ~ IDENT package           [software-ident.html]
+~~ ~ Penalized SLRA          [software-rslra.html]
+~~ ~ Adjusted least squares  [software-als.html]
 Publications	[publications.html]
-
 Presentations	[presentations.html]
-
 Special sessions   	[sessions.html]
-
 Mini courses	[lectures.html]

@@ -6,13 +6,6 @@
 # jemdoc: addpackage{times}
 # jemdoc: addpackage{mathptmx}
 # jemdoc: showsource
-
-#~~~
-#{}{raw}
-#<script type="text/javascript"
-#   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-#~~~
-
 = Software produced by the SLRA project
 
 ~~~
@@ -23,19 +16,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum en
 
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
-== [http://homepages.vub.ac.be/~imarkovs/ident-demo.html IDENT: Identification in behavioural setting]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
-~~~
-
-
-~~~
-{}{img_left}{software-logo.png}{}{120px}{}{}
-== REGSLRA: Penalized SLRA
+== [software-ident.html IDENT: Identification in behavioural setting]
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
 ~~~
 
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
-== ALS: Adjusted least squares
+== [software-rslra.html REGSLRA: Penalized SLRA]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
+~~~
+
+~~~
+{}{img_left}{software-logo.png}{}{120px}{}{}
+== [software-als.html ALS: Adjusted least squares]
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
 ~~~

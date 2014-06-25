@@ -13,9 +13,9 @@
 <td id="layout-menu">
 <div class="menu-item"><a href="index.html">Overview</a></div>
 <div class="menu-item"><a href="software.html">Software</a></div>
-<div class="menu-item"><a href="software-slra.html" class="current">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLRA&nbsp;package</a></div>
+<div class="menu-item"><a href="software-slra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLRA&nbsp;package</a></div>
 <div class="menu-item"><a href="software-ident.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDENT&nbsp;package</a></div>
-<div class="menu-item"><a href="software-rslra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Penalized&nbsp;SLRA</a></div>
+<div class="menu-item"><a href="software-rslra.html" class="current">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Penalized&nbsp;SLRA</a></div>
 <div class="menu-item"><a href="software-als.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjusted&nbsp;least&nbsp;squares</a></div>
 <div class="menu-item"><a href="publications.html">Publications</a></div>
 <div class="menu-item"><a href="presentations.html">Presentations</a></div>
@@ -25,7 +25,7 @@
 <td id="layout-content">
 <table class="imgtable"><tr><td>
 <img src="software-logo.png" alt="" width="120px" />&nbsp;</td>
-<td align="left"><h1>SLRA: Software for weighted structured low-rank approximation</h1>
+<td align="left"><h1>Penalized SLRA</h1>
 </td></tr></table>
 <h2>Overview</h2>
 <p>SLRA is a C<tt></tt> software with interface to MATLAB, Octave, and R for solving low-rank approximation problems</p>
@@ -49,69 +49,10 @@
 </li>
 </ul>
 <p>For an <img class="eq" src="eqs/1734532268-150.png" alt="mtimes n" style="vertical-align: -1px" /> matrix <img class="eq" src="eqs/863917740-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />, with <img class="eq" src="eqs/2059543898-150.png" alt="m &lt; n" style="vertical-align: -1px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/482105550-150.png" alt="O(m^2n)" style="vertical-align: -6px" />, so that the package is suitable for applications with <img class="eq" src="eqs/1014391293-150.png" alt="ngg m" style="vertical-align: -2px" />. Problems with <img class="eq" src="eqs/1530387111-150.png" alt="n_p leq n(m - r)" style="vertical-align: -7px" /> can not be solved by the method, used in the software.</p>
-<h2>Usage</h2>
-<p>In MATLAB/Octave, once the structure and approximation criterion are specified in a variable <tt>s</tt> (see <a href="examples.html">examples</a> and the <a href="https://github.com/slra/slra/raw/master/slra.pdf">manual</a>), the problem is solved by a call of the <tt>slra</tt> function: </p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-[ph, info] = slra(p, s, r, opt);
-</pre></div></div>
-<ul>
-<li><p>The optional parameter <tt>opt</tt> is used to specify an initial approximation and options for the optimization method. </p>
-</li>
-<li><p>The output parameter <tt>info</tt> contains information about the convergence of the optimization method.</p>
-</li>
-</ul>
-<h3>System identification </h3>
-<p>A major application area of mosaic Hankel structured low-rank approximation methods is system identification. The <tt>slra</tt> package includes a wrapper function <tt>ident</tt> for identification of linear time-invariant systems. For details see the <a href="software-ident.html">ident package</a>. </p>
-<h2>Download and installation</h2>
-<h3>Latest stable version (v0.5)</h3>
-<ul>
-<li><p>Download <a href="https://github.com/slra/slra/archive/v0.5.zip">ZIP File</a></p>
-</li>
-<li><p>Download <a href="https://github.com/slra/slra/archive/v0.5.tar.gz">TAR Ball</a></p>
-</li>
-<li><p>View on <a href="https://github.com/slra/slra/releases/tag/v0.5">GitHub</a></p>
-</li>
-</ul>
-<h3>Current version (unstable)</h3>
-<ul>
-<li><p>Download <a href="https://github.com/slra/slra/zipball/master">ZIP File</a></p>
-</li>
-<li><p>Download <a href="https://github.com/slra/slra/tarball/master">TAR Ball</a></p>
-</li>
-<li><p>View on <a href="https://github.com/slra/slra">GitHub</a></p>
-</li>
-</ul>
-<h3>Installation</h3>
-<ul>
-<li><p>For MATLAB/Octave users:  unpack the archive and use <tt>addpath</tt> in MATLAB/Octave</p>
-</li>
-<li><p>For R users (Linux):  unpack the archive and run <tt>make R</tt> in console
-</p>
-</li>
-</ul>
-<h2>For advanced users/developers</h2>
-<ul>
-<li><p>The instructions how to compile from source are contained <a href="https://github.com/slra/slra/">here</a>
-</p>
-</li>
-</ul>
-<h2>Citing</h2>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-@Article{slra-software,
-  author = 	 {I. Markovsky and K. Usevich},
-  title = 	 {Software for weighted structured low-rank approximation},
-  journal =      {J. Comput. Appl. Math.},
-  volume =       {256},
-  pages =        {278--292},
-  year = 	 {2014},
-}
-</pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2014-06-25 14:03:25 Romance Daylight Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-(<a href="software-slra.jemdoc">source</a>)
+Page generated 2014-06-25 13:56:43 Romance Daylight Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+(<a href="software-rslra.jemdoc">source</a>)
 </div>
 </div>
 </td>

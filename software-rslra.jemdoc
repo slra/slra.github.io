@@ -1,0 +1,34 @@
+# jemdoc: menu{MENU}{software-rslra.html}
+# jemdoc: eqs, eqsize{150}, 
+# jemdoc: addpackage{amsmath}
+# jemdoc: addpackage{mathdots}
+# jemdoc: addpackage{amsfonts}
+# jemdoc: addpackage{times}
+# jemdoc: addpackage{mathptmx}
+# jemdoc: showsource
+
+~~~
+{}{img_left}{software-logo.png}{}{120px}{}{}
+= Penalized SLRA
+~~~
+
+== Overview
+
+SLRA is a C++ software with interface to MATLAB, Octave, and R for solving low-rank approximation problems
+\(
+\text{minimize} \quad \text{over} \ \widehat p \quad \|p - \widehat p\|_w \quad \text{subject to} \quad \text{rank}({\cal S}(\widehat p)) \leq r,
+\)
+with the following features:
+- [examples.html mosaic Hankel structured] approximating matrix ${\cal S}(\widehat p)$,
+- weighted 2-norm approximation criterion 
+\(
+\|p\|_w = \textstyle\sqrt{\sum_{i=1}^{n_p} w_i p_i^2},
+\)
+- fixed elements in the approximating matrix,
+- missing elements in the data matrix,
+- linear constraints on an approximating matrix's left kernel basis.
+
+For an $m\times n$ matrix ${\cal S}(\widehat p)$, with $m < n$, the computational complexity of the cost function and derivative evaluation is $O(m^2n)$, so that the package is suitable for applications with $n\gg m$. Problems with $n_p \leq n(m - r)$ can not be solved by the method, used in the software.
+
+
+

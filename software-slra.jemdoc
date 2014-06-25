@@ -7,12 +7,6 @@
 # jemdoc: addpackage{mathptmx}
 # jemdoc: showsource
 
-#~~~
-#{}{raw}
-#<script type="text/javascript"
-#   src="/home/im/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-#~~~
-
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
 = SLRA: Software for weighted structured low-rank approximation
@@ -48,7 +42,7 @@ In MATLAB/Octave, once the structure and approximation criterion are specified i
 
 === System identification 
 
-A major application area of mosaic Hankel structured low-rank approximation methods is system identification. The +slra+ package includes a wrapper function +ident+ for identification of linear time-invariant systems. For details see the [http://homepages.vub.ac.be/~imarkovs/ident-demo.html demo]. 
+A major application area of mosaic Hankel structured low-rank approximation methods is system identification. The +slra+ package includes a wrapper function +ident+ for identification of linear time-invariant systems. For details see the [software-ident.html ident package]. 
 
 == Download and installation
 
@@ -67,13 +61,10 @@ A major application area of mosaic Hankel structured low-rank approximation meth
 - For R users (Linux):  unpack the archive and run +make R+ in console
 # - For R users (Windows): *TODO!*
 
-== Examples
-
-. . . . . . . 
 
 == For advanced users/developers
 - The instructions how to compile from source are contained [https://github.com/slra/slra/ here]
-- The full documentation for the C++ core of the package is  contained [http://kdu.github.io/slra/ here]
+#- The full documentation for the C++ core of the package is  contained [http://kdu.github.io/slra/ here] in progress.
 
 == Citing
 
