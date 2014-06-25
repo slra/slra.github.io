@@ -67,6 +67,14 @@ A major application area of mosaic Hankel structured low-rank approximation meth
 - For R users (Linux):  unpack the archive and run +make R+ in console
 # - For R users (Windows): *TODO!*
 
+== Examples
+
+. . . . . . . 
+
+== For advanced users/developers
+- The instructions how to compile from source are contained [https://github.com/slra/slra/ here]
+- The full documentation for the C++ core of the package is  contained [http://kdu.github.io/slra/ here]
+
 == Citing
 
 ~~~
@@ -80,6 +88,7 @@ A major application area of mosaic Hankel structured low-rank approximation meth
   year = 	 {2014},
 }
 ~~~
+
 
 # == License
 # == Feedback
