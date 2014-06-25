@@ -3,6 +3,9 @@ all:
 	./jemdoc.py index.jemdoc
 	./jemdoc.py publications.jemdoc
 	./jemdoc.py software.jemdoc
+	./jemdoc.py software-slra.jemdoc
+	./jemdoc.py software-rslra.jemdoc
+	./jemdoc.py software-als.jemdoc
 	./jemdoc.py examples.jemdoc
 	./jemdoc.py presentations.jemdoc
 	./jemdoc.py drwa13.jemdoc

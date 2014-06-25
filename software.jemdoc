@@ -11,23 +11,17 @@
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
 == [software-slra.html SLRA: Software for weighted structured low-rank approximation]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
+A software package is presented that computes locally optimal solutions to low-rank approximation problems with the following features:
+ - constraint on the approximating matrix,
+ - /weighted 2-norm/ approximation criterion,
+ - /fixed elements/ in the approximating matrix,
+ - /missing elements/ in the data matrix, and
+ - /linear constraints/ on an approximating matrix's left kernel basis.
+
 ~~~
 
 ~~~
 {}{img_left}{software-logo.png}{}{120px}{}{}
-== [software-ident.html IDENT: Identification in behavioural setting]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
-~~~
-
-~~~
-{}{img_left}{software-logo.png}{}{120px}{}{}
-== [software-rslra.html REGSLRA: Penalized SLRA]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
-~~~
-
-~~~
-{}{img_left}{software-logo.png}{}{120px}{}{}
-== [software-als.html ALS: Adjusted least squares]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum enim quis nisi posuere lacinia. Vivamus pellentesque vehicula dui, a vehicula metus consectetur id. Aliquam eu sollicitudin sem. Donec at magna at risus fringilla tempus. Cras blandit, turpis vel porttitor ornare, risus leo varius libero, non dapibus ipsum augue sed est. Pellentesque sapien velit, sagittis vitae feugiat quis, tincidunt quis nisl. Etiam lacus arcu, dignissim in vestibulum eu, venenatis vitae ipsum. 
+== [software-ident.html IDENT: Package for identification in behavioural setting]
+An identification problem with no a priori separation of the variables into inputs and outputs and representation invariant approximation criterion is considered. The model class consists of linear time-invariant systems of bounded complexity and the approximation criterion is the minimum of a weighted 2-norm distance between the given time series and a time series that is consistent with the model. The problem is equivalent to and is solved as a mosaic-Hankel structured low-rank approximation problem. Software implementing the approach is developed and tested on benchmark problems. Additional nonstandard features of the software are specification of exact and missing variables and identification from multiple experiments.
 ~~~

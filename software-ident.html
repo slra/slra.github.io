@@ -1,41 +1,697 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title></title>
+<title>Demo of the "ident" package</title>
+<!-- 2013-10-21 Mon 15:59 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-item"><a href="index.html">Overview</a></div>
-<div class="menu-item"><a href="software.html">Software</a></div>
-<div class="menu-item"><a href="software-slra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLRA&nbsp;package</a></div>
-<div class="menu-item"><a href="software-ident.html" class="current">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDENT&nbsp;package</a></div>
-<div class="menu-item"><a href="software-rslra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Penalized&nbsp;SLRA</a></div>
-<div class="menu-item"><a href="software-als.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjusted&nbsp;least&nbsp;squares</a></div>
-<div class="menu-item"><a href="publications.html">Publications</a></div>
-<div class="menu-item"><a href="presentations.html">Presentations</a></div>
-<div class="menu-item"><a href="sessions.html">Special&nbsp;sessions</a></div>
-<div class="menu-item"><a href="lectures.html">Mini&nbsp;courses</a></div>
-</td>
-<td id="layout-content">
+<div id="content">
+<h1 class="title">Demo of the "ident" package</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Installation</a></li>
+<li><a href="#sec-2">2. Usage</a></li>
+<li><a href="#sec-3">3. Equivalence with PEM in the OE case</a></li>
+<li><a href="#sec-4">4. Permutation of variables</a></li>
+<li><a href="#sec-5">5. Unstable system</a></li>
+<li><a href="#sec-6">6. Trajectory of minimal length</a></li>
+<li><a href="#sec-7">7. Multiple short trajectories</a></li>
+<li><a href="#sec-8">8. Missing data</a></li>
+<li><a href="#sec-9">9. Step response identification</a></li>
+<li><a href="#sec-10">10. References</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Installation</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The software is hosted in <a href="https://github.com/slra/slra/zipball/master">GitHub</a>. You can download it as a single <a href="https://github.com/slra/slra/zipball/master">zip file</a>, or install it in a sub-directory \(\mathtt{slra}\) to your current directory by pasting the following commands into MATLAB:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% Installation</span>
+unzip(<span style="color: #ff7f24;">'https://github.com/slra/slra/zipball/master'</span>)
+addpath(fullfile(cd, <span style="color: #ff7f24;">'slra-slra-3e77deb'</span>))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Usage</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The package has two main functions:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-matlab">[sys, info, wh] = ident(w, m, ell, opt); <span style="color: #ee0000;">% identification </span>
+[M, wh] = misfit(w, sys, opt);           <span style="color: #ee0000;">% validation</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li><i>data \(\mathtt{w}\)</i> &#x2014; set of time series \(\{\, w^1, \ldots, w^N \,\}\), \(w^k(t) \in \mathbb{R}^q\) specified by 
+<ul class="org-ul">
+<li>\(T\times q\) matrix &#x2014; \(q\)-variate time series with \(T\) samples
+</li>
+<li>\(T\times q \times N\) array &#x2014; \(N\), \(q\)-variate time series with \(T\) samples
+</li>
+<li>cell array of \(T_k\times q\) matrices &#x2014; vector time series with different number of samples
+</li>
+<li><i>missing data</i> &#x2014; \(\mathtt{NaN}\) elements of \(\mathtt{w}\)
+</li>
+</ul>
+</li>
+<li><i>model \(\mathtt{sys}\)</i> &#x2014; LTI system in \(\mathtt{ss}\) object format
+</li>
+<li><i>model class</i> &#x2014; \(\mathcal{L}_{m,\ell}\) is LTI systems with at most \(\mathtt{m}\) inputs and lag at most \(\mathtt{ell}\)
+</li>
+<li><i>identification criterion</i> &#x2014; misfit \(\mathtt{M}\), defined as 
+\begin{equation*}
+M(w,\mathcal{B}) := \min_{\hat w^1,\ldots,\hat w^N\in\mathcal{B}} \sqrt{\textstyle\sum_{k=1}^N \|w^k - \hat w^k\|^2_2 }
+\end{equation*}
+</li>
+<li><i>identification problem</i>, solved by \(\mathtt{ident}\) &#x2014; \(\min_{\mathcal{B}\in\mathcal{L}_{m,\ell}} M(w,\mathcal{B})\)
+</li>
+<li><i>extra options \(\mathtt{opt}\)</i>
+<ul class="org-ul">
+<li>\(\mathtt{exct}\) &#x2014; exact/fixed variables (e.g., output error setup)
+</li>
+<li>\(\mathtt{wini}\) &#x2014; fixed initial conditions (e.g., step response data)
+</li>
+<li>\(\mathtt{sys0}\), \(\mathtt{maxiter}\) &#x2014; initial model and maximum # of iterations for the optimization method
+</li>
+</ul>
+</li>
+<li><i>online help</i> &#x2014; \(\mathtt{help ident}\)
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Equivalence with PEM in the OE case</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% simulation parameters</span>
+clear all, randn(<span style="color: #ff7f24;">'seed'</span>, 0), rand(<span style="color: #ff7f24;">'seed'</span>, 0), warning off
+m = 1; p = 1; ell = 2; T = 300; s = 0.1;     
+opt_oe.exct = 1<span style="color: #98fb98;">:</span>m; <span style="color: #ee0000;">% fixed inputs = output error identification</span>
+opt_eiv.exct = []; <span style="color: #ee0000;">% errors-in-variables setup </span>
+
+<span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% generate data</span>
+n = ell <span style="color: #98fb98;">*</span> p; q = m <span style="color: #98fb98;">+</span> p; sys0 = drss(n, p, m); <span style="color: #ee0000;">% random "true" system</span>
+u0 = rand(T, m); xini0 = rand(n, 1);          <span style="color: #ee0000;">% random "true" trajectory</span>
+y0 = lsim(sys0, u0, [], xini0); u = u0;       
+yt = randn(T, p); y = y0 <span style="color: #98fb98;">+</span> s <span style="color: #98fb98;">*</span> norm(y0) <span style="color: #98fb98;">*</span> yt <span style="color: #98fb98;">/</span> norm(yt); <span style="color: #ee0000;">% output error</span>
+w0 = [u0 y0]; w = [u y];
+
+<span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% compare ident and pem</span>
+<span style="color: #00ffff;">tic</span>, sysh_ident = ident(w, m, ell, opt_oe); t_ident = <span style="color: #00ffff;">toc</span>;
+<span style="color: #00ffff;">tic</span>, sysh_pem = pem(iddata(y, u), n); t_pem = <span style="color: #00ffff;">toc</span>;
+[Yh, M] = compare(iddata(y, u), idss(sysh_ident), sysh_pem); 
+<span style="color: #7fffd4;">ans</span> = [[mean(M{1}); mean(M{2})] [t_ident; t_pem]]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">86.831</td>
+<td class="right">0.0291</td>
+</tr>
+
+<tr>
+<td class="right">86.806</td>
+<td class="right">1.4404</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Permutation of variables</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% the model for [y u] is the inverse of the model for [u y]</span>
+sysh1 = ident(w, m, ell, opt_eiv);
+sysh2 = ident(fliplr(w), m, ell, opt_eiv);
+<span style="color: #7fffd4;">ans</span> = [eig(sysh1) eig(inv(sysh2))]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">0.01129</td>
+<td class="right">0.011284</td>
+</tr>
+
+<tr>
+<td class="right">0.69769</td>
+<td class="right">0.69767</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Unstable system</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>noisy data
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% the model for the reversed time data has reciprocal poles</span>
+sysh3 = ident(flipud(w), m, ell, opt_eiv); 
+<span style="color: #7fffd4;">ans</span> = [sort(1 <span style="color: #98fb98;">./</span> (eig(sysh1))) eig(sysh3)]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">1.433</td>
+<td class="right">1.433</td>
+</tr>
+
+<tr>
+<td class="right">88.573</td>
+<td class="right">88.566</td>
+</tr>
+</tbody>
+</table>
+</li>
+
+<li>exact data
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% pem fails to identify unstable model</span>
+sysh_ident = ident(flipud(w0), m, ell, opt_oe); <span style="color: #ee0000;">% note that now we use the true data w0</span>
+opt_pem = ssestOptions; opt_pem.Advanced.StabilityThreshold.z = <span style="color: #7fffd4;">inf</span>; <span style="color: #ee0000;">% disable the stability constraint</span>
+<span style="color: #00ffff;">try</span> 
+  sysh_pem = pem(iddata(flipud(y0), flipud(u0)), n, opt_pem, <span style="color: #ff7f24;">'dist'</span>, <span style="color: #ff7f24;">'none'</span>);
+<span style="color: #00ffff;">catch</span>
+  sysh_pem = zeros(n); <span style="color: #ee0000;">% zero indicates failure </span>
+<span style="color: #00ffff;">end</span>
+<span style="color: #7fffd4;">ans</span> = [sort(1 <span style="color: #98fb98;">./</span> eig(sys0)) eig(sysh_ident) sort(eig(sysh_pem))]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">1.510</td>
+<td class="right">1.510</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="right">25.751</td>
+<td class="right">25.751</td>
+<td class="right">0</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Trajectory of minimal length</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% pem needs more data to identify a model</span>
+Tmin = ell <span style="color: #98fb98;">+</span> q <span style="color: #98fb98;">*</span> (ell <span style="color: #98fb98;">+</span> 1) <span style="color: #98fb98;">-</span> 1; TT = (Tmin <span style="color: #98fb98;">-</span> 1)<span style="color: #98fb98;">:</span>15; np = length(TT);
+work_ident = zeros(1, np); correct_ident = zeros(1, np); 
+work_pem   = zeros(1, np); correct_pem   = zeros(1, np);
+<span style="color: #00ffff;">for</span> <span style="color: #eedd82;">i</span> = <span style="color: #7fffd4;">1:np</span>
+  <span style="color: #00ffff;">try</span> 
+    sysh_ident = ident(w0(1<span style="color: #98fb98;">:</span>TT(<span style="color: #7fffd4;">i</span>), <span style="color: #98fb98;">:</span>), m, ell, opt_oe); work_ident(<span style="color: #7fffd4;">i</span>) = 1; 
+    correct_ident(<span style="color: #7fffd4;">i</span>) = norm(sys0 <span style="color: #98fb98;">-</span> sysh_ident) <span style="color: #98fb98;">&lt;</span> 1e<span style="color: #98fb98;">-</span>5; 
+  <span style="color: #00ffff;">end</span>
+  <span style="color: #00ffff;">try</span> 
+    sysh_pem = pem(iddata(y0(1<span style="color: #98fb98;">:</span>TT(<span style="color: #7fffd4;">i</span>), <span style="color: #98fb98;">:</span>), u0(1<span style="color: #98fb98;">:</span>TT(<span style="color: #7fffd4;">i</span>), <span style="color: #98fb98;">:</span>)), n, <span style="color: #ff7f24;">'dist'</span>, <span style="color: #ff7f24;">'none'</span>); work_pem(<span style="color: #7fffd4;">i</span>) = 1; 
+    correct_pem(<span style="color: #7fffd4;">i</span>) = norm(sys0 <span style="color: #98fb98;">-</span> sysh_pem) <span style="color: #98fb98;">&lt;</span> 1e<span style="color: #98fb98;">-</span>5; 
+  <span style="color: #00ffff;">end</span>
+<span style="color: #00ffff;">end</span> 
+<span style="color: #7fffd4;">ans</span> = [TT; work_ident; correct_ident; work_pem; correct_pem]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">6</td>
+<td class="right">7</td>
+<td class="right">8</td>
+<td class="right">9</td>
+<td class="right">10</td>
+<td class="right">11</td>
+<td class="right">12</td>
+<td class="right">13</td>
+<td class="right">14</td>
+<td class="right">15</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Multiple short trajectories</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% N short trajectories equivalent to one long trajectory (N * Tshort = T)</span>
+Tshort = 13; N = round(T <span style="color: #98fb98;">/</span> Tshort); 
+u_mult = {}; y_mult = {}; w_mult = []; 
+<span style="color: #00ffff;">for</span> <span style="color: #eedd82;">k</span> = <span style="color: #7fffd4;">1:N</span>,
+  u0 = rand(Tshort, m); xini0 = rand(n, 1); 
+  y0 = lsim(sys0, u0, [], xini0); 
+  yt = randn(Tshort, p); y_mult{k} = y0 <span style="color: #98fb98;">+</span> s <span style="color: #98fb98;">*</span> norm(y0) <span style="color: #98fb98;">*</span> yt <span style="color: #98fb98;">/</span> norm(yt); 
+  u_mult{k} = u0; w_mult(<span style="color: #98fb98;">:</span>, <span style="color: #98fb98;">:</span>, k) = [u0 y_mult{k}]; 
+<span style="color: #00ffff;">end</span>
+<span style="color: #00ffff;">tic</span>, sysh = ident(w_mult, m, ell, opt_oe); t_ident = <span style="color: #00ffff;">toc</span>;
+<span style="color: #00ffff;">tic</span>, sysh_pem = pem(iddata(y_mult, u_mult), n, <span style="color: #ff7f24;">'dist'</span>, <span style="color: #ff7f24;">'none'</span>); t_pem = <span style="color: #00ffff;">toc</span>;
+[Yh, M] = compare(iddata(y_mult, u_mult), idss(sysh), sysh_pem); 
+<span style="color: #7fffd4;">ans</span> = [[mean(M{1}); mean(M{2})] [t_ident; t_pem]]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">88.303</td>
+<td class="right">0.0083</td>
+</tr>
+
+<tr>
+<td class="right">88.462</td>
+<td class="right">1.1033</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Missing data</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% randomly distributed missing data in time and variables</span>
+Tp = 100; Im = randperm(q <span style="color: #98fb98;">*</span> Tp); Tm = round(0.2 <span style="color: #98fb98;">*</span> q <span style="color: #98fb98;">*</span> Tp); 
+wm = w(1<span style="color: #98fb98;">:</span>Tp, <span style="color: #98fb98;">:</span>); wm(Im(1<span style="color: #98fb98;">:</span>Tm)) = <span style="color: #7fffd4;">NaN</span>; um = wm(<span style="color: #98fb98;">:</span>, 1<span style="color: #98fb98;">:</span>m); ym = wm(<span style="color: #98fb98;">:</span>, m <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end);
+
+<span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% use misdata for the comparison</span>
+<span style="color: #00ffff;">tic</span>, sysh_n4sid = ss(n4sid(misdata(iddata(ym, um), 10), n, <span style="color: #ff7f24;">'dist'</span>, <span style="color: #ff7f24;">'none'</span>)); t_n4sid = <span style="color: #00ffff;">toc</span>;
+<span style="color: #00ffff;">tic</span>, opt_oe.sys0 = sysh_n4sid; sysh_ident = ident(wm, m, ell, opt_oe); t_ident = <span style="color: #00ffff;">toc</span>; opt_oe.sys0 = []; 
+<span style="color: #00ffff;">tic</span>, sysh_pem = pem(misdata(iddata(ym, um), 10), sysh_n4sid, <span style="color: #ff7f24;">'dist'</span>, <span style="color: #ff7f24;">'none'</span>); t_pem = <span style="color: #00ffff;">toc</span>;
+[Yh, M] = compare(iddata(y0, u0), sysh_n4sid, idss(sysh_ident), sysh_pem); 
+<span style="color: #7fffd4;">ans</span> = [[mean(M{1}); mean(M{2}); mean(M{3})] [t_n4sid; t_ident; t_pem]]
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">58.51</td>
+<td class="right">6.8132</td>
+</tr>
+
+<tr>
+<td class="right">83.93</td>
+<td class="right">0.0726</td>
+</tr>
+
+<tr>
+<td class="right">60.36</td>
+<td class="right">7.3597</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Step response identification</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #ee0000; font-weight: bold; text-decoration: overline;">%% simulate step response data</span>
+ys0 = step(sys0); Ts = length(ys0); us = ones(Ts, m);
+yt = randn(Ts, p); ys = ys0 <span style="color: #98fb98;">+</span> s <span style="color: #98fb98;">*</span> norm(ys0) <span style="color: #98fb98;">*</span> yt <span style="color: #98fb98;">/</span> norm(yt); 
+opt_oe.w0 = 0; opt_oe.sys0 = sys0; [sysh, info, wh] = ident([us ys], m, ell, opt_oe);
+<span style="color: #98fb98;">figure</span>(<span style="color: #ff7f24;">'visible'</span>, <span style="color: #ff7f24;">'off'</span>);
+plot(1<span style="color: #98fb98;">:</span>Ts, ys0, <span style="color: #ff7f24;">'-r'</span>, 1<span style="color: #98fb98;">:</span>Ts, ys, <span style="color: #ff7f24;">':k'</span>, 1<span style="color: #98fb98;">:</span>Ts, wh(<span style="color: #98fb98;">:</span>, end), <span style="color: #ff7f24;">'--b'</span>)
+legend(<span style="color: #ff7f24;">'true'</span>, <span style="color: #ff7f24;">'noisy'</span>, <span style="color: #ff7f24;">'approx.   .'</span>)
+plot2svg demo_f.svg, <span style="color: #98fb98;">set</span>(<span style="color: #eedd82;">gca</span>, <span style="color: #ff7f24;">'fontsize'</span>, 25), print <span style="color: #98fb98;">-</span>dpdf demo_f.pdf;
+</pre>
+</div>
+
 <table class="imgtable"><tr><td>
-<img src="software-logo.png" alt="" width="120px" />&nbsp;</td>
-<td align="left"><h1>IDENT: Behavioural approach to system identification</h1>
-</td></tr></table>
-<h2>Overview</h2>
-<div id="footer">
-<div id="footer-text">
-Page generated 2014-06-25 14:02:40 Romance Daylight Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-(<a href="software-ident.jemdoc">source</a>)
+<img src="demo_f.svg" alt="" width="500px" />&nbsp;
+<td align="right"></td></tr></table>
 </div>
 </div>
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> References</h2>
+<div class="outline-text-2" id="text-10">
+<ul>
+<li>
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+</td>
+<td class="bibtexitem">
+I.&nbsp;Markovsky and K.&nbsp;Usevich.
+ Software for weighted structured low-rank approximation.
+ <em>J. Comput. Appl. Math.</em>, 256:278-292, 2014.
+[&nbsp;<a href="j_bib.html#slra-software">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.cam.2013.07.048">DOI</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">.html</a>&nbsp;| 
+<a href="j_abstracts.html#slra-software">Abstract</a>&nbsp;]
 </td>
 </tr>
-</table>
+<li>
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+</td>
+<td class="bibtexitem">
+I.&nbsp;Markovsky.
+ A software package for system identification in the behavioral
+  setting.
+ <em>Control Engineering Practice</em>, 21:1422-1436, 2013.
+[&nbsp;<a href="j_bib.html#ident">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.conengprac.2013.06.010">DOI</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">.html</a>&nbsp;| 
+<a href="j_abstracts.html#ident">Abstract</a>&nbsp;]
+</td>
+</tr>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ivan Markovsky</p>
+<p class="date">Created: 2013-10-21 Mon 15:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.1.1 (<a href="http://orgmode.org">Org</a> mode 8.0.7)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

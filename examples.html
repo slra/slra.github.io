@@ -22,6 +22,10 @@ try {
 <td id="layout-menu">
 <div class="menu-item"><a href="index.html">Overview</a></div>
 <div class="menu-item"><a href="software.html" class="current">Software</a></div>
+<div class="menu-item"><a href="software-slra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLRA&nbsp;package</a></div>
+<div class="menu-item"><a href="software-ident.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDENT&nbsp;package</a></div>
+<div class="menu-item"><a href="software-rslra.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Penalized&nbsp;SLRA</a></div>
+<div class="menu-item"><a href="software-als.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjusted&nbsp;least&nbsp;squares</a></div>
 <div class="menu-item"><a href="publications.html">Publications</a></div>
 <div class="menu-item"><a href="presentations.html">Presentations</a></div>
 <div class="menu-item"><a href="sessions.html">Special&nbsp;sessions</a></div>
@@ -30,60 +34,3 @@ try {
 <td id="layout-content">
 <h1>Examples</h1>
 <h2>Hankel matrix</h2>
-
-<div class="eqwl"><img class="eqwl" src="eqs/4353269141702604213-150.png" alt=" {cal H}_{m,n}(p) := left[begin{array}{ccccc}  p_1 &amp; p_2 &amp; p_3 &amp; cdots &amp;  p_n  p_2 &amp; p_3 &amp;    iddots          &amp; &amp; p_{n+1}  p_3 &amp;  iddots            &amp;       &amp;              &amp;  vdots vdots              &amp;               &amp;      &amp;        &amp;   p_m &amp; p_{m+1}             &amp;  cdots                  &amp;  &amp; p_{m+n-1} end{array}right]  in mathbb{R}^{mtimes n} " />
-<br /></div><p>is specified in MATLAB/Octave by a structure variable with fields <tt>m</tt> (number of rows) and, optionally, <tt>n</tt> (number of columns):</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-s.m = m; s.n = n;
-</pre></div></div>
-<p>If <tt>s.n</tt> is missing, the number of columns is determined from the length <img class="eq" src="eqs/5261102140379497868-150.png" alt="n_p" style="vertical-align: -7px" /> of <img class="eq" src="eqs/14336043121-150.png" alt="p" style="vertical-align: -5px" /> as <img class="eq" src="eqs/3577289840459820554-150.png" alt="n = n_p - m  + 1" style="vertical-align: -7px" />.</p>
-<h2>Mosaic Hankel matrix</h2>
-<p>A mosaic Hankel matrix</p>
-
-<div class="eqwl"><img class="eqwl" src="eqs/3310238954953334795-150.png" alt=" {cal H}_{mathbf{m},mathbf{n}} :=  left[begin{array}{ccc} {cal H}_{m_1,n_1}(p^{(11)})     &amp; cdots &amp; {cal H}_{m_1,n_N}(p^{(1N)})   vdots                    &amp;        &amp; vdots   {cal H}_{m_q,n_1}(p^{(q1)})     &amp; cdots &amp; {cal H}_{m_q,n_N}(p^{(qN)})  end{array}right]  " />
-<br /></div><p>is specified by the vectors </p>
-
-<div class="eqwl"><img class="eqwl" src="eqs/384591629377686689-150.png" alt=" mathbf{m} = begin{bmatrix} m_1&amp; cdots &amp; m_q end{bmatrix}, qquad mathbf{n} = begin{bmatrix} n_1&amp; cdots&amp; n_N end{bmatrix}. " />
-<br /></div><p>For example, with <img class="eq" src="eqs/7046377602793978756-150.png" alt="q = N = 2" style="vertical-align: -5px" />,</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-s.m = [m1; m2]; s.n = [n1; n2];
-</pre></div></div>
-<h2>Unstructured matrix</h2>
-<p>An <img class="eq" src="eqs/3187889088634215596-150.png" alt="mtimes n" style="vertical-align: -1px" /> unstructured matrix is a special case of a mosaic Hankel matrix and is specified by</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-s.m = ones(m, 1); s.n = ones(n, 1);
-</pre></div></div>
-<h2>Weight vector</h2>
-<p>The vector <img class="eq" src="eqs/15232045814-150.png" alt="w" style="vertical-align: -1px" /> of weights is considered part of the structure and is specified by a filed <tt>w</tt> of <tt>s</tt>:</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-s.w = w;
-</pre></div></div>
-<h2>Exact elements</h2>
-<p>Exact elements of <img class="eq" src="eqs/14336043121-150.png" alt="p" style="vertical-align: -5px" />, i.e., constraints <img class="eq" src="eqs/4655768527924275747-150.png" alt="widehat p_i = p_i" style="vertical-align: -5px" />, are specifies by infinite weights:</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-s.w(I_exact) = inf;
-</pre></div></div>
-<p>where <tt>I_exct</tt> are the indeces of the exact elements of <img class="eq" src="eqs/14336043121-150.png" alt="p" style="vertical-align: -5px" />.</p>
-<h2>Missing elements</h2>
-<p>Missing elements of <img class="eq" src="eqs/14336043121-150.png" alt="p" style="vertical-align: -5px" /> are specified by setting them to <tt>NaN</tt>:</p>
-<div class="codeblock">
-<div class="blockcontent"><pre>
-p(I_missing) = NaN;
-</pre></div></div>
-<p>where <tt>I_imssing</tt> are the indeces of the missing elements of <img class="eq" src="eqs/14336043121-150.png" alt="p" style="vertical-align: -5px" />.</p>
-<div id="footer">
-<div id="footer-text">
-Page generated 2014-06-03 16:07:12 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-(<a href="examples.jemdoc">source</a>)
-</div>
-</div>
-</td>
-</tr>
-</table>
-</body>
-</html>
