@@ -1,0 +1,287 @@
+#+TITLE: Demo of the "ident" package 
+# TODO: try frequency domain toolbox
+#+PROPERTY: eval export
+#+PROPERTY: exports both
+#+PROPERTY: noweb eval
+#+PROPERTY: tangle "demo.m"
+#+PROPERTY: session *MATLAB*
+
+
+* Installation
+The software is hosted in [[https://github.com/slra/slra/zipball/master][GitHub]]. You can download it as a single [[https://github.com/slra/slra/zipball/master][zip file]], or install it in a sub-directory $\mathtt{slra}$ to your current directory by pasting the following commands into MATLAB:
+#+BEGIN_SRC matlab :tangle no
+%% Installation
+unzip('https://github.com/slra/slra/zipball/master')
+addpath(fullfile(cd, 'slra-slra-3e77deb'))
+#+END_SRC
+.
+
+* Usage
+The package has two main functions:
+  #+BEGIN_SRC matlab :tangle no
+  [sys, info, wh] = ident(w, m, ell, opt); % identification 
+  [M, wh] = misfit(w, sys, opt);           % validation
+  #+END_SRC
+- /data $\mathtt{w}$/ --- set of time series \(\{\, w^1, \ldots, w^N \,\}\), \(w^k(t) \in \mathbb{R}^q\) specified by 
+  - $T\times q$ matrix --- $q$-variate time series with $T$ samples
+  - $T\times q \times N$ array --- $N$, $q$-variate time series with $T$ samples
+  - cell array of $T_k\times q$ matrices --- vector time series with different number of samples
+  - /missing data/ --- $\mathtt{NaN}$ elements of $\mathtt{w}$
+- /model $\mathtt{sys}$/ --- LTI system in $\mathtt{ss}$ object format
+- /model class/ --- $\mathcal{L}_{m,\ell}$ is LTI systems with at most $\mathtt{m}$ inputs and lag at most $\mathtt{ell}$
+- /identification criterion/ --- misfit $\mathtt{M}$, defined as 
+    \begin{equation*}
+    M(w,\mathcal{B}) := \min_{\hat w^1,\ldots,\hat w^N\in\mathcal{B}} \sqrt{\textstyle\sum_{k=1}^N \|w^k - \hat w^k\|^2_2 }
+    \end{equation*}
+- /identification problem/, solved by $\mathtt{ident}$ --- \(\min_{\mathcal{B}\in\mathcal{L}_{m,\ell}} M(w,\mathcal{B})\)
+- /extra options $\mathtt{opt}$/
+    - $\mathtt{exct}$ --- exact/fixed variables (e.g., output error setup)
+    - $\mathtt{wini}$ --- fixed initial conditions (e.g., step response data)
+    - $\mathtt{sys0}$, $\mathtt{maxiter}$ --- initial model and maximum # of iterations for the optimization method
+- /online help/ --- $\mathtt{help ident}$
+
+* Equivalence with PEM in the OE case
+
+#+BEGIN_SRC matlab
+%% simulation parameters
+clear all, randn('seed', 0), rand('seed', 0), warning off
+m = 1; p = 1; ell = 2; T = 300; s = 0.1;     
+opt_oe.exct = 1:m; % fixed inputs = output error identification
+opt_eiv.exct = []; % errors-in-variables setup 
+
+%% generate data
+n = ell * p; q = m + p; sys0 = drss(n, p, m); % random "true" system
+u0 = rand(T, m); xini0 = rand(n, 1);          % random "true" trajectory
+y0 = lsim(sys0, u0, [], xini0); u = u0;       
+yt = randn(T, p); y = y0 + s * norm(y0) * yt / norm(yt); % output error
+w0 = [u0 y0]; w = [u y];
+
+%% compare ident and pem
+tic, sysh_ident = ident(w, m, ell, opt_oe); t_ident = toc;
+tic, sysh_pem = pem(iddata(y, u), n); t_pem = toc;
+[Yh, M] = compare(iddata(y, u), idss(sysh_ident), sysh_pem); 
+ans = [[mean(M{1}); mean(M{2})] [t_ident; t_pem]]
+#+END_SRC
+
+#+RESULTS:
+| 86.831 | 0.39396 |
+| 86.806 |  6.2899 |
+
+* Permutation of variables 
+
+#+BEGIN_SRC matlab
+%% the model for [y u] is the inverse of the model for [u y]
+sysh1 = ident(w, m, ell, opt_eiv);
+sysh2 = ident(fliplr(w), m, ell, opt_eiv);
+ans = [eig(sysh1) eig(inv(sysh2))]
+#+END_SRC
+
+#+RESULTS:
+| 0.01129 | 0.011284 |
+| 0.69769 |  0.69767 |
+
+* Unstable system
+
+- noisy data
+  #+BEGIN_SRC matlab
+  %% the model for the reversed time data has reciprocal poles
+  sysh3 = ident(flipud(w), m, ell, opt_eiv); 
+  ans = [sort(1 ./ (eig(sysh1))) eig(sysh3)]
+  #+END_SRC
+
+  #+RESULTS:
+  |  1.433 |  1.433 |
+  | 88.573 | 88.566 |
+
+- exact data
+  #+BEGIN_SRC matlab
+  %% pem fails to identify unstable model
+  sysh_ident = ident(flipud(w0), m, ell, opt_oe); % note that now we use the true data w0
+  opt_pem = ssestOptions; opt_pem.Advanced.StabilityThreshold.z = inf; % disable the stability constraint
+  try 
+    sysh_pem = pem(iddata(flipud(y0), flipud(u0)), n, opt_pem, 'dist', 'none');
+  catch
+    sysh_pem = zeros(n); % zero indicates failure 
+  end
+  ans = [sort(1 ./ eig(sys0)) eig(sysh_ident) sort(eig(sysh_pem))]
+  #+END_SRC
+
+  #+RESULTS:
+  |  1.510 |  1.510 | 0 |
+  | 25.751 | 25.751 | 0 |
+
+* Trajectory of minimal length
+
+#+BEGIN_SRC matlab
+%% pem needs more data to identify a model
+Tmin = ell + q * (ell + 1) - 1; TT = (Tmin - 1):15; np = length(TT);
+work_ident = zeros(1, np); correct_ident = zeros(1, np); 
+work_pem   = zeros(1, np); correct_pem   = zeros(1, np);
+for i = 1:np
+  try 
+    sysh_ident = ident(w0(1:TT(i), :), m, ell, opt_oe); work_ident(i) = 1; 
+    correct_ident(i) = norm(sys0 - sysh_ident) < 1e-5; 
+  end
+  try 
+    sysh_pem = pem(iddata(y0(1:TT(i), :), u0(1:TT(i), :)), n, 'dist', 'none'); work_pem(i) = 1; 
+    correct_pem(i) = norm(sys0 - sysh_pem) < 1e-5; 
+  end
+end 
+ans = [TT; work_ident; correct_ident; work_pem; correct_pem]
+#+END_SRC
+
+#+RESULTS:
+| 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+| 0 | 0 | 1 | 1 |  1 |  1 |  1 |  1 |  1 |  1 |
+| 0 | 0 | 1 | 1 |  1 |  1 |  1 |  1 |  1 |  1 |
+| 0 | 0 | 0 | 0 |  0 |  0 |  0 |  1 |  1 |  1 |
+| 0 | 0 | 0 | 0 |  0 |  0 |  0 |  1 |  1 |  1 |
+
+* Multiple short trajectories
+
+#+BEGIN_SRC matlab
+%% N short trajectories equivalent to one long trajectory (N * Tshort = T)
+Tshort = 13; N = round(T / Tshort); 
+u_mult = {}; y_mult = {}; w_mult = []; 
+for k = 1:N,
+  u0 = rand(Tshort, m); xini0 = rand(n, 1); 
+  y0 = lsim(sys0, u0, [], xini0); 
+  yt = randn(Tshort, p); y_mult{k} = y0 + s * norm(y0) * yt / norm(yt); 
+  u_mult{k} = u0; w_mult(:, :, k) = [u0 y_mult{k}]; 
+end
+tic, sysh = ident(w_mult, m, ell, opt_oe); t_ident = toc;
+tic, sysh_pem = pem(iddata(y_mult, u_mult), n, 'dist', 'none'); t_pem = toc;
+[Yh, M] = compare(iddata(y_mult, u_mult), idss(sysh), sysh_pem); 
+ans = [[mean(M{1}); mean(M{2})] [t_ident; t_pem]]
+#+END_SRC
+
+#+RESULTS:
+| 88.303 | 0.0083 |
+| 88.462 | 1.1033 |
+
+* Missing data 
+
+#+BEGIN_SRC matlab
+%% randomly distributed missing data in time and variables
+Tp = 100; Im = randperm(q * Tp); Tm = round(0.2 * q * Tp); 
+wm = w(1:Tp, :); wm(Im(1:Tm)) = NaN; um = wm(:, 1:m); ym = wm(:, m + 1:end);
+
+%% use misdata for the comparison
+tic, sysh_n4sid = ss(n4sid(misdata(iddata(ym, um), 10), n, 'dist', 'none')); t_n4sid = toc;
+tic, opt_oe.sys0 = sysh_n4sid; sysh_ident = ident(wm, m, ell, opt_oe); t_ident = toc; opt_oe.sys0 = []; 
+tic, sysh_pem = pem(misdata(iddata(ym, um), 10), sysh_n4sid, 'dist', 'none'); t_pem = toc;
+[Yh, M] = compare(iddata(y0, u0), sysh_n4sid, idss(sysh_ident), sysh_pem); 
+ans = [[mean(M{1}); mean(M{2}); mean(M{3})] [t_n4sid; t_ident; t_pem]]
+#+END_SRC
+
+#+RESULTS:
+| 58.51 | 6.8132 |
+| 83.93 | 0.0726 |
+| 60.36 | 7.3597 |
+
+# addpath /home/im/mfiles/missing-data-dynamic/simio/ % replace 
+# tic, sysh_nn = nucnrm_md(ym, um, n); t_nn = toc; % Liu, Hansson, Vandenberghe, 2013
+
+* Step response identification
+
+#+BEGIN_SRC matlab :results silent
+%% simulate step response data
+ys0 = step(sys0); Ts = length(ys0); us = ones(Ts, m);
+yt = randn(Ts, p); ys = ys0 + s * norm(ys0) * yt / norm(yt); 
+opt_oe.w0 = 0; opt_oe.sys0 = sys0; [sysh, info, wh] = ident([us ys], m, ell, opt_oe);
+figure('visible', 'off');
+plot(1:Ts, ys0, '-r', 1:Ts, ys, ':k', 1:Ts, wh(:, end), '--b')
+legend('true', 'noisy', 'approx.   .')
+plot2svg demo_f.svg, set(gca, 'fontsize', 25), print -dpdf demo_f.pdf;
+#+END_SRC
+
+#+BEGIN_HTML
+<table class="imgtable"><tr><td>
+<img src="demo_f.svg" alt="" width="500px" />&nbsp;
+<td align="right"></td></tr></table>
+#+END_HTML
+
+# * How does it work?
+
+# * Extension for ARMAX
+  
+* References
+
+#+BEGIN_HTML
+<ul>
+<li>
+I.&nbsp;Markovsky and K.&nbsp;Usevich.
+ Software for weighted structured low-rank approximation.
+ <em>J. Comput. Appl. Math.</em>, 256:278-292, 2014.
+[&nbsp;<a href="j_bib.html#slra-software">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.cam.2013.07.048">DOI</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">.html</a>&nbsp;| 
+<a href="j_abstracts.html#slra-software">Abstract</a>&nbsp;]
+<li>
+I.&nbsp;Markovsky.
+ A software package for system identification in the behavioral
+  setting.
+ <em>Control Engineering Practice</em>, 21:1422-1436, 2013.
+[&nbsp;<a href="j_bib.html#ident">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.conengprac.2013.06.010">DOI</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">.html</a>&nbsp;| 
+<a href="j_abstracts.html#ident">Abstract</a>&nbsp;]
+</ul>
+#+END_HTML
+
+#+BEGIN_LaTeX
+\begingroup\renewcommand{\section}[2]{}
+\nocite{slra-software,ident}
+\bibliographystyle{alpha}
+\bibliography{bib-new,bib,mypapers}
+#+END_LaTeX
+
+* preamble								 :NP:
+#+AUTHOR:    Ivan Markovsky
+#+EMAIL:     imarkovs@vub.ac.be
+#+DATE:
+#+OPTIONS:   H:1 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t 
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+LaTeX_HEADER: \input{/home/im/texinputs/mystyle-org.tex}
+#+LaTeX_HEADER: \usepackage{listings}\lstset{flexiblecolumns=true}
+#+LaTeX_HEADER: \definecolor{dkgreen}{rgb}{0,0.6,0} \definecolor{gray}{rgb}{0.5,0.5,0.5}
+#+LaTeX_HEADER: \usepackage{ifpdf}\ifpdf\else\usepackage{psfrag}\fi 
+#+LaTeX_HEADER: \renewcommand{\ttw}{q}
+#+LaTeX_HEADER: \newcommand{\Syl}{S} % Sylvester matrix
+#+LaTeX_HEADER: \usepackage{tikz}\usetikzlibrary{arrows,positioning,fit}
+#+LaTeX_HEADER: \usepackage{pgfplotstable} 
+#+LaTeX_HEADER: \renewcommand{\baselinestretch}{1}
+#+LaTeX_HEADER: \parskip=3ex plus0.3ex minus0.3ex \parindent=0cm \arraycolsep=0.5ex
+#+LaTeX_HEADER: \topmargin=-1.5cm  \oddsidemargin=-1cm \evensidemargin=-1cm 
+#+LaTeX_HEADER: \textheight=25cm   \textwidth=18cm
+#+HTML_HEADER: <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}}); </script> <script type="text/javascript" src="/home/im/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="jemdoc.css" />
+#+EXPORT_EXCLUDE_TAGS: NP
+#+EXCLUDE_TAGS: NP 
+* cut                                                                    :NP:
+
+#+BEGIN_SRC 
+%% plot the results
+figure('visible', 'off'); 
+plot(TT, e_ident, 'xb', TT, e_pem, 'or', 'markersize', 10), xlabel('T'), title('error'); legend('ident  .', 'pem')
+plot2svg demo_e.svg, set(gca, 'fontsize', 25), print -dpdf demo_e.pdf;
+figure('visible', 'off'), 
+plot(TT, t_ident, 'xb', TT, t_pem, 'or', 'markersize', 10), xlabel('T'), title('execution time, sec.'); legend('ident  .', 'pem')
+plot2svg demo_t.svg, set(gca, 'fontsize', 25), print -dpdf demo_t.pdf;
+#+END_SRC
+
+#+BEGIN_HTML
+<table class="imgtable"><tr><td>
+<img src="demo_e.svg" alt="" width="500px" />&nbsp;
+<img src="demo_t.svg" alt="" width="500px" />&nbsp;
+<td align="right"></td></tr></table>
+#+END_HTML
+
+#+BEGIN_LaTeX
+\begin{center}
+\includegraphics[width=.45\textwidth]{./demo_e.pdf}
+\includegraphics[width=.45\textwidth]{./demo_t.pdf}
+\end{center}
+#+END_LaTeX

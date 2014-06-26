@@ -28,16 +28,16 @@
 <h2>Overview</h2>
 <p>SLRA is a C<tt></tt> software with interface to MATLAB, Octave, and R for solving low-rank approximation problems</p>
 
-<div class="eqwl"><img class="eqwl" src="eqs/1409785942-150.png" alt=" text{minimize} quad text{over}  widehat p quad |p - widehat p|_w quad text{subject to} quad text{rank}({cal S}(widehat p)) leq r, " />
+<div class="eqwl"><img class="eqwl" src="eqs/1629822693081112490-150.png" alt=" text{minimize} quad text{over}  widehat p quad |p - widehat p|_w quad text{subject to} quad text{rank}({cal S}(widehat p)) leq r, " />
 <br /></div><p>with the following features:</p>
 <ul>
-<li><p><a href="examples.html">mosaic Hankel structured</a> approximating matrix <img class="eq" src="eqs/863917740-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />,</p>
+<li><p><a href="examples.html">mosaic Hankel structured</a> approximating matrix <img class="eq" src="eqs/9133601666111744340-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />,</p>
 </li>
 <li><p>weighted 2-norm approximation criterion </p>
 </li>
 </ul>
 
-<div class="eqwl"><img class="eqwl" src="eqs/700187050-150.png" alt=" |p|_w = textstylesqrt{sum_{i=1}^{n_p} w_i p_i^2}, " />
+<div class="eqwl"><img class="eqwl" src="eqs/1062761975630790230-150.png" alt=" |p|_w = textstylesqrt{sum_{i=1}^{n_p} w_i p_i^2}, " />
 <br /></div><ul>
 <li><p>fixed elements in the approximating matrix,</p>
 </li>
@@ -46,7 +46,7 @@
 <li><p>linear constraints on an approximating matrix's left kernel basis.</p>
 </li>
 </ul>
-<p>For an <img class="eq" src="eqs/1734532268-150.png" alt="mtimes n" style="vertical-align: -1px" /> matrix <img class="eq" src="eqs/863917740-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />, with <img class="eq" src="eqs/2059543898-150.png" alt="m &lt; n" style="vertical-align: -1px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/482105550-150.png" alt="O(m^2n)" style="vertical-align: -6px" />, so that the package is suitable for applications with <img class="eq" src="eqs/1014391293-150.png" alt="ngg m" style="vertical-align: -2px" />. Problems with <img class="eq" src="eqs/1530387111-150.png" alt="n_p leq n(m - r)" style="vertical-align: -7px" /> can not be solved by the method, used in the software.</p>
+<p>For an <img class="eq" src="eqs/3187889088634215596-150.png" alt="mtimes n" style="vertical-align: -1px" /> matrix <img class="eq" src="eqs/9133601666111744340-150.png" alt="{cal S}(widehat p)" style="vertical-align: -6px" />, with <img class="eq" src="eqs/310184670480442714-150.png" alt="m &lt; n" style="vertical-align: -1px" />, the computational complexity of the cost function and derivative evaluation is <img class="eq" src="eqs/5400137134684481330-150.png" alt="O(m^2n)" style="vertical-align: -6px" />, so that the package is suitable for applications with <img class="eq" src="eqs/3312475274443383293-150.png" alt="ngg m" style="vertical-align: -2px" />. Problems with <img class="eq" src="eqs/4307665416819844441-150.png" alt="n_p leq n(m - r)" style="vertical-align: -7px" /> can not be solved by the method, used in the software.</p>
 <h2>Usage</h2>
 <p>In MATLAB/Octave, once the structure and approximation criterion are specified in a variable <tt>s</tt> (see <a href="examples.html">examples</a> and the <a href="https://github.com/slra/slra/raw/master/slra.pdf">manual</a>), the problem is solved by a call of the <tt>slra</tt> function: </p>
 <div class="codeblock">
@@ -108,7 +108,7 @@
 </pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2014-06-25 14:17:39 Romance Daylight Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2014-06-26 09:21:45 CEST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 (<a href="software-slra.jemdoc">source</a>)
 </div>
 </div>

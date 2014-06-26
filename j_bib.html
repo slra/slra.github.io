@@ -121,8 +121,8 @@ It implements a variable projection type algorithm and allows the user to choose
 @article{<a href="j.html#UM12-aut">UM12-aut</a>,
   author = {K. Usevich and I. Markovsky},
   title = {Optimization on a {G}rassmann manifold with application to system identification},
-  optvolume = {?},
-  optpages = {?--?},
+  volume = {50},
+  pages = {1656–-1662},
   year = {2014},
   journal = {Automatica},
   url = {<a href="http://homepages.vub.ac.be/~kusevich/preprints.html">http://homepages.vub.ac.be/~kusevich/preprints.html</a>},
@@ -137,8 +137,8 @@ It implements a variable projection type algorithm and allows the user to choose
 @article{<a href="j.html#pltv">pltv</a>,
   author = {I. Markovsky and J. Goos and K. Usevich and R. Pintelon},
   title = {Realization and identification of autonomous linear periodically time-varying systems},
-  optvolume = {?},
-  optpages = {?--?},
+  volume = {50},
+  pages = {1632--1640},
   doi = {10.1016/j.automatica.2014.04.003},
   year = {2014},
   journal = {Automatica},
@@ -146,6 +146,23 @@ It implements a variable projection type algorithm and allows the user to choose
   abstract = {Subsampling of a linear periodically time-varying system results in a collection of linear time-invariant systems with common poles. This key fact, known as ``lifting'', is used in a two step realization method. The first step is the realization of the time-invariant dynamics (the lifted system). Computationally, this step is a rank-revealing factorization of a block-Hankel matrix. The second step derives a state space representation of the periodic time-varying system. It is shown that no extra computations are required in the second step. The computational complexity of the overall method is therefore equal to the complexity for the realization of the lifted system. A modification of the realization method is proposed, which makes the complexity independent of the parameter variation period. Replacing the rank-revealing factorization in the realization algorithm by structured low-rank approximation yields a maximum likelihood identification method. Existing methods for structured low-rank approximation are used to identify efficiently linear periodically time-varying system. These methods can deal with missing data.
 },
   keywords = {linear periodically time-varying systems, lifting, realization, Kung's algorithm, Hankel low-rank approximation, maximum likelihood estimation.}
+}
+</pre>
+
+<a name="rslra"></a><pre>
+@article{<a href="j.html#rslra">rslra</a>,
+  author = {M. Ishteva and K. Usevich and I. Markovsky},
+  title = {Factorization approach to structured low-rank approximation with applications},
+  year = {2014},
+  journal = {SIAM J. Matrix Anal. Appl.},
+  optmonth = {},
+  optvolume = {},
+  optnumber = {},
+  optpages = {--},
+  optdoi = {},
+  keywords = {low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf</a>},
+  abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.}
 }
 </pre>
 
@@ -192,7 +209,7 @@ It implements a variable projection type algorithm and allows the user to choose
   number = {3},
   issn = {0219-1377},
   doi = {10.1007/s10115-013-0710-2},
-  url = {<a href="http://dx.doi.org/10.1007/s10115-013-0710-2">http://dx.doi.org/10.1007/s10115-013-0710-2</a>},
+  url = {<a href="http://link.springer.com/article/10.1007/s10115-013-0710-2">http://link.springer.com/article/10.1007/s10115-013-0710-2</a>},
   publisher = {Springer},
   keywords = {Low-rank approximation; Recommender systems; Bound constraints; Matrix factorization; Block coordinate descent method; Scalable algorithm; Block},
   pdf = {<a href="http://link.springer.com/content/pdf/10.1007%2Fs10115-013-0710-2.pdf">http://link.springer.com/content/pdf/10.1007%2Fs10115-013-0710-2.pdf</a>},

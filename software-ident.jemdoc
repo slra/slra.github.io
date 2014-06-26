@@ -1,0 +1,5 @@
+# jemdoc: menu{MENU}{software-ident.html}, nofooter
+
+= Demo of the +ident+ package
+
+#includeraw{ident-demo.html}
