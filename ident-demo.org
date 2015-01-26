@@ -12,7 +12,7 @@ The software is hosted in [[https://github.com/slra/slra/zipball/master][GitHub]
 #+BEGIN_SRC matlab :tangle no
 %% Installation
 unzip('https://github.com/slra/slra/zipball/master')
-addpath(fullfile(cd, 'slra-slra-3e77deb'))
+addpath(fullfile(cd, 'slra-slra-ff475be'))
 #+END_SRC
 .
 

@@ -1,8 +1,28 @@
 # jemdoc: menu{MENU}{presentations.html}
 = Presentations 
 
+== 2015
+
+# - Distance to uncontrollability in the behavioral setting\n [http://events.math.unipd.it/drwa13/ Dolomites research week on approximation], Alba di Canazei, Italy, September ?.
+- Structured low-rank approximation in signal processing and system identification\n 
+Invited lecture at the [http://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=15251 Sparse modelling and multi-exponential analysis],
+Dagstuhl, Germany, 14--19 June
+- Model-free optimal tracking control \n
+Invited lecture at the [http://www.hcm.uni-bonn.de/events/eventpages/2015/workshop-low-rank-optimization-and-applications/ Workshop on Low-rank Optimization and Applications], 
+Bonn, Germany, 8--12 June 
+- System identification with missing data\n 
+Talk at [http://lva.insa-lyon.fr/en/node Laboratoire Vibrations Acoustique], 
+Lyon, France, 30 April
+- Blind FIR system identification, distance to uncontrollability, and minimal kernal representations\n
+Talk at the [http://www.beneluxmeeting.nl/2015/ 34th Benelux Meeting on Systems and Control], 
+Lommel, Belgium, 24--26 March
+
 == 2014
 
+- Reproducible research with Emacs org-mode\n
+Talk at the [http://vubirelec.be/education/seminars ELEC seminar], Brussels, 10 December
+- Progress and challenges in optimization methods for system identification and control\n
+Talk at the [http://vubirelec.be/education/seminars ELEC seminar], Brussels, 24 October
 - Tensor low multilinear rank approximation by structured matrix low-rank approximation\n
 Poster at the [http://wwwtw.vub.ac.be/elec/ERNSI%202014/ERNSI2014-home.html Workshop of the European Research Network on System Identification], Ostend, Belgium, 21--24 September
 - Consistent estimation of linear systems from multiple experiments\n
