@@ -45,7 +45,8 @@
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra-ext.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra-ext.pdf</a>},
   doi = {10.1137/120883050},
-  gs = {<a href="http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC">http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC</a>}
+  gs = {<a href="http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC">http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC</a>},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -62,7 +63,8 @@
   keywords = {system identification; model reduction; behavioral approach; missing data; low-rank approximation; total least squares; reproducible research; DAISY.},
   doi = {10.1016/j.conengprac.2013.06.010},
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf</a>}
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ident.pdf</a>},
+  software = {<a href="http://slra.github.io/software-ident.html">http://slra.github.io/software-ident.html</a>}
 }
 </pre>
 
@@ -78,7 +80,8 @@
   abstract = {The structured low-rank approximation problem for general affine structures, weighted 2-norms and fixed elements is considered. The variable projection principle is used to reduce the dimensionality of the optimization problem. Algorithms for evaluation of the cost function, the gradient and an approximation of the Hessian are developed. For $m\times n$ mosaic Hankel matrices the algorithms have complexity $O(m^2n)$.},
   keywords = {Structured low-rank approximation; Variable projection; Mosaic Hankel matrices; Weighted 2-norm; Fixed elements; Computational complexity},
   url = {<a href="http://arxiv.org/abs/1211.3938">http://arxiv.org/abs/1211.3938</a>},
-  pdf = {<a href="http://arxiv.org/pdf/1211.3938v2">http://arxiv.org/pdf/1211.3938v2</a>}
+  pdf = {<a href="http://arxiv.org/pdf/1211.3938v2">http://arxiv.org/pdf/1211.3938v2</a>},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -101,7 +104,8 @@
 It implements a variable projection type algorithm and allows the user to choose standard local optimization methods for the solution of the parameter optimization problem. For an $m\times n$ data matrix, with $n>m$, the computational complexity of the cost function and derivative evaluation is~$O(m^2n)$. The package is suitable for applications with $n\gg m$. In statistical estimation and data modeling---the main application areas of the package---$n\gg m$ corresponds to modeling of large amount of data by a low-complexity model. Performance results on benchmark system identification problems from the database DAISY and approximate common divisor problems are presented.},
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf</a>},
-  doi = {<a href="http://dx.doi.org/10.1016/j.cam.2013.07.048">http://dx.doi.org/10.1016/j.cam.2013.07.048</a>}
+  doi = {dx.doi.org/10.1016/j.cam.2013.07.048},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -116,7 +120,8 @@ It implements a variable projection type algorithm and allows the user to choose
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf">http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf</a>},
   doi = {10.1016/j.sigpro.2013.09.021},
-  abstract = {Rank deficiency of a data matrix is equivalent to the existence of an exact linear model for the data. For the purpose of linear static modeling, the matrix is unstructured and the corresponding modeling problem is an approximation of the matrix by another matrix of a lower rank. In the context of linear time-invariant dynamic models, the appropriate data matrix is Hankel and the corresponding modeling problems becomes structured low-rank approximation. Low-rank approximation has applications in: system identification; signal processing, machine learning, and computer algebra, where different types of structure and constraints occur. This paper gives an overview of recent progress in efficient local optimization algorithms for solving weighted mosaic-Hankel structured low-rank approximation problems. In addition, the data matrix may have missing elements and elements may be specified as exact. The described algorithms are implemented in a publicly available software package. Their application to system identification, approximate common divisor, and data-driven simulation problems is described in this paper and is illustrated by reproducible simulation examples. As a data modeling paradigm the low-rank approximation setting is closely related to the the behavioral approach in systems and control, total least squares, errors-in-variables modeling, principal component analysis, and rank minimization.}
+  abstract = {Rank deficiency of a data matrix is equivalent to the existence of an exact linear model for the data. For the purpose of linear static modeling, the matrix is unstructured and the corresponding modeling problem is an approximation of the matrix by another matrix of a lower rank. In the context of linear time-invariant dynamic models, the appropriate data matrix is Hankel and the corresponding modeling problems becomes structured low-rank approximation. Low-rank approximation has applications in: system identification; signal processing, machine learning, and computer algebra, where different types of structure and constraints occur. This paper gives an overview of recent progress in efficient local optimization algorithms for solving weighted mosaic-Hankel structured low-rank approximation problems. In addition, the data matrix may have missing elements and elements may be specified as exact. The described algorithms are implemented in a publicly available software package. Their application to system identification, approximate common divisor, and data-driven simulation problems is described in this paper and is illustrated by reproducible simulation examples. As a data modeling paradigm the low-rank approximation setting is closely related to the the behavioral approach in systems and control, total least squares, errors-in-variables modeling, principal component analysis, and rank minimization.},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -132,7 +137,8 @@ It implements a variable projection type algorithm and allows the user to choose
   pdf = {<a href="http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf">http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf</a>},
   doi = {10.1016/j.automatica.2014.04.010},
   abstract = {In this paper, we consider the problem of optimization of a cost function on a Grassmann manifold. This problem appears in system identification in the behavioral setting, which is a structured low-rank approximation problem. We develop a new method for local optimization on the Grassmann manifold with switching coordinate charts. This method reduces the optimization problem on the manifold to an optimization problem in a bounded domain of an Euclidean space. Our experiments show that this method is competitive with state- of-the-art retraction-based methods. Compared to retraction-based methods, the proposed method allows to incorporate easily an arbitrary optimization method for solving the optimization subproblem in the Euclidean space.},
-  keywords = {system identification, over-parameterized models, Grassmann manifold, coordinate charts, structured low-rank approximation, optimization}
+  keywords = {system identification, over-parameterized models, Grassmann manifold, coordinate charts, structured low-rank approximation, optimization},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -148,7 +154,8 @@ It implements a variable projection type algorithm and allows the user to choose
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev3.pdf">http://homepages.vub.ac.be/~imarkovs/publications/pltv-rev3.pdf</a>},
   abstract = {Subsampling of a linear periodically time-varying system results in a collection of linear time-invariant systems with common poles. This key fact, known as ``lifting'', is used in a two step realization method. The first step is the realization of the time-invariant dynamics (the lifted system). Computationally, this step is a rank-revealing factorization of a block-Hankel matrix. The second step derives a state space representation of the periodic time-varying system. It is shown that no extra computations are required in the second step. The computational complexity of the overall method is therefore equal to the complexity for the realization of the lifted system. A modification of the realization method is proposed, which makes the complexity independent of the parameter variation period. Replacing the rank-revealing factorization in the realization algorithm by structured low-rank approximation yields a maximum likelihood identification method. Existing methods for structured low-rank approximation are used to identify efficiently linear periodically time-varying system. These methods can deal with missing data.
 },
-  keywords = {linear periodically time-varying systems, lifting, realization, Kung's algorithm, Hankel low-rank approximation, maximum likelihood estimation.}
+  keywords = {linear periodically time-varying systems, lifting, realization, Kung's algorithm, Hankel low-rank approximation, maximum likelihood estimation.},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/software/pltv-code.tgz">http://homepages.vub.ac.be/~imarkovs/software/pltv-code.tgz</a>}
 }
 </pre>
 
@@ -164,7 +171,8 @@ It implements a variable projection type algorithm and allows the user to choose
   doi = {10.1137/130931655},
   keywords = {low-rank approximation, affine structure, regularization, system identification, approximate greatest common divisor},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/rslra.pdf</a>},
-  abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.}
+  abstract = {We consider the problem of approximating an affinely structured matrix, for example a Hankel matrix, by a low-rank matrix with the same structure. This problem occurs in system identification, signal processing and computer algebra, among others. We impose the low-rank by modeling the approximation as a product of two factors with reduced dimension. The structure of the low-rank model is enforced by introducing a regularization term in the objective function. The proposed local optimization algorithm is able to solve the weighted structured low-rank approximation problem, as well as to deal with the cases of missing or fixed elements. In contrast to approaches based on kernel representations (in linear algebraic sense), the proposed algorithm is designed to address the case of small targeted rank. We compare it to existing approaches on numerical examples of system identification, approximate greatest common divisor problem, and symmetric tensor decomposition and demonstrate its consistently good performance.},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
 }
 </pre>
 
@@ -173,14 +181,48 @@ It implements a variable projection type algorithm and allows the user to choose
   author = {S. Rhode and K. Usevich and I. Markovsky and F. Gauterin},
   title = {A Recursive Restricted Total Least-squares Algorithm},
   journal = {IEEE Trans. Signal Process.},
+  volume = {62},
+  number = {21},
+  pages = {5652--5662},
+  doi = {10.1109/TSP.2014.2350959},
+  keywords = {total least squares, generalized total least squares, restricted total least squares (RTLS), recursive estimation, subspace tracking, system identification},
+  abstract = {We show that the generalized total least squares problem with a singular noise covariance matrix is equivalent to the restricted total least squares problem and propose a recursive method for its numerical solution. The method is based on the generalized inverse iteration. The estimation error covariance matrix and the estimated augmented correction are also characterized and computed recursively. The algorithm is cheap to compute and is suitable for online implementation. Simulation results in least squares, data least squares, total least squares, and restricted total least squares noise scenarios show fast convergence of the parameter estimates to their optimal values obtained by corresponding batch algorithms.},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/rgtls.pdf">http://homepages.vub.ac.be/~imarkovs/publications/rgtls.pdf</a>},
+  year = {2014},
+  software = {<a href="http://ieeexplore.ieee.org/xpl/abstractMultimedia.jsp?arnumber=6882213">http://ieeexplore.ieee.org/xpl/abstractMultimedia.jsp?arnumber=6882213</a>}
+}
+</pre>
+
+<a name="sensor-ieee"></a><pre>
+@article{<a href="j.html#sensor-ieee">sensor-ieee</a>,
+  author = {I. Markovsky},
+  title = {Comparison of adaptive and model-free methods for dynamic measurement},
+  journal = {IEEE Signal Proc. Letters},
+  year = {2015},
+  volume = {22},
+  optissue = {8},
+  pages = {1094--1097},
+  doi = {10.1109/LSP.2014.2388369},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee.pdf</a>},
+  abstract = {Dynamic measurement aims to improve the speed and accuracy characteristics of measurement devices by signal processing. State-of-the-art dynamic measurement methods are model-based adaptive methods, \ie, 1) they estimate model parameters in real-time and 2) based on the identified model perform model-based signal processing. The proposed model-free method belongs to the class of the subspace identification methods. It computes directly the quantity of interest without an explicit parameter estimation. This allows efficient computation as well as applicability to general high order multivariable processes.},
+  keywords = {subspace methods, total least squares, adaptive filtering, model-free signal processing.},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee-code.tar">http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee-code.tar</a>}
+}
+</pre>
+
+<a name="slra-consistency"></a><pre>
+@article{<a href="j.html#slra-consistency">slra-consistency</a>,
+  author = {I. Markovsky and R. Pintelon},
+  title = {Identification of linear time-invariant systems from multiple experiments},
+  journal = {IEEE Trans. Signal Process.},
   optvolume = {},
   optnumber = {},
   optpages = {--},
   optdoi = {},
-  keywords = {total least squares (TLS), generalized total least squares (GTLS), restricted total least squares (RTLS), recursive estimation, subspace tracking, system identification},
-  abstract = {We show that the generalized total least squares (GTLS) problem with a singular noise covariance matrix is equivalent to the restricted total least squares (RTLS) problem and propose a recursive method for its numerical solution. The method is based on the generalized inverse iteration. The estimation error covariance matrix and the estimated augmented correction are also characterized and computed recursively. The algorithm is cheap to compute and is suitable for online implementation. Simulation results in least squares (LS), data least squares (DLS), total least squares (TLS), and RTLS noise scenarios show fast convergence of the parameter estimates to their optimal values obtained by corresponding batch algorithms.},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/rgtls.pdf">http://homepages.vub.ac.be/~imarkovs/publications/rgtls.pdf</a>},
-  year = {2014}
+  year = {2015},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf">http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf</a>},
+  abstract = {A standard assumption for consistent estimation in the errors-in-variables setting is persistency of excitation of the noise free input signal. We relax this assumption by considering data from multiple experiments. Consistency is obtained asymptotically as the number of experiments tends to infinity. The main theoretical and algorithmic difficulties are related to the growing number of to-be-estimated initial conditions. The method proposed in the paper is based on analytic elimination of the initial conditions and optimization over the remaining parameters. The resulting estimator is consistent, however, achieving asymptotically efficiency remains an open problem.},
+  keywords = {maximum likelihood system identification, sum-of-damped exponentials modeling, consistency, structured low-rank approximation}
 }
 </pre>
 

@@ -33,23 +33,13 @@
 <a name="als-kdu"></a><pre>
 @techreport{<a href="t.html#als-kdu">als-kdu</a>,
   author = {K. Usevich and I. Markovsky},
-  title = {Adjusted least squares estimator for algebraic hypersurface fitting},
+  title = {Adjusted least squares fitting of algebraic hypersurfaces},
   year = {2014},
   institution = {Vrije Univ. Brussel},
-  optpdf = {??},
-  abstract = {We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that the points on a true hypersurface are corrupted by Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.}
-}
-</pre>
-
-<a name="slra-consistency"></a><pre>
-@techreport{<a href="t.html#slra-consistency">slra-consistency</a>,
-  author = {I. Markovsky and R. Pintelon},
-  title = {Identification of linear time-invariant systems from multiple experiments},
-  year = {2014},
-  institution = {Vrije Univ. Brussel},
-  optpdf = {??},
-  abstract = {A standard assumption for consistent estimation in the errors-in-variables setting is persistency of excitation of the noise free input signal. We relax this assumption by considering data from multiple experiments. Consistency is obtained asymptotically as the number of experiments tends to infinity. The main theoretical and algorithmic difficulties are related to the growing number of to-be-estimated initial conditions. The method proposed in the paper is based on analytic elimination of the initial conditions and optimization over the remaining parameters. The resulting estimator is consistent, however, achieving asymptotically efficiency remains an open problem.},
-  keywords = {maximum likelihood system identification, sum-of-damped exponentials modeling, consistency, structured low-rank approximation}
+  pdf = {<a href="http://arxiv.org/abs/1412.2291">http://arxiv.org/abs/1412.2291</a>},
+  abstract = {We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that points on a true hypersurface, described by a polynomial equation, are corrupted by zero mean independent Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.},
+  keywords = {hypersurface fitting; curve fitting; statistical estimation, errors-in-variables; Quasi-Hankel matrix; Hermite polynomials; affine invariance; subspace clustering},
+  file = {~/als/als-computation/als.tex}
 }
 </pre>
 
@@ -63,6 +53,42 @@
   abstract = {In this paper, the problem of computing the distance from a given linear time-invariant system to the nearest uncontrollable system is posed and solved in the behavioral setting. In the case of a system with two external variables, the problem is restated as a Sylvester structured distance to singularity problem. The structured distance to singularity problem is then solved by integrating a system of ordinary differential equations which describes the gradient associated to the cost functional.
 An advantage of the method with respect to other approaches is in its capability to include further constraints. Numerical simulations also show that the method is more robust to the initial approximation than the Newton-type methods.},
   keywords = {Sylvester matrix, structured pseudospectrum, structured low-rank approximation, ODEs on matrix manifolds, structured distance to singularity, distance to uncontrollability, behavioral approach.}
+}
+</pre>
+
+<a name="sensor-cep"></a><pre>
+@techreport{<a href="t.html#sensor-cep">sensor-cep</a>,
+  author = {I. Markovsky},
+  title = {An application of system identification in metrology},
+  year = {2015},
+  institution = {Vrije Univ. Brussel},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf</a>},
+  abstract = {Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.},
+  keywords = {system identification, behavioral approach, Kalman filtering, metrology, reproducible research}
+}
+</pre>
+
+<a name="ident-prague"></a><pre>
+@techreport{<a href="t.html#ident-prague">ident-prague</a>,
+  author = {I. Markovsky},
+  title = {System identification in the behavioral setting},
+  year = {2015},
+  institution = {Vrije Univ. Brussel},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident-prague.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ident-prague.pdf</a>},
+  abstract = {System identification is a fast growing research area that encompasses a broad range of problems and solution methods. It is desirable to have a unifying setting and a few common principles that are sufficient to understand the currently existing identification methods. The behavioral approach to system and control, put forward in the mid 80's, is such a unifying setting. Till recently, however, the behavioral approach lacked supporting numerical solution methods. In the last 10 yeas, the structured low-rank approximation setting was used to fulfill this gap. In this paper, we summarize recent progress on methods for system identification in the behavioral setting and pose some open problems. First, we show that errors-in-variables and output error system identification problems are equivalent to Hankel structured low-rank approximation. Then, we outline three generic solution approaches: 1) methods based on local optimization, 2) methods based on convex relaxations, and 3) subspace methods. A specific example of a subspace identification method---data-driven impulse response computation---is presented in full details. In order to achieve the desired unification, the classical ARMAX identification problem should also be formulated as a structured low-rank approximation problem. This is an outstanding open problem.},
+  keywords = {system identification; errors-in-variables modeling, behavioral approach; Hankel matrix, low-rank approximation, impulse response estimation, ARMAX identification.}
+}
+</pre>
+
+<a name="ica2"></a><pre>
+@techreport{<a href="t.html#ica2">ica2</a>,
+  author = {I. Markovsky and Otto Debals and Lieven De Lathauwer},
+  title = {Sum-of-Exponentials Modeling and Common Dynamics Estimation Using Tensorlab},
+  year = {2015},
+  institution = {Vrije Univ. Brussel},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf</a>},
+  abstract = {Fitting a signal to a sum-of-exponentials model is a basic problem in signal processing. It can be posed and solved as a Hankel structured low-rank matrix approximation problem. Subsequently, local optimization, subspace, and convex relaxation methods can be used for the numerical solution. In this paper, we show another approach, based on the recently proposed concept of structured data fusion. Structured data fusion problems are solved in the Tensorlab toolbox by local optimization methods. The approach allows fitting of signals with missing samples and adding constraints on the model, such as fixed exponents and common dynamics in multi-channel estimation problems. These problems are non-trivial to solve by other existing methods.},
+  keywords = {system identification; low-rank approximation; mosaic Hankel matrix; tensorlab; structured data fusion.}
 }
 </pre>
 
