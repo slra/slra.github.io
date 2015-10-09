@@ -33,8 +33,9 @@ Keywords: subspace methods, total least squares, adaptive filtering, model-free 
 I.&nbsp;Markovsky and R.&nbsp;Pintelon.
  Identification of linear time-invariant systems from multiple
   experiments.
- <em>IEEE Trans. Signal Process.</em>, 2015.
+ <em>IEEE Trans. Signal Process.</em>, 63(13):3549-3554, 2015.
 [&nbsp;<a href="j_bib.html#slra-consistency">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1109/TSP.2015.2428218">DOI</a>&nbsp;| 
 <a href="http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf">pdf</a>&nbsp;]
 <blockquote>
 A standard assumption for consistent estimation in the errors-in-variables setting is persistency of excitation of the noise free input signal. We relax this assumption by considering data from multiple experiments. Consistency is obtained asymptotically as the number of experiments tends to infinity. The main theoretical and algorithmic difficulties are related to the growing number of to-be-estimated initial conditions. The method proposed in the paper is based on analytic elimination of the initial conditions and optimization over the remaining parameters. The resulting estimator is consistent, however, achieving asymptotically efficiency remains an open problem.
@@ -49,7 +50,74 @@ Keywords: maximum likelihood system identification, sum-of-damped exponentials m
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="slra-efficient">3</a>]
+[<a name="als-kdu">3</a>]
+</td>
+<td class="bibtexitem">
+K.&nbsp;Usevich and I.&nbsp;Markovsky.
+ Adjusted least squares fitting of algebraic hypersurfaces.
+ <em>Linear Algebra Appl.</em>, 2015.
+[&nbsp;<a href="j_bib.html#als-kdu">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.laa.2015.07.023">DOI</a>&nbsp;| 
+<a href="http://arxiv.org/abs/1412.2291">pdf</a>&nbsp;]
+<blockquote>
+We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that points on a true hypersurface, described by a polynomial equation, are corrupted by zero mean independent Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.
+</blockquote>
+<p><blockquote>
+Keywords: hypersurface fitting; curve fitting; statistical estimation, errors-in-variables; Quasi-Hankel matrix; Hermite polynomials; affine invariance; subspace clustering
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="sensor-cep">4</a>]
+</td>
+<td class="bibtexitem">
+I.&nbsp;Markovsky.
+ An application of system identification in metrology.
+ <em>Control Engineering Practice</em>, 43:85-93, 2015.
+[&nbsp;<a href="j_bib.html#sensor-cep">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.conengprac.2015.07.001">DOI</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html">software</a>&nbsp;]
+<blockquote>
+Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.
+</blockquote>
+<p><blockquote>
+Keywords: system identification, behavioral approach, Kalman filtering, metrology, reproducible research
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="jss-kdu">5</a>]
+</td>
+<td class="bibtexitem">
+N.&nbsp;Golyandina, A.&nbsp;Korobeynikov, A.&nbsp;Shlemov, and K.&nbsp;Usevich.
+ Multivariate and 2D extensions of singular spectrum analysis with
+  the Rssa Package.
+ <em>Journal of Statistical Software</em>, 67(2), 2015.
+[&nbsp;<a href="j_bib.html#jss-kdu">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.18637/jss.v067.i02">DOI</a>&nbsp;]
+<blockquote>
+Implementation of multivariate and 2D extensions of singular spectrum analysis (SSA) by means of the R package Rssa is considered. The extensions include MSSA for simultaneous analysis and forecasting of several time series and 2D-SSA for analysis of digital images. A new extension of 2D-SSA analysis called shaped 2D-SSA is introduced for analysis of images of arbitrary shape, not necessary rectangular. It is shown that implementation of shaped 2D-SSA can serve as a basis for implementation of MSSA and other generalizations. Efficient implementation of operations with Hankel and Hankel-block-Hankel matrices through the fast Fourier transform is suggested. Examples with code fragments in R, which explain the methodology and demonstrate the proper use of Rssa, are presented.
+</blockquote>
+<p><blockquote>
+Keywords: analysis, decomposition, forecasting, image processing, R package, singular spectrum analysis, time series
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="slra-efficient">6</a>]
 </td>
 <td class="bibtexitem">
 K.&nbsp;Usevich and I.&nbsp;Markovsky.
@@ -74,7 +142,7 @@ Keywords: Structured low-rank approximation; Variable projection; Mosaic Hankel 
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="slra-software">4</a>]
+[<a name="slra-software">7</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky and K.&nbsp;Usevich.
@@ -103,7 +171,7 @@ It implements a variable projection type algorithm and allows the user to choose
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="overview">5</a>]
+[<a name="overview">8</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky.
@@ -125,13 +193,13 @@ Rank deficiency of a data matrix is equivalent to the existence of an exact line
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="UM12-aut">6</a>]
+[<a name="UM12-aut">9</a>]
 </td>
 <td class="bibtexitem">
 K.&nbsp;Usevich and I.&nbsp;Markovsky.
  Optimization on a Grassmann manifold with application to system
   identification.
- <em>Automatica</em>, 50:1656–-1662, 2014.
+ <em>Automatica</em>, 50:1656-1662, 2014.
 [&nbsp;<a href="j_bib.html#UM12-aut">bib</a>&nbsp;| 
 <a href="http://dx.doi.org/10.1016/j.automatica.2014.04.010">DOI</a>&nbsp;| 
 <a href="http://homepages.vub.ac.be/~kusevich/preprints/usevich_markovsky_aut2012.pdf">pdf</a>&nbsp;| 
@@ -150,7 +218,7 @@ Keywords: system identification, over-parameterized models, Grassmann manifold, 
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="pltv">7</a>]
+[<a name="pltv">10</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky, J.&nbsp;Goos, K.&nbsp;Usevich, and R.&nbsp;Pintelon.
@@ -175,7 +243,7 @@ Keywords: linear periodically time-varying systems, lifting, realization, Kung's
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="rslra">8</a>]
+[<a name="rslra">11</a>]
 </td>
 <td class="bibtexitem">
 M.&nbsp;Ishteva, K.&nbsp;Usevich, and I.&nbsp;Markovsky.
@@ -199,7 +267,7 @@ Keywords: low-rank approximation, affine structure, regularization, system ident
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="rgtls">9</a>]
+[<a name="rgtls">12</a>]
 </td>
 <td class="bibtexitem">
 S.&nbsp;Rhode, K.&nbsp;Usevich, I.&nbsp;Markovsky, and F.&nbsp;Gauterin.
@@ -222,7 +290,7 @@ Keywords: total least squares, generalized total least squares, restricted total
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="DeMarchi.Usevich14LAaIA-certain">10</a>]
+[<a name="DeMarchi.Usevich14LAaIA-certain">13</a>]
 </td>
 <td class="bibtexitem">
 S.&nbsp;De Marchi and K.&nbsp;Usevich.
@@ -244,7 +312,7 @@ Keywords:  Multivariate Vandermonde determinant; Padua points; Tensor product gr
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="KanIshPar13">11</a>]
+[<a name="KanIshPar13">14</a>]
 </td>
 <td class="bibtexitem">
 R.&nbsp;Kannan, M.&nbsp;Ishteva, and H.&nbsp;Park.
@@ -267,7 +335,7 @@ Keywords: Low-rank approximation; Recommender systems; Bound constraints; Matrix
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="slra-ext">12</a>]
+[<a name="slra-ext">15</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky and K.&nbsp;Usevich.
@@ -291,7 +359,7 @@ Keywords: low-rank approximation, missing data, variable projection, system iden
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="ident">13</a>]
+[<a name="ident">16</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky.
@@ -316,7 +384,7 @@ Keywords: system identification; model reduction; behavioral approach; missing d
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="IshAbsVDo13">14</a>]
+[<a name="IshAbsVDo13">17</a>]
 </td>
 <td class="bibtexitem">
 M.&nbsp;Ishteva, P.-A. Absil, and P.&nbsp;Van Dooren.
@@ -340,7 +408,7 @@ Keywords: multilinear algebra, higher-order tensor, rank reduction, singular val
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="LMFR12">15</a>]
+[<a name="LMFR12">18</a>]
 </td>
 <td class="bibtexitem">
 F.&nbsp;Le, I.&nbsp;Markovsky, C.&nbsp;Freeman, and E.&nbsp;Rogers.
@@ -363,7 +431,7 @@ Keywords: recursive identification; Hammerstein system; muscle model; functional
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="complex-ls">16</a>]
+[<a name="complex-ls">19</a>]
 </td>
 <td class="bibtexitem">
 I.&nbsp;Markovsky.

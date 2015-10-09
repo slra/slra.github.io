@@ -130,7 +130,7 @@ It implements a variable projection type algorithm and allows the user to choose
   author = {K. Usevich and I. Markovsky},
   title = {Optimization on a {G}rassmann manifold with application to system identification},
   volume = {50},
-  pages = {1656–-1662},
+  pages = {1656--1662},
   year = {2014},
   journal = {Automatica},
   url = {<a href="http://homepages.vub.ac.be/~kusevich/preprints.html">http://homepages.vub.ac.be/~kusevich/preprints.html</a>},
@@ -215,14 +215,48 @@ It implements a variable projection type algorithm and allows the user to choose
   author = {I. Markovsky and R. Pintelon},
   title = {Identification of linear time-invariant systems from multiple experiments},
   journal = {IEEE Trans. Signal Process.},
-  optvolume = {},
-  optnumber = {},
-  optpages = {--},
-  optdoi = {},
+  volume = {63},
+  number = {13},
+  pages = {3549--3554},
+  doi = {10.1109/TSP.2015.2428218},
   year = {2015},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf">http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf</a>},
   abstract = {A standard assumption for consistent estimation in the errors-in-variables setting is persistency of excitation of the noise free input signal. We relax this assumption by considering data from multiple experiments. Consistency is obtained asymptotically as the number of experiments tends to infinity. The main theoretical and algorithmic difficulties are related to the growing number of to-be-estimated initial conditions. The method proposed in the paper is based on analytic elimination of the initial conditions and optimization over the remaining parameters. The resulting estimator is consistent, however, achieving asymptotically efficiency remains an open problem.},
   keywords = {maximum likelihood system identification, sum-of-damped exponentials modeling, consistency, structured low-rank approximation}
+}
+</pre>
+
+<a name="als-kdu"></a><pre>
+@article{<a href="j.html#als-kdu">als-kdu</a>,
+  author = {K. Usevich and I. Markovsky},
+  title = {Adjusted least squares fitting of algebraic hypersurfaces},
+  journal = {Linear Algebra Appl.},
+  optvolume = {},
+  optnumber = {},
+  optpages = {--},
+  doi = {10.1016/j.laa.2015.07.023},
+  year = {2015},
+  pdf = {<a href="http://arxiv.org/abs/1412.2291">http://arxiv.org/abs/1412.2291</a>},
+  abstract = {We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that points on a true hypersurface, described by a polynomial equation, are corrupted by zero mean independent Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.},
+  keywords = {hypersurface fitting; curve fitting; statistical estimation, errors-in-variables; Quasi-Hankel matrix; Hermite polynomials; affine invariance; subspace clustering},
+  file = {~/als/als-computation/als.tex}
+}
+</pre>
+
+<a name="sensor-cep"></a><pre>
+@article{<a href="j.html#sensor-cep">sensor-cep</a>,
+  author = {I. Markovsky},
+  title = {An application of system identification in metrology},
+  journal = {Control Engineering Practice},
+  volume = {43},
+  optnumber = {},
+  pages = {85--93},
+  year = {2015},
+  doi = {10.1016/j.conengprac.2015.07.001},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf</a>},
+  abstract = {Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html">http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html</a>},
+  keywords = {system identification, behavioral approach, Kalman filtering, metrology, reproducible research}
 }
 </pre>
 
@@ -274,6 +308,20 @@ It implements a variable projection type algorithm and allows the user to choose
   keywords = {Low-rank approximation; Recommender systems; Bound constraints; Matrix factorization; Block coordinate descent method; Scalable algorithm; Block},
   pdf = {<a href="http://link.springer.com/content/pdf/10.1007%2Fs10115-013-0710-2.pdf">http://link.springer.com/content/pdf/10.1007%2Fs10115-013-0710-2.pdf</a>},
   abstract = {Matrix factorization has been widely utilized as a latent factor model for solving the recommender system problem using collaborative filtering. For a recommender system, all the ratings in the rating matrix are bounded within a pre-determined range. In this paper, we propose a new improved matrix factorization approach for such a rating matrix, called Bounded Matrix Factorization (BMF), which imposes a lower and an upper bound on every estimated missing element of the rating matrix. We present an efficient algorithm to solve BMF based on the block coordinate descent method. We show that our algorithm is scalable for large matrices with missing elements on multicore systems with low memory. We present substantial experimental results illustrating that the proposed method outperforms the state of the art algorithms for recommender system such as stochastic gradient descent, alternating least squares with regularization, SVD++ and Bias-SVD on real-world datasets such as Jester, Movielens, Book crossing, Online dating and Netflix.}
+}
+</pre>
+
+<a name="jss-kdu"></a><pre>
+@article{<a href="j.html#jss-kdu">jss-kdu</a>,
+  title = {Multivariate and {2D} Extensions of Singular Spectrum Analysis with the {Rssa} {Package}},
+  author = {N. Golyandina and A. Korobeynikov and A. Shlemov and K. Usevich},
+  journal = {Journal of Statistical Software},
+  doi = {10.18637/jss.v067.i02},
+  volume = {67},
+  number = {2},
+  year = {2015},
+  abstract = {Implementation of multivariate and 2D extensions of singular spectrum analysis (SSA) by means of the R package Rssa is considered. The extensions include MSSA for simultaneous analysis and forecasting of several time series and 2D-SSA for analysis of digital images. A new extension of 2D-SSA analysis called shaped 2D-SSA is introduced for analysis of images of arbitrary shape, not necessary rectangular. It is shown that implementation of shaped 2D-SSA can serve as a basis for implementation of MSSA and other generalizations. Efficient implementation of operations with Hankel and Hankel-block-Hankel matrices through the fast Fourier transform is suggested. Examples with code fragments in R, which explain the methodology and demonstrate the proper use of Rssa, are presented.},
+  keywords = {analysis, decomposition, forecasting, image processing, R package, singular spectrum analysis, time series}
 }
 </pre>
 

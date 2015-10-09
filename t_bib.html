@@ -30,19 +30,6 @@
 }
 </pre>
 
-<a name="als-kdu"></a><pre>
-@techreport{<a href="t.html#als-kdu">als-kdu</a>,
-  author = {K. Usevich and I. Markovsky},
-  title = {Adjusted least squares fitting of algebraic hypersurfaces},
-  year = {2014},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://arxiv.org/abs/1412.2291">http://arxiv.org/abs/1412.2291</a>},
-  abstract = {We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that points on a true hypersurface, described by a polynomial equation, are corrupted by zero mean independent Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.},
-  keywords = {hypersurface fitting; curve fitting; statistical estimation, errors-in-variables; Quasi-Hankel matrix; Hermite polynomials; affine invariance; subspace clustering},
-  file = {~/als/als-computation/als.tex}
-}
-</pre>
-
 <a name="uncontr"></a><pre>
 @techreport{<a href="t.html#uncontr">uncontr</a>,
   author = {N. Guglielmi and I. Markovsky},
@@ -56,30 +43,6 @@ An advantage of the method with respect to other approaches is in its capability
 }
 </pre>
 
-<a name="sensor-cep"></a><pre>
-@techreport{<a href="t.html#sensor-cep">sensor-cep</a>,
-  author = {I. Markovsky},
-  title = {An application of system identification in metrology},
-  year = {2015},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf</a>},
-  abstract = {Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.},
-  keywords = {system identification, behavioral approach, Kalman filtering, metrology, reproducible research}
-}
-</pre>
-
-<a name="ident-prague"></a><pre>
-@techreport{<a href="t.html#ident-prague">ident-prague</a>,
-  author = {I. Markovsky},
-  title = {System identification in the behavioral setting},
-  year = {2015},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ident-prague.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ident-prague.pdf</a>},
-  abstract = {System identification is a fast growing research area that encompasses a broad range of problems and solution methods. It is desirable to have a unifying setting and a few common principles that are sufficient to understand the currently existing identification methods. The behavioral approach to system and control, put forward in the mid 80's, is such a unifying setting. Till recently, however, the behavioral approach lacked supporting numerical solution methods. In the last 10 yeas, the structured low-rank approximation setting was used to fulfill this gap. In this paper, we summarize recent progress on methods for system identification in the behavioral setting and pose some open problems. First, we show that errors-in-variables and output error system identification problems are equivalent to Hankel structured low-rank approximation. Then, we outline three generic solution approaches: 1) methods based on local optimization, 2) methods based on convex relaxations, and 3) subspace methods. A specific example of a subspace identification method---data-driven impulse response computation---is presented in full details. In order to achieve the desired unification, the classical ARMAX identification problem should also be formulated as a structured low-rank approximation problem. This is an outstanding open problem.},
-  keywords = {system identification; errors-in-variables modeling, behavioral approach; Hankel matrix, low-rank approximation, impulse response estimation, ARMAX identification.}
-}
-</pre>
-
 <a name="ica2"></a><pre>
 @techreport{<a href="t.html#ica2">ica2</a>,
   author = {I. Markovsky and Otto Debals and Lieven De Lathauwer},
@@ -89,6 +52,31 @@ An advantage of the method with respect to other approaches is in its capability
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf</a>},
   abstract = {Fitting a signal to a sum-of-exponentials model is a basic problem in signal processing. It can be posed and solved as a Hankel structured low-rank matrix approximation problem. Subsequently, local optimization, subspace, and convex relaxation methods can be used for the numerical solution. In this paper, we show another approach, based on the recently proposed concept of structured data fusion. Structured data fusion problems are solved in the Tensorlab toolbox by local optimization methods. The approach allows fitting of signals with missing samples and adding constraints on the model, such as fixed exponents and common dynamics in multi-channel estimation problems. These problems are non-trivial to solve by other existing methods.},
   keywords = {system identification; low-rank approximation; mosaic Hankel matrix; tensorlab; structured data fusion.}
+}
+</pre>
+
+<a name="jan"></a><pre>
+@techreport{<a href="t.html#jan">jan</a>,
+  author = {I. Markovsky},
+  title = {On the most powerful unfalsified model for data with missing values},
+  year = {2015},
+  institution = {Vrije Univ. Brussel},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf">http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf</a>},
+  abstract = {The notion of the most powerful unfalsified model plays a key role in system identification. Since its introduction in the mid 80's, many methods have been developed for its numerical computation. All currently existing methods, however, assume that the given data is a /complete/ trajectory of the system. Motivated by the practical issues of data corruption due to failing sensors, transmission lines, or storage devices, we study the problem of computing the most powerful unfalsified model from data with missing values. We do not make assumptions about the nature or pattern of the missing values apart from the basic one that they are a part of a trajectory of a linear time-invariant system. The identification problem with missing data is equivalent to a Hankel structured low-rank matrix completion problem. The method proposed constructs rank deficient complete submatrices of the incomplete Hankel matrix. Under specified conditions the kernels of the submatrices form a nonminimal kernel representation of the data generating system. The final step of the algorithm is reduction of the nonminimal kernel representation to a minimal one. Apart from its practical relevance in identification, missing data is a useful concept in systems and control. Classic problems, such as simulation, filtering, and tracking control can be viewed as missing data estimation problems for a given system. The corresponding identification problems with missing data are ``data-driven'' equivalents of the classical simulation, filtering, and tracking control problems.},
+  keywords = {most powerful unfalsified model, exact system identification, subspace methods, missing data, low-rank matrix completion.}
+}
+</pre>
+
+<a name="ddsp"></a><pre>
+@techreport{<a href="t.html#ddsp">ddsp</a>,
+  author = {I. Markovsky},
+  title = {A low-rank matrix completion approach to data-driven signal processing},
+  year = {2015},
+  institution = {Vrije Univ. Brussel},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ddsp.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ddsp.pdf</a>},
+  abstract = {In signal processing as well as in control and other mathematical engineering areas, it is common to use a model-based approach, which splits the problem into two steps: 1) model identification and 2) model-based design. Despite its success the model-based approach has the shortcoming that the design objective is not taken into account at the identification step, \ie, the model is not optimized for its intended use. In this paper, we propose an approach for data processing, called data-driven signal processing, that combines the identification and the model-based design into one joint problem. The to-be-computed signal is modeled as a missing part of a trajectory of the (unknown) data generating system. Subsequently, the missing data estimation problem is reformulated as a mosaic-Hankel structured matrix low-rank approximation and completion problem. A local optimization methods, based on the variable projections principle, is used for the numerical solution of the matrix completion/approximation problem. The missing data estimation approach for data-driven signal processing and the local optimization method for its implementation in practice are illustrated on examples of state estimation, filtering/smoothing, and prediction. Development of fast algorithms with provable properties in the presence of measurement noise and disturbances will make the matrix completion approach for data-driven signal processing a practically feasible alternative to the model-based methods.},
+  keywords = {data-driven, Kalman filtering, structured low-rank approximation, missing data, matrix completion.},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/ddsp.tar">http://homepages.vub.ac.be/~imarkovs/ddsp.tar</a>}
 }
 </pre>
 
