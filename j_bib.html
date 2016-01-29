@@ -46,7 +46,8 @@
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra-ext.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra-ext.pdf</a>},
   doi = {10.1137/120883050},
   gs = {<a href="http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC">http://scholar.google.be/citations?view_op=view_citation&hl=en&user=qSl_3FQAAAAJ&cstart=20&citation_for_view=qSl_3FQAAAAJ:l7t_Zn2s7bgC</a>},
-  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>},
+  addendum = {(Citations: 8 in WoS, 27 in GS)}
 }
 </pre>
 
@@ -104,8 +105,9 @@
 It implements a variable projection type algorithm and allows the user to choose standard local optimization methods for the solution of the parameter optimization problem. For an $m\times n$ data matrix, with $n>m$, the computational complexity of the cost function and derivative evaluation is~$O(m^2n)$. The package is suitable for applications with $n\gg m$. In statistical estimation and data modeling---the main application areas of the package---$n\gg m$ corresponds to modeling of large amount of data by a low-complexity model. Performance results on benchmark system identification problems from the database DAISY and approximate common divisor problems are presented.},
   url = {<a href="http://homepages.vub.ac.be/~imarkovs/recent-publications.html">http://homepages.vub.ac.be/~imarkovs/recent-publications.html</a>},
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf">http://homepages.vub.ac.be/~imarkovs/publications/slra.pdf</a>},
-  doi = {dx.doi.org/10.1016/j.cam.2013.07.048},
-  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
+  doi = {10.1016/j.cam.2013.07.048},
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>},
+  addendum = {(Citations: 8 in WoS, 39 in GS)}
 }
 </pre>
 
@@ -121,7 +123,8 @@ It implements a variable projection type algorithm and allows the user to choose
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf">http://homepages.vub.ac.be/~imarkovs/publications/overview.pdf</a>},
   doi = {10.1016/j.sigpro.2013.09.021},
   abstract = {Rank deficiency of a data matrix is equivalent to the existence of an exact linear model for the data. For the purpose of linear static modeling, the matrix is unstructured and the corresponding modeling problem is an approximation of the matrix by another matrix of a lower rank. In the context of linear time-invariant dynamic models, the appropriate data matrix is Hankel and the corresponding modeling problems becomes structured low-rank approximation. Low-rank approximation has applications in: system identification; signal processing, machine learning, and computer algebra, where different types of structure and constraints occur. This paper gives an overview of recent progress in efficient local optimization algorithms for solving weighted mosaic-Hankel structured low-rank approximation problems. In addition, the data matrix may have missing elements and elements may be specified as exact. The described algorithms are implemented in a publicly available software package. Their application to system identification, approximate common divisor, and data-driven simulation problems is described in this paper and is illustrated by reproducible simulation examples. As a data modeling paradigm the low-rank approximation setting is closely related to the the behavioral approach in systems and control, total least squares, errors-in-variables modeling, principal component analysis, and rank minimization.},
-  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>}
+  software = {<a href="http://slra.github.io/software-slra.html">http://slra.github.io/software-slra.html</a>},
+  optaddendum = {(Citations: 1 in WoS, 6 in GS)}
 }
 </pre>
 
@@ -257,6 +260,33 @@ It implements a variable projection type algorithm and allows the user to choose
   abstract = {Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.},
   software = {<a href="http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html">http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html</a>},
   keywords = {system identification, behavioral approach, Kalman filtering, metrology, reproducible research}
+}
+</pre>
+
+<a name="slra-agcd"></a><pre>
+@article{<a href="j.html#slra-agcd">slra-agcd</a>,
+  author = {K. Usevich and I. Markovsky},
+  title = {Variable projection methods for approximate (greatest) common divisor computations},
+  year = {2016},
+  url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
+  pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>},
+  abstract = {We consider the problem of finding for a given $N$-tuple of polynomials the closest $N$-tuple that has a common divisor of degree at least $d$. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either $d$ is small or $d$ is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.},
+  journal = {Theoretical Computer Science}
+}
+</pre>
+
+<a name="jan"></a><pre>
+@article{<a href="j.html#jan">jan</a>,
+  author = {I. Markovsky},
+  title = {On the most powerful unfalsified model for data with missing values},
+  year = {2016},
+  journal = {Systems \& Control Letters},
+  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf">http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf</a>},
+  abstract = {The notion of the most powerful unfalsified model plays a key role in system identification. Since its introduction in the mid 80's, many methods have been developed for its numerical computation. All currently existing methods, however, assume that the given data is a /complete/ trajectory of the system. Motivated by the practical issues of data corruption due to failing sensors, transmission lines, or storage devices, we study the problem of computing the most powerful unfalsified model from data with missing values. We do not make assumptions about the nature or pattern of the missing values apart from the basic one that they are a part of a trajectory of a linear time-invariant system. The identification problem with missing data is equivalent to a Hankel structured low-rank matrix completion problem. The method proposed constructs rank deficient complete submatrices of the incomplete Hankel matrix. Under specified conditions the kernels of the submatrices form a nonminimal kernel representation of the data generating system. The final step of the algorithm is reduction of the nonminimal kernel representation to a minimal one. Apart from its practical relevance in identification, missing data is a useful concept in systems and control. Classic problems, such as simulation, filtering, and tracking control can be viewed as missing data estimation problems for a given system. The corresponding identification problems with missing data are ``data-driven'' equivalents of the classical simulation, filtering, and tracking control problems.},
+  keywords = {most powerful unfalsified model, exact system identification, subspace methods, missing data, low-rank matrix completion.},
+  doi = {10.1016/j.sysconle.2015.12.012},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/mpum-md.tar">http://homepages.vub.ac.be/~imarkovs/mpum-md.tar</a>},
+  optaddendum = {\newline\medskip A subspace identification method with missing data.}
 }
 </pre>
 

@@ -1,16 +1,32 @@
 # jemdoc: menu{MENU}{presentations.html}
 = Presentations 
 
+== 2016
+
+- [talks/tda.pdf Scientometrics via low-rank approximation and completion]\n
+Invited talk at the [http://www.esat.kuleuven.be/stadius/TDA2016/ Workshop on Tensor Decompositions and Applications], Leuven, Belgium, 18--22 January 
+
 == 2015
 
-# - Distance to uncontrollability in the behavioral setting\n [http://events.math.unipd.it/drwa13/ Dolomites research week on approximation], Alba di Canazei, Italy, September ?.
-- Structured low-rank approximation in signal processing and system identification\n 
-Invited lecture at the [http://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=15251 Sparse modelling and multi-exponential analysis],
+- Tensor techniques for latent variable modeling\n
+Talk at the [http://www.unige.ch/math/en/annonces/anum/ Numerical analysis seminar], Department of Mathematics, University of Geneva, Switzerland, 1 December 
+- Tensors and structured matrices of low rank\n
+Talk at the [https://www.siam.org/meetings/la15/ SIAM conference on applied linear algebra], Atlanta, Georgia, USA, 26--30 October
+- Tensors and latent variable models\n
+Talk at the [http://amca.cz/lva2015/ International conference on latent variable analysis and signal separation], Liberec, Czech Republic, 25--28 August
+- System identification in the behavioral setting\n 
+Poster presented at the [http://amca.cz/lva2015/ International conference on latent variable analysis and signal separation], Liberec, Czech Republic, 25--28 August
+- Model-free optimal tracking control via nuclear norm minimization\n
+Poster presented at the [http://www.siam.org/meetings/ct15/ SIAM conference on control and its applications], Paris, 8--10 June 
+- [talks/dagstuhl.pdf Structured low-rank approximation approach to sum-of-exponentials]\n 
+Invited talk at the [http://www.dagstuhl.de/15251/ Sparse modelling and multi-exponential analysis],
 Dagstuhl, Germany, 14--19 June
-- Model-free optimal tracking control \n
-Invited lecture at the [http://www.hcm.uni-bonn.de/events/eventpages/2015/workshop-low-rank-optimization-and-applications/ Workshop on Low-rank Optimization and Applications], 
-Bonn, Germany, 8--12 June 
-# Grenoble
+- [talks/bonn.pdf A structured low-rank approximation approach to system identification]\n
+Invited lecture at the [http://www.hcm.uni-bonn.de/events/eventpages/2015/workshop-low-rank-optimization-and-applications/ Workshop on low-rank optimization and applications], Bonn, Germany, 8--12 June 
+- Low-rank approximation and its applications\n 
+Invited lecture at the [http://www.gipsa-lab.fr/summerschool/slra2015/ Structured low-rank approximation workshop], Grenoble, 1--2 June
+- System identification in the behavioral setting\n
+Talk at the [http://www.uclouvain.be/11245.html Seminars in Systems and Control], U.C. Louvain, 5 May
 - System identification with missing data\n 
 Talk at [http://lva.insa-lyon.fr/en/node Laboratoire Vibrations Acoustique], 
 Lyon, France, 30 April

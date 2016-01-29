@@ -18,18 +18,6 @@
 }
 </pre>
 
-<a name="slra-agcd"></a><pre>
-@techreport{<a href="t.html#slra-agcd">slra-agcd</a>,
-  author = {K. Usevich and I. Markovsky},
-  title = {Variable projection methods for approximate (greatest) common divisor computations},
-  year = {2013},
-  institution = {Vrije Univ. Brussel},
-  url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
-  pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>},
-  abstract = {We consider the problem of finding for a given $N$-tuple of polynomials the closest $N$-tuple that has a common divisor of degree at least $d$. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either $d$ is small or $d$ is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.}
-}
-</pre>
-
 <a name="uncontr"></a><pre>
 @techreport{<a href="t.html#uncontr">uncontr</a>,
   author = {N. Guglielmi and I. Markovsky},
@@ -52,18 +40,6 @@ An advantage of the method with respect to other approaches is in its capability
   pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ica2.pdf</a>},
   abstract = {Fitting a signal to a sum-of-exponentials model is a basic problem in signal processing. It can be posed and solved as a Hankel structured low-rank matrix approximation problem. Subsequently, local optimization, subspace, and convex relaxation methods can be used for the numerical solution. In this paper, we show another approach, based on the recently proposed concept of structured data fusion. Structured data fusion problems are solved in the Tensorlab toolbox by local optimization methods. The approach allows fitting of signals with missing samples and adding constraints on the model, such as fixed exponents and common dynamics in multi-channel estimation problems. These problems are non-trivial to solve by other existing methods.},
   keywords = {system identification; low-rank approximation; mosaic Hankel matrix; tensorlab; structured data fusion.}
-}
-</pre>
-
-<a name="jan"></a><pre>
-@techreport{<a href="t.html#jan">jan</a>,
-  author = {I. Markovsky},
-  title = {On the most powerful unfalsified model for data with missing values},
-  year = {2015},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf">http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf</a>},
-  abstract = {The notion of the most powerful unfalsified model plays a key role in system identification. Since its introduction in the mid 80's, many methods have been developed for its numerical computation. All currently existing methods, however, assume that the given data is a /complete/ trajectory of the system. Motivated by the practical issues of data corruption due to failing sensors, transmission lines, or storage devices, we study the problem of computing the most powerful unfalsified model from data with missing values. We do not make assumptions about the nature or pattern of the missing values apart from the basic one that they are a part of a trajectory of a linear time-invariant system. The identification problem with missing data is equivalent to a Hankel structured low-rank matrix completion problem. The method proposed constructs rank deficient complete submatrices of the incomplete Hankel matrix. Under specified conditions the kernels of the submatrices form a nonminimal kernel representation of the data generating system. The final step of the algorithm is reduction of the nonminimal kernel representation to a minimal one. Apart from its practical relevance in identification, missing data is a useful concept in systems and control. Classic problems, such as simulation, filtering, and tracking control can be viewed as missing data estimation problems for a given system. The corresponding identification problems with missing data are ``data-driven'' equivalents of the classical simulation, filtering, and tracking control problems.},
-  keywords = {most powerful unfalsified model, exact system identification, subspace methods, missing data, low-rank matrix completion.}
 }
 </pre>
 
