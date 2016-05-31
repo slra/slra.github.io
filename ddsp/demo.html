@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>A missing data approach to data-driven filtering and control: Simulation examples addendum</title>
+<!-- 2016-05-31 Tue 08:56 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">A missing data approach to data-driven filtering and control: Simulation examples addendum</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. EIV Kalman smoothing</a></li>
+<li><a href="#sec-2">2. Step response simulation</a></li>
+<li><a href="#sec-3">3. Linear quadratic step tracking</a></li>
+<li><a href="#sec-4">4. Realization</a></li>
+<li><a href="#sec-5">5. Noisy realization</a></li>
+</ul>
+</div>
+</div>
+<p>
+This document shows simulation examples with the matrix completion approach for data-driven signal processing, presented in <a href="http://homepages.vub.ac.be/~imarkovs/publications/ddsp.pdf">"A missing data approach to data-driven filtering and control"</a>. The EIV Kalman smoothing example is included in Section VI of the paper. Due to space limitations, the other examples are presented only in this document. The full code used to generate the results is listed, making the results easily reproducible.
+</p>
+
+<p>
+This document in also available in <a href="./ddsp-demo.pdf">pdf format</a>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> EIV Kalman smoothing</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Problem (the references correspond to the equations and bibliography in the paper)
+<ul class="org-ul">
+<li>classical: (4) + (8) 
+</li>
+<li>data-driven: (7)
+</li>
+</ul>
+</li>
+<li>Data generating system: \(\overline{\mathcal{B}} = \{\, (u,y) \ | \ u - \sigma u + \sigma^2 u = 0.81 y - 1.456 \sigma y + \sigma^2 y \,\}.\)
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="system-1"><span style="color: #ee0000;">% &lt;system-1&gt;</span>
+clear all, n = 2; sys0 = ss(tf([1 <span style="color: #98fb98;">-</span>1 1], [1 <span style="color: #98fb98;">-</span>1.456 0.81], 1));
+</pre>
+</div>
+</li>
+<li>Identification data: \(w_\text{d} = \overline w_\text{d} + \tilde w\), where \(\overline w_\text{d}\in\overline{\mathcal{B}}\) and \(\tilde w\) is zero mean, white Gaussian noise.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ident-data"><span style="color: #ee0000;">% &lt;ident-data&gt;</span>
+Td = 100; rng(<span style="color: #ff7f24;">'default'</span>)
+ud0 = rand(Td, 1); yd0 = lsim(sys0, ud0); wd0 = [ud0 yd0]; 
+wt = randn(Td, 2); wd = wd0 <span style="color: #98fb98;">+</span> 0.1 <span style="color: #98fb98;">*</span> wt <span style="color: #98fb98;">/</span> norm(wt) <span style="color: #98fb98;">*</span> norm(wd0);
+</pre>
+</div>
+</li>
+<li>Trajectory \(w = w_{\text{p}} \wedge w_{\text{f}}\): \(w_{\text{p}}\) missing, \(w_{\text{f}} = \overline w_{\text{f}} + \tilde w_{\text{f}}\), where \(\overline w_{{\text{f}}}\) is the step response of \(\overline{\mathcal{B}}\) and \(\tilde w_{{\text{f}}}\) is zero mean, white Gaussian noise.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="w-est"><span style="color: #ee0000;">% &lt;w-est&gt;</span>
+wp = <span style="color: #7fffd4;">NaN</span> <span style="color: #98fb98;">*</span> ones(n, 2); Tf = 20; 
+uf0 = ones(Tf, 1); yf0 = step(sys0, Tf <span style="color: #98fb98;">-</span> 1); wf0 = [uf0 yf0]; 
+wft = randn(Tf, 2); wf = wf0 <span style="color: #98fb98;">+</span> 0.05 <span style="color: #98fb98;">*</span> wft <span style="color: #98fb98;">/</span> norm(wft) <span style="color: #98fb98;">*</span> norm(wf0);
+</pre>
+</div>
+</li>
+<li>Validation criterion: \(e := ||\overline w_{\text{f}} - \hat w_{\text{f}}|| / ||\overline w_{\text{f}}||\)
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="est-error"><span style="color: #ee0000;">% &lt;est-error&gt;</span>
+e = @(wfh) norm(wf0 <span style="color: #98fb98;">-</span> wfh, <span style="color: #ff7f24;">'fro'</span>) <span style="color: #98fb98;">/</span> norm(wf0, <span style="color: #ff7f24;">'fro'</span>);
+</pre>
+</div>
+</li>
+<li>Model based Kalman smoother: (19)
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #00ffff;">function</span> <span style="color: #eedd82;">[wh, x0h]</span> = <span style="color: #ffffff; text-decoration: underline;">eiv_ks</span>(<span style="color: #eedd82;">w</span>, <span style="color: #eedd82;">sys</span>)
+T = size(w, 1); n = size(sys, <span style="color: #ff7f24;">'order'</span>); <span style="color: #ee0000;">% assume SISO</span>
+h = impulse(sys, T <span style="color: #98fb98;">-</span> 1); 
+TT = toeplitz(h, [h(1) zeros(1, T <span style="color: #98fb98;">-</span> 1)]);
+I = eye(n); 
+<span style="color: #00ffff;">for</span> <span style="color: #eedd82;">i</span> = <span style="color: #7fffd4;">1:n</span>, 
+  O(<span style="color: #98fb98;">:</span>, <span style="color: #7fffd4;">i</span>) = initial(sys, I(<span style="color: #98fb98;">:</span>, <span style="color: #7fffd4;">i</span>), T <span style="color: #98fb98;">-</span> 1); 
+<span style="color: #00ffff;">end</span>
+A = [zeros(T, n) eye(T); O TT]; 
+x0uh = A <span style="color: #98fb98;">\</span> w(<span style="color: #98fb98;">:</span>);
+yh = [O TT] <span style="color: #98fb98;">*</span> x0uh; 
+wh = [x0uh(n <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end), yh]; 
+x0h = x0uh(1<span style="color: #98fb98;">:</span>n);
+</pre>
+</div>
+</li>
+<li>Subspace data-driven method: [ 11 ]
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #00ffff;">function</span> <span style="color: #eedd82;">wh</span> = <span style="color: #ffffff; text-decoration: underline;">eiv_ks_dd</span>(<span style="color: #eedd82;">wd</span>, <span style="color: #eedd82;">w</span>, <span style="color: #eedd82;">n</span>, <span style="color: #eedd82;">m</span>)
+<span style="color: #00ffff;">if</span> <span style="color: #98fb98;">~</span>exist(<span style="color: #ff7f24;">'m'</span>) <span style="color: #98fb98;">||</span> isempty(m), m = 1; <span style="color: #00ffff;">end</span>
+Tf = size(w, 1); H = blkhank(wd, Tf); 
+[R, P] = lra(H, Tf <span style="color: #98fb98;">*</span> m <span style="color: #98fb98;">+</span> n);
+wh = reshape(P <span style="color: #98fb98;">*</span> P' <span style="color: #98fb98;">*</span> vec(w'), 2, Tf)';
+</pre>
+</div>
+</li>
+<li>We verify that with knowledge of the true model \(\overline{\mathcal{B}}\), the result of estimating the missing values in \(w\), using the <code>misfit</code> function, gives the correct result, \ie, it coincides with the result of the <code>eiv_ks</code>.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="est-check"><span style="color: #ee0000;">% &lt;est-check&gt;</span>
+[M, wh] = misfit([wp; wf], sys0); 
+wfh = wh(n <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end, <span style="color: #98fb98;">:</span>);
+wfh_ks  = eiv_ks(wf, sys0); 
+check_misfit = norm(wfh <span style="color: #98fb98;">-</span> wfh_ks, <span style="color: #ff7f24;">'fro'</span>) <span style="color: #98fb98;">/</span> norm(wfh_ks, <span style="color: #ff7f24;">'fro'</span>)
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">3.7316e-09</td>
+</tr>
+</tbody>
+</table>
+<p>
+("\(\Rightarrow\)" indicates a result of the evaluation of the previous block of code.)
+</p>
+
+<p>
+The subspace data-driven method <code>eiv_ks_dd</code> also gives the correct result when the data \(w_\text{d}\) is exact, i.e., \(w_\text{d} = \overline{w_\text{d}}\)
+</p>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="est-check">wfh_ss = eiv_ks_dd(wd0, wf, n);
+check_ss = norm(wfh_ss <span style="color: #98fb98;">-</span> wfh_ks, <span style="color: #ff7f24;">'fro'</span>) <span style="color: #98fb98;">/</span> norm(wfh_ks, <span style="color: #ff7f24;">'fro'</span>)
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">1.2531e-15</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Next, we compare the results of 
+<ol class="org-ol">
+<li><code>ident</code> i.e., estimation of the missing values in \(w\) without using the true model,
+</li>
+<li><code>ident</code> + <code>eiv_ks</code> i.e., identification of a model \(\hat{\mathcal{B}}\) for \(\overline{\mathcal{B}}\) using the data \(w_\text{d}\) and applying the model based Kalman smoother <code>eiv_ks</code> on \(w_{{\text{f}}}\) with the identified model \(\hat{\mathcal{B}}\), and
+</li>
+<li><code>eiv_ks_dd</code>, i.e., the alternative subspace data-driven EIV Kalman filtering method.
+</li>
+</ol>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="est-result"><span style="color: #ee0000;">% &lt;est-id&gt;</span>
+[sysh, info, wh] = ident({wd, [wp; wf]}, 1, n); 
+
+[sysh_id, info_id] = ident(wd, 1, n); 
+wfh_id = eiv_ks(wf,sysh_id); 
+
+wfh_ss = eiv_ks_dd(wd, wf, n); 
+
+[e(wh{2}(n <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end, <span style="color: #98fb98;">:</span>)) e(wfh_id) e(wfh_ss) e(wf)]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.0310</td>
+<td class="right">0.0315</td>
+<td class="right">0.0412</td>
+<td class="right">0.0581</td>
+</tr>
+</tbody>
+</table>
+<p>
+For explanation of the result see Section VI of the paper. 
+</p>
+</li>
+<li>Code from this section: <a href="./test_est.m"><code>test_est.m</code></a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Step response simulation</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Problem
+<ul class="org-ul">
+<li>classical: (4) + (9)
+</li>
+<li>data-driven problem: 
+    \[\text{minimize} \quad \text{over \(\hat w_{\text{d}}\) and $\hat y_{\text{f}}$} \quad \| w_{\text{d}} - \hat w_{\text{d}} \| \quad \text{subject to} \quad \hat w = w_{\text{p}} \wedge (u_{\text{f}}, \hat y_{\text{f}}) \in \mathcal{B}_\text{mpum}(\hat w_{\text{d}}) \in\mathcal{L}_{1,\ell}\]
+</li>
+</ul>
+</li>
+<li>Data generating system \(\overline{\mathcal{B}}\) and the identification data \(w_\text{d}\) are the same as in the EIV Kalman smoothing example.
+</li>
+<li>Trajectory \(w = w_{\text{p}} \wedge w_{\text{f}}\): \(w_{\text{p}} = 0\) exact, \(u_{\text{f}} = 1\) exact, and \(y_{\text{f}}\) missing.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="w-sim"><span style="color: #ee0000;">% &lt;w-simulation&gt;</span>
+Tf = 20; s0 = step(sys0, Tf <span style="color: #98fb98;">-</span> 1); 
+uf = ones(Tf, 1); yf = <span style="color: #7fffd4;">NaN</span> <span style="color: #98fb98;">*</span> ones(Tf, 1); wf = [uf yf];
+</pre>
+</div>
+</li>
+<li>Validation criterion: \(e := ||\bar s - \hat y_{\text{f}}|| / ||\bar s||\), where \(\bar s\) is the step response of the system \(\overline{\mathcal{B}}\).
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="sim-error"><span style="color: #ee0000;">% &lt;sim-error&gt;</span>
+e = @(sh) norm(s0 <span style="color: #98fb98;">-</span> sh) <span style="color: #98fb98;">/</span> norm(s0);
+</pre>
+</div>
+</li>
+<li>We verify that with knowledge of the true model \(\overline{\mathcal{B}}\), the result of estimating the missing values in \(w\), using the <code>misfit</code> function is correct, \ie, \(\hat y_{{\text{f}}} = \bar s\)
+<ul class="org-ul">
+<li><code>opt.exct = 1</code> specifies that the \(u\) component of the trajectory \(w=(u,y)\) is exact, and 
+</li>
+<li><code>opt.wini = 0</code> specifies zero initial conditions.
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="sim-check"><span style="color: #ee0000;">% &lt;sim-check&gt;</span>
+opt.exct = 1; opt.wini = 0; 
+[M, wfh] = misfit(wf, sys0, opt); sh = wfh(<span style="color: #98fb98;">:</span>, 2); e(sh)
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">7.5067-16</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Next, we compare the results of 
+<ol class="org-ol">
+<li><code>ident</code> i.e., estimation of the missing values in \(w\) without using the true model, and 
+</li>
+<li><code>ident</code> + <code>step</code> i.e., identification of a model \(\hat{\mathcal{B}}\) for \(\overline{\mathcal{B}}\) using the data \(w_\text{d}\) and simulating the impulse response, using the identified model \(\hat{\mathcal{B}}\), and
+</li>
+<li>subspace data-driven simulation method [ 11 ], implemented in the function <code>uy2h</code>.
+</li>
+</ol>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="sim-result"><span style="color: #ee0000;">% &lt;sim-result&gt;</span>
+opt.exct = {[], 1}; opt.wini = {[], 0}; 
+[sysh, info, wh] = ident({wd wf}, 1, n, opt); 
+sh = wh{2}(<span style="color: #98fb98;">:</span>, 2); 
+
+[sysh_id, info_id, wd_id] = ident(wd, 1, n); 
+sh_id = step(sysh_id, Tf <span style="color: #98fb98;">-</span> 1); 
+
+addpath <span style="color: #98fb98;">~/</span>mfiles<span style="color: #98fb98;">/</span>detss
+sh_ss = cumsum(uy2h(wd(<span style="color: #98fb98;">:</span>, 1), wd(<span style="color: #98fb98;">:</span>, 2), 2, 2, Tf));
+
+[e(sh) e(sh_id) e(sh_ss)]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.0655</td>
+<td class="right">0.0655</td>
+<td class="right">0.1356</td>
+</tr>
+</tbody>
+</table>
+<p>
+The results of the data-driven and classical approaches are equal up to numerical errors. The reason is that the objective function of the data-driven problem coincides with the objective function of the identification problem. Indeed, \(||w-\hat w||_{v} = 0\), because \(w\) contains only exact and missing data. Another justification of the equivalence of the classical and the data-driven methods for data-driven simulation is that in this case the trajectory \(w_{\text{f}}\) does not carry information about the data generating system. Thus, the system identification and data-driven simulation methods use the same data. 
+</p>
+
+<p>
+The result of the subspace method has higher estimation error. Indeed, the subspace method does not use nonlinear optimization and as a result yields a suboptimal estimator, while the other methods are statistically optimal (maximum likelihood estimators in the EIV setting). 
+</p>
+</li>
+<li>Code from this section: <a href="./test_sim.m"><code>test_sim.m</code></a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Linear quadratic step tracking</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Problem
+<ul class="org-ul">
+<li>classical: (4) + (10) 
+</li>
+<li>data-driven: 
+</li>
+</ul>
+<p>
+\[\text{minimize} \quad \text{over \(\hat w_{\text{d}}\) and $\hat w_{\text{f}}$} \quad \gamma \underbrace{\|w_{\text{d}} - \hat w_{\text{d}}\|_2^2}_{\text{identification error}} + \underbrace{\|y_{{\text{f}}} - \hat y_{{\text{f}}}\|_2^2}_{\text{tracking error}} \quad \text{subject to} \quad \hat w = w_{\text{p}} \wedge \hat w_{\text{f}} \in \mathcal{B}_\text{mpum}(\hat w_{\text{d}}) \in\mathcal{L}_{1,\ell}.\]
+The parameter \(\gamma\) is user defined and allow for a trade-off between identification and tracking errors.
+</p>
+</li>
+<li>Data generating system: the system used above is invertible, so that any reference output can be tracked perfectly by a suitable input. In order to have tracking error, we modify the system so that it is not invertible.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="system-2"><span style="color: #ee0000;">% &lt;system-2&gt;</span>
+n = 2; sys0 = ss(tf([1 <span style="color: #98fb98;">-</span>1],[1 <span style="color: #98fb98;">-</span>1.456 0.81],1));
+</pre>
+</div>
+</li>
+<li>Identification data \(w_\text{d}\): generated in the same way as above (EIV setup)
+</li>
+<li>Initial conditions for the tracking problem: set to zero
+</li>
+<li>Trajectory \(w = w_{\text{p}} \wedge w_{\text{f}}\): \(w_{{\text{p}}} = 0\) exact, \(u_{\text{f}}\) missing, \(y_{\text{f}} = 1\)
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="w-ctr"><span style="color: #ee0000;">% &lt;w-ctr&gt;</span>
+Tf = 30; uf = <span style="color: #7fffd4;">NaN</span> <span style="color: #98fb98;">*</span> ones(Tf, 1); yf = ones(Tf, 1); wf = [uf yf];
+</pre>
+</div>
+</li>
+<li>Validation criterion: \(e := ||y_{\text{f}} - \hat y_{\text{f}}|| / ||y_{\text{f}}||\)
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ctr-error"><span style="color: #ee0000;">% &lt;ctr-error&gt;</span>
+e = @(yfh) norm(yf <span style="color: #98fb98;">-</span> yfh) <span style="color: #98fb98;">/</span> norm(yf);
+</pre>
+</div>
+</li>
+<li>Model based least-squares output tracking: \quad \(\text{minimize} \quad\text{over $u_{\text{f}}$}\quad || y_{\text{f}} - \mathcal{O}_{T_{\text{f}}}x_{\text{ini}} - \mathcal{T}_{T_{\text{f}}} u_{\text{f}} ||\)
+<div class="org-src-container">
+
+<pre class="src src-matlab"><span style="color: #00ffff;">function</span> <span style="color: #eedd82;">[uh, yh]</span> = <span style="color: #ffffff; text-decoration: underline;">ls_track</span>(<span style="color: #eedd82;">sys</span>, <span style="color: #eedd82;">y</span>, <span style="color: #eedd82;">x0</span>)
+[T, p] = size(y); n = size(sys, <span style="color: #ff7f24;">'order'</span>); <span style="color: #ee0000;">% asume single input</span>
+<span style="color: #00ffff;">if</span> nargin <span style="color: #98fb98;">&lt;</span> 3, x0 = zeros(n, 1); <span style="color: #00ffff;">end</span>
+h = impulse(sys, T <span style="color: #98fb98;">-</span> 1); h = vec(h'); 
+
+TT = zeros(p <span style="color: #98fb98;">*</span> T, T); 
+<span style="color: #00ffff;">for</span> <span style="color: #eedd82;">i</span> = <span style="color: #7fffd4;">1:T</span>, 
+  TT(<span style="color: #98fb98;">:</span>, <span style="color: #7fffd4;">i</span>) = [zeros(p <span style="color: #98fb98;">*</span> (<span style="color: #7fffd4;">i</span> <span style="color: #98fb98;">-</span> 1), 1); h(1<span style="color: #98fb98;">:</span>(p <span style="color: #98fb98;">*</span> (T <span style="color: #98fb98;">-</span> <span style="color: #7fffd4;">i</span> <span style="color: #98fb98;">+</span> 1)))]; 
+<span style="color: #00ffff;">end</span>
+
+I = eye(n); 
+<span style="color: #00ffff;">for</span> <span style="color: #eedd82;">i</span> = <span style="color: #7fffd4;">1:n</span>, 
+  O(<span style="color: #98fb98;">:</span>, <span style="color: #7fffd4;">i</span>) = vec(initial(sys, I(<span style="color: #98fb98;">:</span>, <span style="color: #7fffd4;">i</span>), T <span style="color: #98fb98;">-</span> 1)'); 
+<span style="color: #00ffff;">end</span>
+
+uh = pinv(TT) <span style="color: #98fb98;">*</span> (vec(y') <span style="color: #98fb98;">-</span> O <span style="color: #98fb98;">*</span> x0); 
+yh = reshape(O <span style="color: #98fb98;">*</span> x0 <span style="color: #98fb98;">+</span> TT <span style="color: #98fb98;">*</span> uh, p, T)';
+</pre>
+</div>
+</li>
+<li>We verify that with knowledge of the true model \(\overline{\mathcal{B}}\), the result of estimating the missing values in \(w\), using the <code>misfit</code> function is correct, \ie, it coincides with the result of the <code>ls_track</code>.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ctr-check"><span style="color: #ee0000;">% &lt;ctr-check&gt;</span>
+opt.wini = 0; <span style="color: #ee0000;">% zero initial conditions</span>
+[M, wfh] = misfit(wf, sys0, opt); ufh = wfh(<span style="color: #98fb98;">:</span>, 1);
+[ufh_ls, yfh_ls] = ls_track(sys0, yf); ufh_ls_opt = ufh_ls;
+norm(ufh_ls <span style="color: #98fb98;">-</span> ufh) <span style="color: #98fb98;">/</span> norm(ufh_ls)
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">4.2057e-05</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Next, we compare the results of 
+<ol class="org-ol">
+<li><code>ident</code> i.e., estimation of the missing values in \(w\) without using the true model, and 
+</li>
+<li><code>ident</code> + <code>ls_track</code> i.e., identification of a model \(\hat{\mathcal{B}}\) for \(\overline{\mathcal{B}}\) using the data \(w_\text{d}\) and least-squares tracking of \(y_{{\text{f}}}\) using the identified model \(\hat{\mathcal{B}}\).
+</li>
+</ol>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ctr-result"><span style="color: #ee0000;">% &lt;ctr-results&gt;</span>
+opt.wini = 0; opt.method = <span style="color: #ff7f24;">'q'</span>; 
+[sysh, info, wfh] = ident({100 <span style="color: #98fb98;">*</span> wd, wf}, 1, n, opt); ufh = wfh{2}(<span style="color: #98fb98;">:</span>, 1); 
+[sysh_id, info_id] = ident(wd, 1, n, opt); 
+[ufh_ls, yfh_ls] = ls_track(sysh_id, yf);
+</pre>
+</div>
+<p>
+Applying the control signals on the <i>models</i>, we have
+</p>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ctr-result">yfh = lsim(sysh, ufh); 
+yfh_ls = lsim(sysh_id, ufh_ls); 
+[e(yfh) e(yfh_ls)]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.1645</td>
+<td class="right">0.1644</td>
+</tr>
+</tbody>
+</table>
+<p>
+Applying the control signals on the <i>true system</i>, we have
+</p>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="ctr-result">yfh = lsim(sys0, ufh); 
+yfh_ls = lsim(sys0, ufh_ls); 
+yfh_ls_opt = lsim(sys0, ufh_ls_opt); 
+[e(yfh) e(yfh_ls) e(yfh_ls_opt)]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.2602</td>
+<td class="right">0.2604</td>
+<td class="right">0.1826</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Code from this section: <a href="./test_ctr.m"><code>test_ctr.m</code></a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Realization</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Data generating system \(\overline{\mathcal{B}}\): the same as in the EIV Kalman smoothing example.
+</li>
+<li>Identification data: \(w_\text{d} = w_{\text{p}} \wedge (u_{{\text{f}},1} y_{{\text{f}},1})\), see below
+</li>
+<li>Trajectory \(w = w_{\text{p}} \wedge w_{\text{f}}\): \(w_{\text{p}} = 0\) exact, \(u_{{\text{f}}} = \delta\) (unit pulse) exact, \(y_{{\text{f}}} = y_{{\text{f}},1} \wedge y_{{\text{f}},2}\), where 
+<ul class="org-ul">
+<li>\(y_{{\text{f}},1} = \bar h|_{T_{{\text{f}},1}}\), with \(\bar h\) the impulse response of \(\overline{\mathcal{B}}\) 
+</li>
+<li>\(y_{{\text{f}},2}\) missing 
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="w-realization"><span style="color: #ee0000;">% &lt;w-realization&gt;</span>
+Tf = 30; Tf1 = 25;
+uf = zeros(Tf, 1); uf(1) = 1;
+yf0 = impulse(sys0, Tf <span style="color: #98fb98;">-</span> 1); 
+yf = yf0; yf(Tf1 <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end) = <span style="color: #7fffd4;">NaN</span>;
+wf = [uf yf];
+</pre>
+</div>
+</li>
+<li>Validation criterion: \(e := ||\bar h_{2} - \hat y_{{\text{f}}, 2}|| / ||\bar h_{2}||\), where \(\bar h_{2} := \big(\bar h(T_{{\text{f}},1}+1),\ldots, \bar h(T_{\text{f}})\big)\)
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="realization-error"><span style="color: #ee0000;">% &lt;realization-error&gt;</span>
+e = @(yfh) norm(yf0(Tf1<span style="color: #98fb98;">+</span>1<span style="color: #98fb98;">:</span>end) <span style="color: #98fb98;">-</span> yfh(Tf1<span style="color: #98fb98;">+</span>1<span style="color: #98fb98;">:</span>end)) <span style="color: #98fb98;">/</span> norm(yf0(Tf1<span style="color: #98fb98;">+</span>1<span style="color: #98fb98;">:</span>end));
+</pre>
+</div>
+</li>
+<li>We verify that with knowledge of the true model \(\overline{\mathcal{B}}\), the result of estimating the missing values in \(w\), using the <code>misfit</code> function, gives the correct result, \ie, it coincides with the result of the <code>impulse</code> function.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="realization-check"><span style="color: #ee0000;">% &lt;realization-check&gt;</span>
+opt.wini = 0; opt.exct = 1;
+[M, wh] = misfit(wf, sys0, opt); e(wh(<span style="color: #98fb98;">:</span>, 2))
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">1.1100e-14</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Next, we verify that without knowledge of the true model \(\overline{\mathcal{B}}\), the result of estimating the missing values in \(w\), using the <code>ident</code> function, also gives the correct result. As alternative method we use the nuclear norm minimization, implemented in the function <code>hmc_nn</code>.
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="realization-result"><span style="color: #ee0000;">% &lt;realization-result&gt;</span>
+[sysh, info, wfh] = ident(wf, 1, n, opt); 
+wh = hmc_nn([zeros(2); wf], n, 1); wh(1<span style="color: #98fb98;">:</span>2, <span style="color: #98fb98;">:</span>) = []; 
+[e(wfh(<span style="color: #98fb98;">:</span>, 2)) e(wh(<span style="color: #98fb98;">:</span>, 2))]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.1006e-06</td>
+<td class="right">0.0203e-06</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Code from this section: <a href="./test_realization.m"><code>test_realization.m</code></a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Noisy realization</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Data generating system \(\overline{\mathcal{B}}\), identification data \(w_{\text{d}}\), trajectory \(w\), and validation criterion are the same as in the realization problem, expect for 
+<ul class="org-ul">
+<li>\(y_{{\text{f}},1} = \bar h|_{T_{{\text{f}},1}} + \tilde y_{{\text{f}},1}\), where \(\tilde y_{{\text{f}},1}\) is zero-mean, white, Gaussian noise.
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="w-noisy-realization"><span style="color: #ee0000;">% &lt;w-noisy-realization&gt;</span>
+yfn = randn(Tf, 1); yf = yf0 <span style="color: #98fb98;">+</span> 0.1 <span style="color: #98fb98;">*</span> yfn <span style="color: #98fb98;">/</span> norm(yfn) <span style="color: #98fb98;">*</span> norm(yf0); 
+yf(Tf1 <span style="color: #98fb98;">+</span> 1<span style="color: #98fb98;">:</span>end) = <span style="color: #7fffd4;">NaN</span>; wf = [uf yf];
+</pre>
+</div>
+</li>
+<li>We compare the estimation errors of the data-driven method and the nuclear norm minimization method:
+<div class="org-src-container">
+
+<pre class="src src-matlab" id="noisy-realization-result"><span style="color: #ee0000;">% &lt;noisy-realization-result&gt;</span>
+opt.wini = 0; opt.exct = 1;
+[sysh, info, wfh] = ident(wf, 1, n, opt); 
+wh = hmc_nn([zeros(2); wf], n, 1); wh(1<span style="color: #98fb98;">:</span>2, <span style="color: #98fb98;">:</span>) = []; 
+[e(wfh(<span style="color: #98fb98;">:</span>, 2)) e(wh(<span style="color: #98fb98;">:</span>, 2))]
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">\(\Rightarrow\)</td>
+<td class="right">0.1458</td>
+<td class="right">0.3671</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Code from this section: <a href="./test_noisy_realization.m"><code>test_noisy_realization.m</code></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ivan Markovsky</p>
+<p class="date">Created: 2016-05-31 Tue 08:56</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

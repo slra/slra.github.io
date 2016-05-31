@@ -5,6 +5,15 @@
 = Structured low-rank approximation:\n Theory, algorithms, and applications
 ~~~
 
+- ERC stating grant, number 258581, acronym SLRA
+- started on 1 January 2011; ended on 31 December 2015
+
+== Team members
+
+- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky] (principal investigator)
+- [http://www.gipsa-lab.grenoble-inp.fr/~konstantin.usevich/ Konstantin Usevich] (postdoctoral researcher)
+- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva] (postdoctoral researcher)
+
 == Overview
 
 State-of-the-art data processing methods are model based and require a parameter estimation step prior to solving the data processing problem. This project investigates alternative model-free approaches, in which model parameters are not explicitly estimated. From a theoretical point of view, the prime advantage of the new paradigm is conceptual unification of existing data modeling and model based data processing methods. From a practical point of view, the proposed paradigm offers new methods for data processing. 
@@ -24,11 +33,3 @@ Different applications lead to structured low-rank approximation problems with d
 
 Performance results on benchmark problems in system identification, model reduction, and approximate common divisor computation show that the structured low-rank approximation package developed in the project is competitive with the state-of-the-art methods in these areas. Current and future work (as of August 2013) is focused on dealing efficiently with large data sets with missing data, real-time data processing, and application of the results to nonlinear system identification and tensor decomposition problems.
 
-== Team members
-
-- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky]
-- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva]
-
-== Former team members
-
-- [http://www.gipsa-lab.grenoble-inp.fr/~konstantin.usevich/ Konstantin Usevich]
