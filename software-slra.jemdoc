@@ -46,12 +46,7 @@ A major application area of mosaic Hankel structured low-rank approximation meth
 
 == Download and installation
 
-=== Latest stable version (v0.5)
-- Download [https://github.com/slra/slra/archive/v0.5.zip  ZIP File]
-- Download [https://github.com/slra/slra/archive/v0.5.tar.gz TAR Ball]
-- View on [https://github.com/slra/slra/releases/tag/v0.5 GitHub]
-
-=== Current version (unstable)
+=== Latest version 
 - Download [https://github.com/slra/slra/zipball/master ZIP File]
 - Download [https://github.com/slra/slra/tarball/master TAR Ball]
 - View on [https://github.com/slra/slra GitHub]
